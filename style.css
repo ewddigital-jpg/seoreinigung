@@ -28,14 +28,14 @@ html {
 }
 
 body {
-    font-family: 'DM Sans', Arial, sans-serif;
+    font-family: 'Open Sans', Arial, sans-serif;
     color: var(--text);
     background: #fff;
     line-height: 1.65;
 }
 
 h1, h2, h3, h4, h5, h6 {
-    font-family: 'Syne', Arial, sans-serif;
+    font-family: 'Open Sans', Arial, sans-serif;
 }
 
 a {
@@ -67,7 +67,7 @@ img {
     text-transform: uppercase;
     letter-spacing: .1em;
     margin-bottom: 12px;
-    font-family: 'DM Sans', Arial, sans-serif;
+    font-family: 'Open Sans', Arial, sans-serif;
 }
 
 .section-heading {
@@ -76,7 +76,7 @@ img {
     color: var(--dark);
     margin-bottom: 18px;
     font-weight: 800;
-    font-family: 'Syne', Arial, sans-serif;
+    font-family: 'Open Sans', Arial, sans-serif;
 }
 
 .section-copy {
@@ -106,7 +106,7 @@ img {
     transition: all .22s ease;
     border: 1.5px solid transparent;
     cursor: pointer;
-    font-family: 'DM Sans', Arial, sans-serif;
+    font-family: 'Open Sans', Arial, sans-serif;
     letter-spacing: .01em;
 }
 
@@ -188,7 +188,7 @@ header .container {
     color: var(--dark);
     font-size: 1.05rem;
     font-weight: 800;
-    font-family: 'Syne', Arial, sans-serif;
+    font-family: 'Open Sans', Arial, sans-serif;
     letter-spacing: -.01em;
 }
 
@@ -304,7 +304,7 @@ nav a::after {
     line-height: 1.06;
     margin-bottom: 22px;
     font-weight: 800;
-    font-family: 'Syne', Arial, sans-serif;
+    font-family: 'Open Sans', Arial, sans-serif;
 }
 
 .hero h1 span {
@@ -356,7 +356,7 @@ nav a::after {
     font-size: 1.3rem;
     margin-bottom: 10px;
     line-height: 1.38;
-    font-family: 'Syne', Arial, sans-serif;
+    font-family: 'Open Sans', Arial, sans-serif;
     font-weight: 700;
 }
 
@@ -442,7 +442,7 @@ nav a::after {
     color: var(--dark);
     margin-bottom: 18px;
     font-weight: 800;
-    font-family: 'Syne', Arial, sans-serif;
+    font-family: 'Open Sans', Arial, sans-serif;
 }
 
 .page-hero h1 span {
@@ -546,7 +546,7 @@ section {
     color: var(--dark);
     margin-bottom: 10px;
     font-size: 1.12rem;
-    font-family: 'Syne', Arial, sans-serif;
+    font-family: 'Open Sans', Arial, sans-serif;
     font-weight: 700;
 }
 
@@ -661,7 +661,7 @@ section {
     font-size: 1.18rem;
     margin-bottom: 22px;
     color: var(--dark);
-    font-family: 'Syne', Arial, sans-serif;
+    font-family: 'Open Sans', Arial, sans-serif;
     font-weight: 700;
 }
 
@@ -853,7 +853,7 @@ section {
 
 .link-card h3 {
     font-size: 1.04rem;
-    font-family: 'Syne', Arial, sans-serif;
+    font-family: 'Open Sans', Arial, sans-serif;
     font-weight: 700;
     color: var(--dark);
     margin-bottom: 8px;
@@ -912,7 +912,7 @@ section {
     font-size: 1rem;
     margin-bottom: 5px;
     color: var(--dark);
-    font-family: 'Syne', Arial, sans-serif;
+    font-family: 'Open Sans', Arial, sans-serif;
     font-weight: 700;
 }
 
@@ -953,7 +953,7 @@ section {
     padding: 13px 16px;
     border: 1.5px solid var(--border);
     border-radius: 12px;
-    font-family: 'DM Sans', Arial, sans-serif;
+    font-family: 'Open Sans', Arial, sans-serif;
     font-size: .95rem;
     transition: all .2s;
     background: #fafbfc;
@@ -1002,7 +1002,7 @@ section {
     text-align: left;
     cursor: pointer;
     transition: background .18s;
-    font-family: 'DM Sans', Arial, sans-serif;
+    font-family: 'Open Sans', Arial, sans-serif;
 }
 
 .faq-question:hover {
@@ -1064,7 +1064,7 @@ section {
     font-size: clamp(1.65rem, 3.5vw, 2.45rem);
     line-height: 1.14;
     margin-bottom: 14px;
-    font-family: 'Syne', Arial, sans-serif;
+    font-family: 'Open Sans', Arial, sans-serif;
     font-weight: 800;
 }
 
@@ -1101,7 +1101,7 @@ section {
 .cta-panel h3 {
     font-size: 1.18rem;
     margin-bottom: 24px;
-    font-family: 'Syne', Arial, sans-serif;
+    font-family: 'Open Sans', Arial, sans-serif;
     font-weight: 700;
 }
 
@@ -1195,7 +1195,7 @@ footer a:hover {
 .footer-col h4 {
     margin-bottom: 18px;
     font-size: .93rem;
-    font-family: 'Syne', Arial, sans-serif;
+    font-family: 'Open Sans', Arial, sans-serif;
     font-weight: 700;
     color: #fff;
     letter-spacing: .02em;
