@@ -1,149 +1,205 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Datenschutz | K.K. Reinigung</title>
-<meta name="description" content="Datenschutzerklärung der K.K. Reinigung.">
-<meta name="robots" content="noindex, follow">
-
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
-<link rel="icon" href="favicon.ico">
-
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Datenschutz | K.K. Reinigung</title>
+  <meta name="description" content="Datenschutzerklärung der K.K. Reinigung.">
+  <meta name="robots" content="noindex, follow">
+  <link rel="icon" href="favicon.ico">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: { primary: { DEFAULT: '#1a3a5c' } },
+          fontFamily: { sans: ['Inter', 'sans-serif'] }
+        }
+      }
+    }
+  </script>
+  <link rel="stylesheet" href="style.css">
 </head>
+<body class="font-sans text-gray-900 bg-white">
 
-<body>
-
-<header>
-<div class="container">
-
-<a href="index.html" class="logo">
-<img src="apple-touch-icon.png" alt="K.K. Reinigung Logo">
-<div class="logo-text">
-<span class="brand-name">K.K. Reinigung</span>
-<span class="brand-sub">Gebäudereinigung</span>
-</div>
-</a>
-
-<nav id="nav">
-<a href="index.html">Start</a>
-<a href="leistungen.html">Leistungen</a>
-<a href="ueber-uns.html">Über uns</a>
-<a href="kontakt.html">Kontakt</a>
-</nav>
-
-<div class="header-cta">
-<a href="tel:01778740889" class="btn btn-outline">
-0177 8740889
-</a>
-</div>
-
-<button class="menu-btn" onclick="toggleMenu(this)">☰</button>
-
-</div>
+<header id="site-header">
+  <div class="max-w-6xl mx-auto px-4">
+    <div class="flex items-center justify-between h-16">
+      <a href="index.html" class="flex items-center gap-2.5">
+        <img src="apple-touch-icon.png" alt="K.K. Reinigung Logo" class="w-8 h-8 rounded-lg">
+        <div>
+          <div class="font-bold text-primary text-sm leading-tight">K.K. Reinigung</div>
+          <div class="text-xs text-gray-500 leading-tight hidden sm:block">Gebäudereinigung & Reinigungsservice</div>
+        </div>
+      </a>
+      <nav class="hidden md:flex items-center gap-6 text-sm font-medium">
+        <a href="index.html" class="text-gray-600 hover:text-primary transition-colors">Start</a>
+        <a href="leistungen.html" class="text-gray-600 hover:text-primary transition-colors">Leistungen</a>
+        <a href="ueber-uns.html" class="text-gray-600 hover:text-primary transition-colors">Über uns</a>
+        <a href="kontakt.html" class="text-gray-600 hover:text-primary transition-colors">Kontakt</a>
+      </nav>
+      <div class="hidden md:flex items-center gap-3">
+        <a href="tel:01778740889" class="btn-primary text-sm py-2 px-4">📞 0177 8740889</a>
+      </div>
+      <button id="menu-btn" class="md:hidden p-2 text-gray-600 rounded-lg hover:bg-gray-100" aria-label="Menü öffnen" aria-expanded="false">
+        <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+      </button>
+    </div>
+    <nav id="mobile-nav">
+      <a href="index.html">Start</a>
+      <a href="leistungen.html">Leistungen</a>
+      <a href="ueber-uns.html">Über uns</a>
+      <a href="kontakt.html">Kontakt</a>
+      <div class="mobile-cta">
+        <a href="tel:01778740889" class="btn-primary text-center">📞 0177 8740889</a>
+      </div>
+    </nav>
+  </div>
 </header>
 
+<main class="pt-16">
+  <div class="max-w-6xl mx-auto px-4 py-3">
+    <div class="breadcrumb">
+      <a href="index.html">Start</a><span>›</span>
+      <span class="text-gray-900">Datenschutz</span>
+    </div>
+  </div>
 
-<section class="legal-page">
+  <section class="py-12 md:py-16">
+    <div class="max-w-2xl mx-auto px-4">
+      <h1 class="text-3xl font-extrabold text-gray-900 mb-8">Datenschutzerklärung</h1>
 
-<div class="container">
+      <div class="space-y-8 text-gray-700 leading-relaxed">
 
-<div class="legal-content">
+        <div>
+          <h2 class="text-lg font-bold text-gray-900 mb-2">1. Verantwortlicher</h2>
+          <p>
+            <strong>K.K. Gebäudereinigung</strong><br>
+            Inhaber: Khaled Kurdi<br>
+            Heinrich-Heine-Straße 33<br>
+            88045 Friedrichshafen<br>
+            Telefon: 0177 8740889<br>
+            E-Mail: <a href="mailto:kurdi.reinigungsservice@gmail.com" class="text-primary hover:underline">kurdi.reinigungsservice@gmail.com</a>
+          </p>
+        </div>
 
-<h1>Datenschutzerklärung</h1>
+        <div>
+          <h2 class="text-lg font-bold text-gray-900 mb-2">2. Erhebung und Speicherung personenbezogener Daten</h2>
+          <p>Beim Aufrufen dieser Website werden automatisch Daten durch den Hosting-Anbieter erfasst:</p>
+          <ul class="mt-3 space-y-1 list-disc list-inside text-gray-600">
+            <li>IP-Adresse</li>
+            <li>Datum und Uhrzeit des Zugriffs</li>
+            <li>Browsertyp und Browserversion</li>
+            <li>Betriebssystem</li>
+            <li>Referrer-URL</li>
+            <li>Name des Providers</li>
+          </ul>
+          <p class="mt-3">Diese Daten sind technisch notwendig, um die Website korrekt anzuzeigen und die Stabilität zu gewährleisten.</p>
+        </div>
 
-<h2>1. Verantwortlicher</h2>
+        <div>
+          <h2 class="text-lg font-bold text-gray-900 mb-2">3. Hosting</h2>
+          <p>Diese Website wird bei GitHub Pages gehostet.</p>
+        </div>
 
-<p>
-<strong>K.K. Gebäudereinigung</strong><br>
-Inhaber: Khaled Kurdi<br>
-Heinrich-Heine-Straße 33<br>
-88045 Friedrichshafen<br>
-Telefon: 0177 8740889<br>
-E-Mail: <a href="mailto:kurdi.reinigungsservice@gmail.com">
-kurdi.reinigungsservice@gmail.com
-</a>
-</p>
+        <div>
+          <h2 class="text-lg font-bold text-gray-900 mb-2">4. Cookies</h2>
+          <p>Diese Website verwendet ausschließlich technisch notwendige Cookies.</p>
+          <ul class="mt-3 space-y-1 list-disc list-inside text-gray-600">
+            <li>Keine Tracking-Cookies</li>
+            <li>Keine Analyse-Tools</li>
+          </ul>
+        </div>
 
-<h2>2. Erhebung und Speicherung personenbezogener Daten</h2>
+        <div>
+          <h2 class="text-lg font-bold text-gray-900 mb-2">5. Kontaktaufnahme</h2>
+          <p>Wenn Sie uns per Kontaktformular oder E-Mail kontaktieren, werden folgende Daten verarbeitet:</p>
+          <ul class="mt-3 space-y-1 list-disc list-inside text-gray-600">
+            <li>Name</li>
+            <li>E-Mail-Adresse</li>
+            <li>Telefonnummer (optional)</li>
+            <li>Inhalt der Nachricht</li>
+          </ul>
+        </div>
 
-<p>
-Beim Aufrufen dieser Website werden automatisch Daten durch den Hosting-Anbieter erfasst:
-</p>
+        <div>
+          <h2 class="text-lg font-bold text-gray-900 mb-2">6. SSL-/TLS-Verschlüsselung</h2>
+          <p>Diese Website nutzt eine SSL-Verschlüsselung zur sicheren Übertragung von Daten.</p>
+        </div>
 
-<ul>
-<li>IP-Adresse</li>
-<li>Datum und Uhrzeit des Zugriffs</li>
-<li>Browsertyp und Browserversion</li>
-<li>Betriebssystem</li>
-<li>Referrer-URL</li>
-<li>Name des Providers</li>
-</ul>
+        <div>
+          <h2 class="text-lg font-bold text-gray-900 mb-2">7. Rechte der betroffenen Personen</h2>
+          <ul class="space-y-1 list-disc list-inside text-gray-600">
+            <li>Auskunft</li>
+            <li>Berichtigung</li>
+            <li>Löschung</li>
+            <li>Einschränkung der Verarbeitung</li>
+            <li>Widerspruch</li>
+            <li>Datenübertragbarkeit</li>
+          </ul>
+        </div>
 
-<p>
-Diese Daten sind technisch notwendig, um die Website korrekt anzuzeigen und die Stabilität zu gewährleisten.
-</p>
+        <div>
+          <h2 class="text-lg font-bold text-gray-900 mb-2">8. Aktualität dieser Datenschutzerklärung</h2>
+          <p>Stand: Januar 2025</p>
+        </div>
 
-<h2>3. Hosting</h2>
+      </div>
+    </div>
+  </section>
+</main>
 
-<p>
-Diese Website wird bei GitHub Pages gehostet.
-</p>
+<footer class="bg-gray-900 text-gray-400 pt-12 pb-6">
+  <div class="max-w-6xl mx-auto px-4">
+    <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-8 mb-10">
+      <div>
+        <a href="index.html" class="flex items-center gap-2 mb-3">
+          <img src="apple-touch-icon.png" alt="K.K. Reinigung" class="w-8 h-8 rounded-lg">
+          <span class="font-bold text-white text-sm">K.K. Reinigung</span>
+        </a>
+        <p class="text-sm leading-relaxed">Gebäudereinigung & Reinigungsservice im Bodenseekreis.</p>
+        <div class="mt-3 text-sm"><a href="tel:01778740889" class="text-blue-400">📞 0177 8740889</a></div>
+      </div>
+      <div>
+        <h4 class="text-white font-semibold text-sm mb-3">Navigation</h4>
+        <ul class="space-y-2 text-sm">
+          <li><a href="index.html">Start</a></li>
+          <li><a href="leistungen.html">Leistungen</a></li>
+          <li><a href="ueber-uns.html">Über uns</a></li>
+          <li><a href="kontakt.html">Kontakt</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="text-white font-semibold text-sm mb-3">Leistungen</h4>
+        <ul class="space-y-2 text-sm">
+          <li><a href="bueroreinigung-friedrichshafen.html">Büroreinigung</a></li>
+          <li><a href="bauendreinigung-friedrichshafen.html">Bauendreinigung</a></li>
+          <li><a href="gebaeudereinigung-friedrichshafen.html">Gebäudereinigung</a></li>
+          <li><a href="unterhaltsreinigung-friedrichshafen.html">Unterhaltsreinigung</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="text-white font-semibold text-sm mb-3">Regionen</h4>
+        <ul class="space-y-2 text-sm">
+          <li><a href="index.html">Friedrichshafen</a></li>
+          <li><a href="reinigungsfirma-lindau.html">Lindau</a></li>
+          <li><a href="reinigungsfirma-ravensburg.html">Ravensburg</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="border-t border-gray-800 pt-5 flex flex-col sm:flex-row justify-between items-center text-xs gap-2">
+      <p>© 2025 K.K. Reinigung – Friedrichshafen</p>
+      <div class="flex gap-4">
+        <a href="impressum.html">Impressum</a>
+        <a href="datenschutz.html">Datenschutz</a>
+      </div>
+    </div>
+  </div>
+</footer>
 
-<h2>4. Cookies</h2>
-
-<p>
-Diese Website verwendet ausschließlich technisch notwendige Cookies.
-</p>
-
-<ul>
-<li>Keine Tracking-Cookies</li>
-<li>Keine Analyse-Tools</li>
-</ul>
-
-<h2>5. Kontaktaufnahme</h2>
-
-<p>
-Wenn Sie uns per Kontaktformular oder E-Mail kontaktieren, werden folgende Daten verarbeitet:
-</p>
-
-<ul>
-<li>Name</li>
-<li>E-Mail-Adresse</li>
-<li>Telefonnummer (optional)</li>
-<li>Inhalt der Nachricht</li>
-</ul>
-
-<h2>6. SSL-/TLS-Verschlüsselung</h2>
-
-<p>
-Diese Website nutzt eine SSL-Verschlüsselung zur sicheren Übertragung von Daten.
-</p>
-
-<h2>7. Rechte der betroffenen Personen</h2>
-
-<ul>
-<li>Auskunft</li>
-<li>Berichtigung</li>
-<li>Löschung</li>
-<li>Einschränkung der Verarbeitung</li>
-<li>Widerspruch</li>
-<li>Datenübertragbarkeit</li>
-</ul>
-
-<h2>8. Aktualität dieser Datenschutzerklärung</h2>
-
-<p>
-Stand: Januar 2025
-</p>
-
-</div>
-
-</div>
-
-</section>
+<script src="script.js"></script>
+</body>
+</html>
