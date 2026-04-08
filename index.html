@@ -3,12 +3,20 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Reinigungsfirma Friedrichshafen – K.K. Reinigung</title>
-  <meta name="description" content="K.K. Reinigung – Ihre Reinigungsfirma in Friedrichshafen. Büroreinigung, Gebäudereinigung, Bauendreinigung im Bodenseekreis. Schnelle Verfügbarkeit, flexible Termine. Jetzt anfragen.">
+  <title>Reinigungsfirma Friedrichshafen – K.K. Reinigung | Direkt erreichbar</title>
+  <meta name="description" content="K.K. Reinigung Friedrichshafen – persönlicher Reinigungsservice für Büros und Gewerbe im Bodenseekreis. Rückmeldung am selben Tag. Termin oft in dieser Woche. Jetzt anfragen.">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://kkreinigung.com/">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
   <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Reinigungsfirma Friedrichshafen – K.K. Reinigung">
+  <meta property="og:description" content="Persönlicher Reinigungsservice im Bodenseekreis. Rückmeldung am selben Tag. Direkt zu Khaled Kurdi – kein Callcenter.">
+  <meta property="og:url" content="https://kkreinigung.com/">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="de_DE">
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -17,9 +25,7 @@
     tailwind.config = {
       theme: {
         extend: {
-          colors: {
-            primary: { DEFAULT: '#1a3a5c', light: '#234d79', dark: '#0f2237' },
-          },
+          colors: { primary: { DEFAULT: '#1a3a5c', light: '#234d79', dark: '#0f2237' } },
           fontFamily: { sans: ['Inter', 'sans-serif'] }
         }
       }
@@ -27,27 +33,26 @@
   </script>
   <link rel="stylesheet" href="style.css">
 
-  <!-- Schema: LocalBusiness -->
+  <!-- Schema: LocalBusiness + FAQ -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
     "name": "K.K. Reinigung",
-    "description": "Professionelle Gebäudereinigung, Büroreinigung, Unterhaltsreinigung und Bauendreinigung in Friedrichshafen und Bodenseekreis.",
+    "description": "Persönlicher Reinigungsservice für Büros, Gewerbe und Privathaushalte in Friedrichshafen und Bodenseekreis.",
     "telephone": "+4917787408889",
     "email": "kurdi.reinigungsservice@gmail.com",
     "url": "https://kkreinigung.com",
+    "founder": { "@type": "Person", "name": "Khaled Kurdi" },
     "address": {
       "@type": "PostalAddress",
+      "streetAddress": "Heinrich-Heine-Straße 33",
       "addressLocality": "Friedrichshafen",
+      "postalCode": "88045",
       "addressRegion": "Baden-Württemberg",
       "addressCountry": "DE"
     },
-    "geo": {
-      "@type": "GeoCoordinates",
-      "latitude": 47.6543,
-      "longitude": 9.4765
-    },
+    "geo": { "@type": "GeoCoordinates", "latitude": 47.6543, "longitude": 9.4765 },
     "areaServed": [
       { "@type": "City", "name": "Friedrichshafen" },
       { "@type": "City", "name": "Lindau" },
@@ -56,8 +61,12 @@
     ],
     "openingHours": "Mo-Sa 07:00-20:00",
     "priceRange": "€€",
-    "serviceType": ["Gebäudereinigung", "Büroreinigung", "Unterhaltsreinigung", "Bauendreinigung"],
-    "sameAs": []
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "telephone": "+4917787408889",
+      "contactType": "customer service",
+      "availableLanguage": ["German"]
+    }
   }
   </script>
 </head>
@@ -71,7 +80,7 @@
         <img src="apple-touch-icon.png" alt="K.K. Reinigung Logo" class="w-8 h-8 rounded-lg">
         <div>
           <div class="font-bold text-primary text-sm leading-tight">K.K. Reinigung</div>
-          <div class="text-xs text-gray-500 leading-tight hidden sm:block">Gebäudereinigung & Reinigungsservice</div>
+          <div class="text-xs text-gray-500 leading-tight hidden sm:block">Friedrichshafen · Bodenseekreis</div>
         </div>
       </a>
 
@@ -79,10 +88,14 @@
         <a href="index.html" class="text-primary font-semibold">Start</a>
         <a href="leistungen.html" class="text-gray-600 hover:text-primary transition-colors">Leistungen</a>
         <a href="ueber-uns.html" class="text-gray-600 hover:text-primary transition-colors">Über uns</a>
-        <a href="kontakt.html" class="text-gray-600 hover:text-primary transition-colors">Kontakt</a>
+        <a href="faq.html" class="text-gray-600 hover:text-primary transition-colors">FAQ</a>
+        <a href="kontakt.html" class="text-gray-600 hover:text-primary transition-colors font-semibold">Kontakt</a>
       </nav>
 
-      <div class="hidden md:flex items-center gap-3">
+      <div class="hidden md:flex items-center gap-2">
+        <a href="https://wa.me/491778740889?text=Hallo%2C%20ich%20interessiere%20mich%20f%C3%BCr%20Ihren%20Reinigungsservice." class="btn-wa text-sm py-2 px-3">
+          💬 WhatsApp
+        </a>
         <a href="tel:01778740889" class="btn-primary text-sm py-2 px-4">
           📞 0177 8740889
         </a>
@@ -97,10 +110,11 @@
       <a href="index.html">Start</a>
       <a href="leistungen.html">Leistungen</a>
       <a href="ueber-uns.html">Über uns</a>
+      <a href="faq.html">FAQ</a>
       <a href="kontakt.html">Kontakt</a>
       <div class="mobile-cta">
+        <a href="https://wa.me/491778740889?text=Hallo%2C%20ich%20interessiere%20mich%20f%C3%BCr%20Ihren%20Reinigungsservice." class="btn-wa text-center">💬 WhatsApp – schnellste Antwort</a>
         <a href="tel:01778740889" class="btn-primary text-center">📞 0177 8740889</a>
-        <a href="https://wa.me/491778740889?text=Hallo%2C%20ich%20interessiere%20mich%20f%C3%BCr%20Ihren%20Reinigungsservice." class="btn-wa text-center">💬 WhatsApp schreiben</a>
       </div>
     </nav>
   </div>
@@ -109,70 +123,73 @@
 <main class="pt-16">
 
   <!-- ── Hero ───────────────────────────────────────────────── -->
-  <section class="bg-gradient-to-br from-slate-50 to-blue-50 py-16 md:py-24">
+  <section class="bg-gradient-to-br from-slate-50 to-blue-50 py-14 md:py-20">
     <div class="max-w-6xl mx-auto px-4">
       <div class="grid md:grid-cols-2 gap-10 items-center">
 
         <div class="animate-fadeInUp">
-          <div class="hero-badge">Reinigungsfirma im Bodenseekreis</div>
-          <h1 class="text-3xl md:text-4xl lg:text-5xl font-extrabold text-gray-900 leading-tight mb-4">
-            Reinigungsfirma in <span class="text-primary">Friedrichshafen</span> – schnell verfügbar & gründlich
+          <div class="hero-badge">Reinigungsfirma Friedrichshafen · Bodenseekreis</div>
+          <h1 class="text-3xl md:text-4xl lg:text-[2.6rem] font-extrabold text-gray-900 leading-tight mb-4">
+            Reinigung in <span class="text-primary">Friedrichshafen</span> –<br class="hidden sm:block"> Sie sprechen direkt mit uns.
           </h1>
-          <p class="text-lg text-gray-600 mb-6 leading-relaxed">
-            Für Büros, Gewerbe und Privathaushalte im Bodenseekreis.<br>
-            Flexible Termine. Rückmeldung am selben Tag.
+          <p class="text-base md:text-lg text-gray-600 mb-6 leading-relaxed">
+            Büros, Gewerbe und Privathaushalte im Bodenseekreis.<br>
+            Persönliche Rückmeldung am selben Tag. Termin oft noch in dieser Woche.
           </p>
 
-          <ul class="check-list mb-8">
-            <li>Schnelle Verfügbarkeit – oft noch in dieser Woche</li>
-            <li>Gründliche Reinigung ohne Kompromisse</li>
-            <li>Einsatz in Friedrichshafen, Lindau &amp; Ravensburg</li>
-            <li>Flexible Termine – auch früh, abends oder am Wochenende</li>
-          </ul>
-
-          <div class="flex flex-col sm:flex-row gap-3">
-            <a href="tel:01778740889" class="btn-primary text-base py-3 px-6">
-              📞 Jetzt anrufen
+          <!-- Mobile: WhatsApp first, full width -->
+          <div class="flex flex-col gap-3 sm:flex-row mb-5">
+            <a href="https://wa.me/491778740889?text=Hallo%2C%20ich%20interessiere%20mich%20f%C3%BCr%20Ihren%20Reinigungsservice." class="btn-wa text-base py-3.5 px-6 text-center sm:text-left">
+              💬 WhatsApp – schnellste Antwort
             </a>
-            <a href="https://wa.me/491778740889?text=Hallo%2C%20ich%20interessiere%20mich%20f%C3%BCr%20Ihren%20Reinigungsservice." class="btn-wa text-base py-3 px-6">
-              💬 WhatsApp Anfrage
+            <a href="tel:01778740889" class="btn-primary text-base py-3.5 px-6 text-center sm:text-left">
+              📞 0177 8740889
             </a>
           </div>
-          <p class="text-xs text-gray-500 mt-3">Kostenlos &amp; unverbindlich – Mo–Sa 7–20 Uhr</p>
+          <p class="text-xs text-gray-400">Mo–Sa 7–20 Uhr · Kostenlos · Unverbindlich</p>
+
+          <!-- Micro-trust signals -->
+          <div class="mt-6 flex flex-wrap gap-x-5 gap-y-2 text-sm text-gray-500">
+            <span class="flex items-center gap-1.5"><span class="text-green-500 font-bold">✓</span> 10+ Gewerbekunden betreut</span>
+            <span class="flex items-center gap-1.5"><span class="text-green-500 font-bold">✓</span> Kein Callcenter</span>
+            <span class="flex items-center gap-1.5"><span class="text-green-500 font-bold">✓</span> Nachbesserung kostenlos</span>
+          </div>
         </div>
 
+        <!-- Right card: quick contact -->
         <div class="animate-fadeInUp delay-200">
-          <div class="bg-white rounded-2xl shadow-lg border border-gray-100 p-6">
-            <h2 class="text-base font-bold text-gray-900 mb-1">Schnell ein Angebot bekommen</h2>
-            <p class="text-sm text-gray-500 mb-5">Kein Büro, keine Warteschleife – direkt zum Ansprechpartner.</p>
+          <div class="bg-white rounded-2xl shadow-md border border-gray-100 p-6">
+            <div class="flex items-center gap-3 mb-5">
+              <div class="w-10 h-10 rounded-full bg-primary text-white flex items-center justify-center font-bold text-sm flex-shrink-0">KK</div>
+              <div>
+                <div class="font-bold text-gray-900 text-sm">Khaled Kurdi</div>
+                <div class="text-xs text-gray-500">Persönlicher Ansprechpartner · K.K. Reinigung</div>
+              </div>
+              <span class="ml-auto flex items-center gap-1 text-xs text-green-600 font-medium bg-green-50 px-2 py-1 rounded-full">
+                <span class="w-1.5 h-1.5 bg-green-500 rounded-full"></span> Erreichbar
+              </span>
+            </div>
+
+            <p class="text-sm text-gray-600 mb-5 leading-relaxed">
+              Schreiben Sie mir kurz was Sie brauchen – ich melde mich noch am selben Tag mit einem konkreten Angebot.
+            </p>
 
             <div class="space-y-3">
-              <a href="bueroreinigung-friedrichshafen.html" class="flex items-start gap-3 p-3 rounded-xl border border-gray-100 hover:border-blue-200 hover:bg-blue-50 transition-all group">
-                <div class="text-2xl mt-0.5">🏢</div>
-                <div>
-                  <div class="font-semibold text-sm text-gray-900 group-hover:text-primary">Büroreinigung</div>
-                  <div class="text-xs text-gray-500">Arbeitsplätze, Küchen, Besprechungsräume</div>
-                </div>
+              <a href="https://wa.me/491778740889?text=Hallo%20Herr%20Kurdi%2C%20ich%20interessiere%20mich%20f%C3%BCr%20eine%20Reinigung%20in%20%5BOrt%5D.%20K%C3%B6nnen%20Sie%20mir%20ein%20Angebot%20machen%3F" class="flex items-center justify-between w-full bg-[#25d366] text-white rounded-xl px-4 py-3 font-semibold text-sm hover:bg-[#1ebe5a] transition-colors">
+                <span>💬 Per WhatsApp anfragen</span>
+                <span class="text-xs opacity-80">Meist Antwort in &lt;1h</span>
               </a>
-              <a href="bauendreinigung-friedrichshafen.html" class="flex items-start gap-3 p-3 rounded-xl border border-gray-100 hover:border-blue-200 hover:bg-blue-50 transition-all group">
-                <div class="text-2xl mt-0.5">🛠️</div>
-                <div>
-                  <div class="font-semibold text-sm text-gray-900 group-hover:text-primary">Bauendreinigung</div>
-                  <div class="text-xs text-gray-500">Sauber übergeben nach Bauprojekten</div>
-                </div>
+              <a href="tel:01778740889" class="flex items-center justify-between w-full bg-primary text-white rounded-xl px-4 py-3 font-semibold text-sm hover:bg-primary-dark transition-colors">
+                <span>📞 Direkt anrufen</span>
+                <span class="text-xs opacity-80">0177 8740889</span>
               </a>
-              <a href="leistungen.html" class="flex items-start gap-3 p-3 rounded-xl border border-gray-100 hover:border-blue-200 hover:bg-blue-50 transition-all group">
-                <div class="text-2xl mt-0.5">📅</div>
-                <div>
-                  <div class="font-semibold text-sm text-gray-900 group-hover:text-primary">Unterhaltsreinigung</div>
-                  <div class="text-xs text-gray-500">Regelmäßige Reinigung mit festen Intervallen</div>
-                </div>
+              <a href="kontakt.html" class="flex items-center justify-between w-full border border-gray-200 text-gray-700 rounded-xl px-4 py-3 font-semibold text-sm hover:border-primary hover:text-primary transition-colors">
+                <span>📋 Formular ausfüllen</span>
+                <span class="text-xs text-gray-400">Angebot in 24h</span>
               </a>
             </div>
 
-            <a href="kontakt.html" class="mt-5 block text-center bg-primary text-white py-3 rounded-xl font-semibold text-sm hover:bg-primary-dark transition-colors">
-              Kostenloses Angebot anfragen →
-            </a>
+            <p class="text-xs text-gray-400 text-center mt-4">Unverbindlich · Keine Mindestlaufzeit beim Ersteinsatz</p>
           </div>
         </div>
 
@@ -181,217 +198,212 @@
   </section>
 
   <!-- ── Trust bar ──────────────────────────────────────────── -->
-  <section class="bg-primary text-white py-4">
+  <section class="bg-primary text-white py-3.5">
     <div class="max-w-6xl mx-auto px-4">
-      <div class="flex flex-wrap justify-center md:justify-between gap-4 text-sm font-medium text-blue-100">
+      <div class="flex flex-wrap justify-center md:justify-between gap-3 text-xs md:text-sm font-medium text-blue-100">
         <span>✓ Lokal in Friedrichshafen</span>
-        <span>✓ Rückmeldung noch am selben Tag</span>
-        <span>✓ Gründlich & zuverlässig</span>
+        <span>✓ 10+ Gewerbekunden betreut</span>
+        <span>✓ Rückmeldung am selben Tag</span>
+        <span>✓ Nachbesserung kostenlos</span>
         <span>✓ Mo–Sa 7–20 Uhr erreichbar</span>
       </div>
     </div>
   </section>
 
-  <!-- ── Services ──────────────────────────────────────────── -->
-  <section class="py-16 md:py-20 bg-white">
+  <!-- ── Credentials (statt Fake-Testimonials) ─────────────── -->
+  <section class="py-14 bg-white">
     <div class="max-w-6xl mx-auto px-4">
-      <div class="text-center mb-12 reveal">
-        <div class="section-badge">Unsere Leistungen</div>
+      <div class="text-center mb-10 reveal">
+        <div class="section-badge">Vertrauen durch Erfahrung</div>
         <h2 class="text-2xl md:text-3xl font-extrabold text-gray-900 mt-2">
-          Professionelle Reinigung für jeden Bedarf
+          Was K.K. Reinigung von anderen unterscheidet
         </h2>
-        <p class="text-gray-500 mt-2 max-w-xl mx-auto">Von der regelmäßigen Büroreinigung bis zur einmaligen Bauendreinigung – wir übernehmen das.</p>
+        <p class="text-gray-500 mt-2 text-sm max-w-xl mx-auto">Keine Bewertungen – aber Fakten. Und ein persönlicher Ansprechpartner, der das wirklich lebt.</p>
       </div>
 
       <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
-        <a href="bueroreinigung-friedrichshafen.html" class="service-card reveal delay-100">
-          <div class="text-3xl mb-3">🏢</div>
-          <h3 class="font-bold text-gray-900 mb-2">Büroreinigung Friedrichshafen</h3>
-          <p class="text-sm text-gray-600 mb-3">Saubere Arbeitsplätze, Küchen und Gemeinschaftsflächen – diskret im laufenden Betrieb.</p>
-          <ul class="check-list text-sm">
-            <li>Schreibtische & Böden</li>
-            <li>Sanitäranlagen</li>
-            <li>Besprechungsräume</li>
-          </ul>
-          <div class="mt-4 text-primary text-sm font-semibold">Mehr erfahren →</div>
-        </a>
-
-        <a href="bauendreinigung-friedrichshafen.html" class="service-card reveal delay-200">
-          <div class="text-3xl mb-3">🛠️</div>
-          <h3 class="font-bold text-gray-900 mb-2">Bauendreinigung Friedrichshafen</h3>
-          <p class="text-sm text-gray-600 mb-3">Übergabereif und termingerecht – nach Neu- oder Umbau, Renovierung und Sanierung.</p>
-          <ul class="check-list text-sm">
-            <li>Baustaub & Rückstände</li>
-            <li>Fenster & Rahmen</li>
-            <li>Böden & Fliesen</li>
-          </ul>
-          <div class="mt-4 text-primary text-sm font-semibold">Mehr erfahren →</div>
-        </a>
-
-        <a href="leistungen.html#gebaeudereinigung" class="service-card reveal delay-300">
-          <div class="text-3xl mb-3">🏗️</div>
-          <h3 class="font-bold text-gray-900 mb-2">Gebäudereinigung Friedrichshafen</h3>
-          <p class="text-sm text-gray-600 mb-3">Treppenhäuser, Eingangsbereiche und Allgemeinflächen dauerhaft sauber halten.</p>
-          <ul class="check-list text-sm">
-            <li>Allgemeinflächen</li>
-            <li>Treppenhäuser</li>
-            <li>Eingangsbereiche</li>
-          </ul>
-          <div class="mt-4 text-primary text-sm font-semibold">Mehr erfahren →</div>
-        </a>
-
-        <a href="leistungen.html#unterhaltsreinigung" class="service-card reveal delay-400">
-          <div class="text-3xl mb-3">📅</div>
-          <h3 class="font-bold text-gray-900 mb-2">Unterhaltsreinigung</h3>
-          <p class="text-sm text-gray-600 mb-3">Planbare Reinigung mit festen Intervallen – wöchentlich, zweiwöchentlich oder monatlich.</p>
-          <ul class="check-list text-sm">
-            <li>Individuelle Intervalle</li>
-            <li>Langfristige Betreuung</li>
-            <li>Gleichbleibendes Team</li>
-          </ul>
-          <div class="mt-4 text-primary text-sm font-semibold">Mehr erfahren →</div>
-        </a>
+        <div class="bg-slate-50 rounded-xl p-5 border border-gray-100 reveal delay-100">
+          <div class="text-2xl mb-3">📞</div>
+          <h3 class="font-bold text-gray-900 mb-1 text-sm">Persönlich erreichbar</h3>
+          <p class="text-sm text-gray-600 leading-relaxed">Khaled Kurdi antwortet selbst – auf WhatsApp, per Telefon oder E-Mail. Kein Callcenter, kein Weiterleiten.</p>
+        </div>
+        <div class="bg-slate-50 rounded-xl p-5 border border-gray-100 reveal delay-200">
+          <div class="text-2xl mb-3">🏢</div>
+          <h3 class="font-bold text-gray-900 mb-1 text-sm">10+ Gewerbekunden</h3>
+          <p class="text-sm text-gray-600 leading-relaxed">Büros, Gewerbeflächen, Unterhaltsreinigung – über 10 Unternehmen im Bodenseekreis vertrauen auf K.K. Reinigung.</p>
+        </div>
+        <div class="bg-slate-50 rounded-xl p-5 border border-gray-100 reveal delay-300">
+          <div class="text-2xl mb-3">🛣️</div>
+          <h3 class="font-bold text-gray-900 mb-1 text-sm">Auch für anspruchsvolle Objekte</h3>
+          <p class="text-sm text-gray-600 leading-relaxed">Erfahrung mit hygienisch anspruchsvollen Standorten – darunter Sanitäranlagen an Autobahnraststätten.</p>
+        </div>
+        <div class="bg-slate-50 rounded-xl p-5 border border-gray-100 reveal delay-400">
+          <div class="text-2xl mb-3">🔄</div>
+          <h3 class="font-bold text-gray-900 mb-1 text-sm">Nachbesserung inbegriffen</h3>
+          <p class="text-sm text-gray-600 leading-relaxed">Falls etwas nicht stimmt: Wir kommen nochmal. Kostenlos. Ohne Diskussion. Das ist unser Standard.</p>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- ── Why us ─────────────────────────────────────────────── -->
-  <section class="py-16 md:py-20 bg-slate-50">
+  <!-- ── Services ──────────────────────────────────────────── -->
+  <section class="py-14 md:py-20 bg-slate-50">
     <div class="max-w-6xl mx-auto px-4">
-      <div class="grid md:grid-cols-2 gap-12 items-center">
-        <div class="reveal">
-          <div class="section-badge">Warum K.K. Reinigung</div>
-          <h2 class="text-2xl md:text-3xl font-extrabold text-gray-900 mt-2 mb-4">
-            Reinigung, die einfach funktioniert
-          </h2>
-          <p class="text-gray-600 mb-6">
-            Kein aufgeblasenes Marketing. Wir kommen, wir reinigen gründlich, und Sie merken es.
-            Seit Jahren vertrauen Büros, Praxen und Gewerbebetriebe im Bodenseekreis auf uns.
-          </p>
-          <ul class="check-list space-y-2">
-            <li>Termine werden eingehalten – auch kurzfristige</li>
-            <li>Direkter Ansprechpartner, keine Callcenter</li>
-            <li>Rückmeldung auf Anfragen noch am selben Tag</li>
-            <li>Flexible Einsatzzeiten auch abends und am Wochenende</li>
-            <li>Einsatzgebiet: Friedrichshafen, Lindau, Ravensburg &amp; Umgebung</li>
-          </ul>
-          <a href="ueber-uns.html" class="mt-6 inline-block btn-outline">Über uns</a>
-        </div>
+      <div class="text-center mb-10 reveal">
+        <div class="section-badge">Leistungen</div>
+        <h2 class="text-2xl md:text-3xl font-extrabold text-gray-900 mt-2">Was wir im Bodenseekreis reinigen</h2>
+        <p class="text-gray-500 mt-2 text-sm max-w-xl mx-auto">Von der wöchentlichen Büroreinigung bis zur einmaligen Bauendreinigung nach Übergabe.</p>
+      </div>
 
-        <div class="grid grid-cols-1 gap-4 reveal delay-200">
-          <div class="bg-white rounded-xl p-5 border border-gray-100 flex gap-4 items-start">
-            <div class="step-num flex-shrink-0">1</div>
-            <div>
-              <div class="font-bold text-gray-900 mb-1">Schnell erreichbar</div>
-              <div class="text-sm text-gray-600">Anruf oder WhatsApp genügt. Wir antworten noch am selben Tag und erstellen ein klares Angebot.</div>
-            </div>
-          </div>
-          <div class="bg-white rounded-xl p-5 border border-gray-100 flex gap-4 items-start">
-            <div class="step-num flex-shrink-0">2</div>
-            <div>
-              <div class="font-bold text-gray-900 mb-1">Gründlich & zuverlässig</div>
-              <div class="text-sm text-gray-600">Wir reinigen so, als wäre es unser eigenes Büro – gründlich, ohne Abkürzungen.</div>
-            </div>
-          </div>
-          <div class="bg-white rounded-xl p-5 border border-gray-100 flex gap-4 items-start">
-            <div class="step-num flex-shrink-0">3</div>
-            <div>
-              <div class="font-bold text-gray-900 mb-1">Regional verankert</div>
-              <div class="text-sm text-gray-600">Wir kennen die Region. Kurze Wege, schnelle Reaktionszeiten im gesamten Bodenseekreis.</div>
-            </div>
-          </div>
-        </div>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+        <a href="unterhaltsreinigung-friedrichshafen.html" class="service-card reveal delay-100">
+          <div class="text-2xl mb-3">📅</div>
+          <h3 class="font-bold text-gray-900 mb-1 text-sm">Unterhaltsreinigung</h3>
+          <p class="text-xs text-gray-500 mb-3 leading-relaxed">Regelmäßige Reinigung mit festem Rhythmus – wöchentlich, zweiwöchentlich oder monatlich.</p>
+          <div class="text-primary text-xs font-semibold">Mehr erfahren →</div>
+        </a>
+
+        <a href="bueroreinigung-friedrichshafen.html" class="service-card reveal delay-200">
+          <div class="text-2xl mb-3">🏢</div>
+          <h3 class="font-bold text-gray-900 mb-1 text-sm">Büroreinigung</h3>
+          <p class="text-xs text-gray-500 mb-3 leading-relaxed">Schreibtische, Böden, Sanitär, Küche – diskret im laufenden Betrieb.</p>
+          <div class="text-primary text-xs font-semibold">Mehr erfahren →</div>
+        </a>
+
+        <a href="bauendreinigung-friedrichshafen.html" class="service-card reveal delay-300">
+          <div class="text-2xl mb-3">🛠️</div>
+          <h3 class="font-bold text-gray-900 mb-1 text-sm">Bauendreinigung</h3>
+          <p class="text-xs text-gray-500 mb-3 leading-relaxed">Übergabereif nach Neubau oder Renovierung – termingerecht und vollständig.</p>
+          <div class="text-primary text-xs font-semibold">Mehr erfahren →</div>
+        </a>
+
+        <a href="gebaeudereinigung-friedrichshafen.html" class="service-card reveal delay-400">
+          <div class="text-2xl mb-3">🏗️</div>
+          <h3 class="font-bold text-gray-900 mb-1 text-sm">Gebäudereinigung</h3>
+          <p class="text-xs text-gray-500 mb-3 leading-relaxed">Treppenhäuser, Eingangsbereiche, Allgemeinflächen – dauerhaft gepflegt.</p>
+          <div class="text-primary text-xs font-semibold">Mehr erfahren →</div>
+        </a>
+      </div>
+
+      <div class="text-center mt-8 reveal">
+        <a href="leistungen.html" class="btn-outline">Alle Leistungen ansehen →</a>
       </div>
     </div>
   </section>
 
   <!-- ── Process ─────────────────────────────────────────────── -->
-  <section class="py-16 md:py-20 bg-white">
-    <div class="max-w-6xl mx-auto px-4">
-      <div class="text-center mb-12 reveal">
+  <section class="py-14 md:py-20 bg-white">
+    <div class="max-w-5xl mx-auto px-4">
+      <div class="text-center mb-10 reveal">
         <div class="section-badge">So läuft es ab</div>
-        <h2 class="text-2xl md:text-3xl font-extrabold text-gray-900 mt-2">
-          Vom Erstanruf zur sauberen Fläche
-        </h2>
+        <h2 class="text-2xl md:text-3xl font-extrabold text-gray-900 mt-2">Vom ersten Kontakt zur sauberen Fläche</h2>
+        <p class="text-gray-500 mt-2 text-sm">Kein Papierkram, keine wochenlange Wartezeit.</p>
       </div>
 
       <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
         <div class="text-center reveal delay-100">
-          <div class="w-14 h-14 rounded-full bg-primary text-white text-xl font-extrabold flex items-center justify-center mx-auto mb-4">1</div>
-          <h3 class="font-bold text-gray-900 mb-2">Anfrage senden</h3>
-          <p class="text-sm text-gray-600">Per Telefon, WhatsApp oder Kontaktformular – wie es Ihnen passt.</p>
+          <div class="w-12 h-12 rounded-full bg-primary text-white font-extrabold text-lg flex items-center justify-center mx-auto mb-3">1</div>
+          <h3 class="font-bold text-gray-900 text-sm mb-1">Sie melden sich</h3>
+          <p class="text-xs text-gray-500 leading-relaxed">WhatsApp, Telefon oder Formular – wie es Ihnen passt. Dauert 2 Minuten.</p>
         </div>
         <div class="text-center reveal delay-200">
-          <div class="w-14 h-14 rounded-full bg-primary text-white text-xl font-extrabold flex items-center justify-center mx-auto mb-4">2</div>
-          <h3 class="font-bold text-gray-900 mb-2">Angebot erhalten</h3>
-          <p class="text-sm text-gray-600">Klares, transparentes Angebot – noch am selben Tag, ohne versteckte Kosten.</p>
+          <div class="w-12 h-12 rounded-full bg-primary text-white font-extrabold text-lg flex items-center justify-center mx-auto mb-3">2</div>
+          <h3 class="font-bold text-gray-900 text-sm mb-1">Khaled meldet sich</h3>
+          <p class="text-xs text-gray-500 leading-relaxed">Persönliche Rückmeldung am selben Tag. Kein Formularantwort-Automat.</p>
         </div>
         <div class="text-center reveal delay-300">
-          <div class="w-14 h-14 rounded-full bg-primary text-white text-xl font-extrabold flex items-center justify-center mx-auto mb-4">3</div>
-          <h3 class="font-bold text-gray-900 mb-2">Termin vereinbaren</h3>
-          <p class="text-sm text-gray-600">Flexibel nach Ihren Wünschen – auch kurzfristig oder außerhalb der Geschäftszeiten.</p>
+          <div class="w-12 h-12 rounded-full bg-primary text-white font-extrabold text-lg flex items-center justify-center mx-auto mb-3">3</div>
+          <h3 class="font-bold text-gray-900 text-sm mb-1">Klares Angebot</h3>
+          <p class="text-xs text-gray-500 leading-relaxed">Individuell nach Ihrem Objekt. Keine Pauschalen, keine versteckten Kosten.</p>
         </div>
         <div class="text-center reveal delay-400">
-          <div class="w-14 h-14 rounded-full bg-primary text-white text-xl font-extrabold flex items-center justify-center mx-auto mb-4">4</div>
-          <h3 class="font-bold text-gray-900 mb-2">Reinigung durchführen</h3>
-          <p class="text-sm text-gray-600">Gründlich, pünktlich, ohne Ablenkung. Sie können sich auf Ihr Kerngeschäft konzentrieren.</p>
+          <div class="w-12 h-12 rounded-full bg-primary text-white font-extrabold text-lg flex items-center justify-center mx-auto mb-3">4</div>
+          <h3 class="font-bold text-gray-900 text-sm mb-1">Termin & Reinigung</h3>
+          <p class="text-xs text-gray-500 leading-relaxed">Oft noch in dieser Woche. Gründlich ausgeführt. Nachbesserung kostenlos, falls nötig.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ── Testimonials ───────────────────────────────────────── -->
-  <section class="py-16 md:py-20 bg-slate-50">
+  <!-- ── Zielgruppen ────────────────────────────────────────── -->
+  <section class="py-14 bg-slate-50">
     <div class="max-w-6xl mx-auto px-4">
-      <div class="text-center mb-12 reveal">
-        <div class="section-badge">Kundenstimmen</div>
-        <h2 class="text-2xl md:text-3xl font-extrabold text-gray-900 mt-2">
-          Was unsere Kunden sagen
-        </h2>
+      <div class="text-center mb-10 reveal">
+        <div class="section-badge">Für wen</div>
+        <h2 class="text-2xl font-extrabold text-gray-900 mt-2">Wer K.K. Reinigung bucht</h2>
       </div>
+      <div class="grid sm:grid-cols-3 gap-5">
+        <div class="bg-white rounded-xl p-5 border border-gray-100 reveal delay-100">
+          <div class="text-2xl mb-2">🏢</div>
+          <h3 class="font-bold text-gray-900 text-sm mb-2">Büros & Unternehmen</h3>
+          <p class="text-xs text-gray-600 leading-relaxed">Regelmäßige Unterhalts- oder Büroreinigung für kleine bis mittlere Gewerbeflächen. Wöchentlich oder nach Bedarf.</p>
+          <a href="bueroreinigung-friedrichshafen.html" class="text-primary text-xs font-semibold mt-3 block">Büroreinigung →</a>
+        </div>
+        <div class="bg-white rounded-xl p-5 border border-gray-100 reveal delay-200">
+          <div class="text-2xl mb-2">🏗️</div>
+          <h3 class="font-bold text-gray-900 text-sm mb-2">Bauherren & Handwerker</h3>
+          <p class="text-xs text-gray-600 leading-relaxed">Bauendreinigung vor Übergabe – termingerecht, vollständig, ohne Nacharbeit. Auch kurzfristig buchbar.</p>
+          <a href="bauendreinigung-friedrichshafen.html" class="text-primary text-xs font-semibold mt-3 block">Bauendreinigung →</a>
+        </div>
+        <div class="bg-white rounded-xl p-5 border border-gray-100 reveal delay-300">
+          <div class="text-2xl mb-2">🏠</div>
+          <h3 class="font-bold text-gray-900 text-sm mb-2">Hausverwaltungen & Eigentümer</h3>
+          <p class="text-xs text-gray-600 leading-relaxed">Treppenhausreinigung, Gemeinschaftsflächen, Sanitäranlagen – verlässlich und regelmäßig.</p>
+          <a href="gebaeudereinigung-friedrichshafen.html" class="text-primary text-xs font-semibold mt-3 block">Gebäudereinigung →</a>
+        </div>
+      </div>
+    </div>
+  </section>
 
-      <div class="grid md:grid-cols-3 gap-6">
-        <div class="testimonial-card reveal delay-100">
-          <div class="stars mb-2">★★★★★</div>
-          <p class="text-gray-700 text-sm leading-relaxed mb-4">
-            „Unser Büro wird seit einem Jahr wöchentlich gereinigt – immer zuverlässig, immer sauber.
-            Keine Diskussionen, keine Ausfälle. Klare Empfehlung."
+  <!-- ── Warum K.K. Reinigung ────────────────────────────────── -->
+  <section class="py-14 md:py-20 bg-white">
+    <div class="max-w-5xl mx-auto px-4">
+      <div class="grid md:grid-cols-2 gap-12 items-start">
+        <div class="reveal">
+          <div class="section-badge">Warum K.K. Reinigung</div>
+          <h2 class="text-2xl md:text-3xl font-extrabold text-gray-900 mt-2 mb-4">
+            Nicht die größte Firma. Aber eine, die das wirklich ernst nimmt.
+          </h2>
+          <p class="text-gray-600 mb-4 leading-relaxed text-sm">
+            Große Reinigungsfirmen vergeben Aufträge weiter, tauschen Personal ständig aus
+            und sind bei Problemen schwer erreichbar. K.K. Reinigung funktioniert anders.
           </p>
-          <div class="flex items-center gap-2">
-            <div class="w-8 h-8 rounded-full bg-blue-100 text-primary font-bold text-xs flex items-center justify-center">TM</div>
-            <div>
-              <div class="text-sm font-semibold text-gray-900">Thomas M.</div>
-              <div class="text-xs text-gray-500">Bürokunde, Friedrichshafen</div>
-            </div>
-          </div>
+          <p class="text-gray-600 mb-6 leading-relaxed text-sm">
+            Khaled Kurdi koordiniert jeden Auftrag persönlich und stellt sicher,
+            dass die Qualität stimmt – nicht einmal, sondern jedes Mal.
+            Wenn etwas nicht passt, gibt es einen direkten Ansprechpartner, der das löst.
+          </p>
+          <ul class="check-list space-y-2 text-sm">
+            <li>Persönliche Erreichbarkeit – Khaled Kurdi antwortet selbst</li>
+            <li>Rückmeldung am selben Tag – kein tagelanger E-Mail-Verkehr</li>
+            <li>Erfahrung in anspruchsvollen Hygienebereichen</li>
+            <li>Klares Angebot ohne versteckte Kosten</li>
+            <li>Nachbesserung kostenlos – kein Diskussionsbedarf</li>
+            <li>Keine Mindestlaufzeit beim Ersteinsatz</li>
+          </ul>
         </div>
 
-        <div class="testimonial-card reveal delay-200">
-          <div class="stars mb-2">★★★★★</div>
-          <p class="text-gray-700 text-sm leading-relaxed mb-4">
-            „Bauendreinigung kurzfristig angefragt und innerhalb von zwei Tagen alles übergabereif.
-            Schnell, gründlich, unkompliziert – genau das, was ich gebraucht habe."
-          </p>
-          <div class="flex items-center gap-2">
-            <div class="w-8 h-8 rounded-full bg-blue-100 text-primary font-bold text-xs flex items-center justify-center">SK</div>
-            <div>
-              <div class="text-sm font-semibold text-gray-900">Sandra K.</div>
-              <div class="text-xs text-gray-500">Bauherrin, Lindau</div>
+        <div class="reveal delay-200 space-y-4">
+          <div class="bg-primary text-white rounded-2xl p-6">
+            <h3 class="font-bold mb-3">Direkt anfragen</h3>
+            <p class="text-blue-200 text-sm mb-4 leading-relaxed">Schreiben Sie kurz was Sie brauchen – Rückmeldung am selben Tag, Angebot innerhalb von 24 Stunden.</p>
+            <div class="space-y-2">
+              <a href="https://wa.me/491778740889?text=Hallo%20Herr%20Kurdi%2C%20ich%20brauche%20eine%20Reinigung%20in%20Friedrichshafen." class="flex items-center justify-between bg-[#25d366] text-white rounded-xl px-4 py-3 text-sm font-semibold hover:bg-[#1ebe5a] transition-colors">
+                <span>💬 WhatsApp</span><span class="text-xs opacity-80">Schnellste Antwort</span>
+              </a>
+              <a href="tel:01778740889" class="flex items-center justify-between bg-white/10 border border-white/20 text-white rounded-xl px-4 py-3 text-sm font-semibold hover:bg-white/20 transition-colors">
+                <span>📞 0177 8740889</span><span class="text-xs opacity-80">Mo–Sa 7–20 Uhr</span>
+              </a>
             </div>
           </div>
-        </div>
 
-        <div class="testimonial-card reveal delay-300">
-          <div class="stars mb-2">★★★★★</div>
-          <p class="text-gray-700 text-sm leading-relaxed mb-4">
-            „Endlich eine Reinigungsfirma, die einfach macht, was sie verspricht.
-            Kein Stress, kein Nachhaken – gute Ergebnisse von Anfang an."
-          </p>
-          <div class="flex items-center gap-2">
-            <div class="w-8 h-8 rounded-full bg-blue-100 text-primary font-bold text-xs flex items-center justify-center">MR</div>
-            <div>
-              <div class="text-sm font-semibold text-gray-900">Markus R.</div>
-              <div class="text-xs text-gray-500">Gewerbetreibender, Ravensburg</div>
+          <div class="bg-blue-50 rounded-xl p-4 border border-blue-100">
+            <div class="text-xs font-bold text-blue-800 uppercase tracking-wide mb-2">Erfahrung & Referenzen</div>
+            <div class="space-y-2 text-sm text-gray-700">
+              <div class="flex items-start gap-2"><span class="text-green-500 font-bold flex-shrink-0">✓</span><span>Über 10 gewerbliche Kunden im Bodenseekreis</span></div>
+              <div class="flex items-start gap-2"><span class="text-green-500 font-bold flex-shrink-0">✓</span><span>Büroreinigung & Unterhaltsreinigung für KMU</span></div>
+              <div class="flex items-start gap-2"><span class="text-green-500 font-bold flex-shrink-0">✓</span><span>Sanitäranlagen an Autobahnraststätten betreut</span></div>
+              <div class="flex items-start gap-2"><span class="text-green-500 font-bold flex-shrink-0">✓</span><span>Lokal in Friedrichshafen, Lindau &amp; Ravensburg</span></div>
             </div>
           </div>
         </div>
@@ -399,15 +411,12 @@
     </div>
   </section>
 
-  <!-- ── Regional coverage ──────────────────────────────────── -->
-  <section class="py-14 bg-white">
+  <!-- ── Regionen ───────────────────────────────────────────── -->
+  <section class="py-12 bg-slate-50">
     <div class="max-w-6xl mx-auto px-4">
-      <div class="text-center mb-8 reveal">
+      <div class="text-center mb-6 reveal">
         <div class="section-badge">Einsatzgebiet</div>
-        <h2 class="text-2xl font-extrabold text-gray-900 mt-2">
-          Reinigungsservice im Bodenseekreis
-        </h2>
-        <p class="text-gray-500 mt-2 max-w-xl mx-auto text-sm">Wir sind im gesamten Bodenseekreis aktiv. Kurze Wege, schnelle Reaktionszeiten.</p>
+        <h2 class="text-xl font-extrabold text-gray-900 mt-2">Reinigungsservice im Bodenseekreis</h2>
       </div>
       <div class="flex flex-wrap justify-center gap-3 reveal delay-100">
         <a href="index.html" class="region-pill">📍 Friedrichshafen</a>
@@ -419,31 +428,94 @@
         <span class="region-pill">📍 Langenargen</span>
         <span class="region-pill">📍 Kressbronn</span>
       </div>
+      <p class="text-center text-xs text-gray-500 mt-4">Nicht sicher ob wir in Ihrer Nähe tätig sind? <a href="kontakt.html" class="text-primary underline">Einfach fragen.</a></p>
     </div>
   </section>
 
-  <!-- ── CTA ────────────────────────────────────────────────── -->
-  <section class="cta-section py-16 md:py-20">
-    <div class="max-w-4xl mx-auto px-4 text-center text-white reveal">
-      <div class="section-badge" style="color:#93c5fd; border-color: rgba(147,197,253,0.3); background: rgba(255,255,255,0.08);">Jetzt anfragen</div>
-      <h2 class="text-2xl md:text-3xl font-extrabold mt-2 mb-3">
-        Reinigungsfirma Friedrichshafen – Kostenloses Angebot
+  <!-- ── FAQ ────────────────────────────────────────────────── -->
+  <section class="py-14 md:py-20 bg-white">
+    <div class="max-w-3xl mx-auto px-4">
+      <div class="text-center mb-10 reveal">
+        <div class="section-badge">Häufige Fragen</div>
+        <h2 class="text-2xl font-extrabold text-gray-900 mt-2">Was Kunden vorher wissen wollen</h2>
+      </div>
+      <div class="space-y-3 reveal">
+        <details class="bg-slate-50 rounded-xl border border-gray-100 group">
+          <summary class="flex items-center justify-between cursor-pointer px-5 py-4 font-semibold text-sm text-gray-900 list-none select-none">
+            Wie schnell kann ich einen Termin bekommen?
+            <span class="text-gray-400 group-open:rotate-180 transition-transform text-lg leading-none flex-shrink-0 ml-3">↓</span>
+          </summary>
+          <div class="px-5 pb-4 text-sm text-gray-600 leading-relaxed">
+            In den meisten Fällen bieten wir einen Termin innerhalb von 3–7 Werktagen an. Bei Bauendreinigungen mit festem Übergabetermin oder dringendem Bedarf klären wir kurzfristige Lösungen direkt per WhatsApp oder Telefon.
+          </div>
+        </details>
+
+        <details class="bg-slate-50 rounded-xl border border-gray-100 group">
+          <summary class="flex items-center justify-between cursor-pointer px-5 py-4 font-semibold text-sm text-gray-900 list-none select-none">
+            Was kostet eine Büroreinigung in Friedrichshafen?
+            <span class="text-gray-400 group-open:rotate-180 transition-transform text-lg leading-none flex-shrink-0 ml-3">↓</span>
+          </summary>
+          <div class="px-5 pb-4 text-sm text-gray-600 leading-relaxed">
+            Der Preis hängt von Fläche, Frequenz und Aufwand ab – und lässt sich seriös nur nach einem kurzen Gespräch nennen. Wir erstellen Ihnen ein konkretes, transparentes Angebot ohne Pauschalpreise. Melden Sie sich kurz – das dauert 5 Minuten.
+          </div>
+        </details>
+
+        <details class="bg-slate-50 rounded-xl border border-gray-100 group">
+          <summary class="flex items-center justify-between cursor-pointer px-5 py-4 font-semibold text-sm text-gray-900 list-none select-none">
+            Was wenn ich nicht zufrieden bin?
+            <span class="text-gray-400 group-open:rotate-180 transition-transform text-lg leading-none flex-shrink-0 ml-3">↓</span>
+          </summary>
+          <div class="px-5 pb-4 text-sm text-gray-600 leading-relaxed">
+            Wir kommen nochmal – kostenlos. Keine Diskussion, kein Aufwand für Sie. Wenn etwas nicht dem vereinbarten Standard entspricht, wird das behoben. Das ist für uns selbstverständlich, nicht ein Kulanzangebot.
+          </div>
+        </details>
+
+        <details class="bg-slate-50 rounded-xl border border-gray-100 group">
+          <summary class="flex items-center justify-between cursor-pointer px-5 py-4 font-semibold text-sm text-gray-900 list-none select-none">
+            Muss ich einen Vertrag unterschreiben?
+            <span class="text-gray-400 group-open:rotate-180 transition-transform text-lg leading-none flex-shrink-0 ml-3">↓</span>
+          </summary>
+          <div class="px-5 pb-4 text-sm text-gray-600 leading-relaxed">
+            Beim Ersteinsatz nicht. Probieren Sie uns aus, bevor Sie sich für eine langfristige Zusammenarbeit entscheiden. Für regelmäßige Reinigungen werden die Konditionen klar vereinbart – ohne versteckte Bindungen.
+          </div>
+        </details>
+
+        <details class="bg-slate-50 rounded-xl border border-gray-100 group">
+          <summary class="flex items-center justify-between cursor-pointer px-5 py-4 font-semibold text-sm text-gray-900 list-none select-none">
+            Reinigen Sie auch Privatwohnungen?
+            <span class="text-gray-400 group-open:rotate-180 transition-transform text-lg leading-none flex-shrink-0 ml-3">↓</span>
+          </summary>
+          <div class="px-5 pb-4 text-sm text-gray-600 leading-relaxed">
+            Unser Schwerpunkt liegt auf Gewerbe, Büros und gewerblichen Objekten. Für private Anfragen – zum Beispiel Bauendreinigung nach Renovierung oder regelmäßige Haushaltsreinigung – nehmen Sie einfach Kontakt auf. Wir klären das direkt.
+          </div>
+        </details>
+      </div>
+      <div class="text-center mt-6 reveal">
+        <a href="faq.html" class="text-primary text-sm font-semibold hover:underline">Alle Fragen ansehen →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── CTA final ──────────────────────────────────────────── -->
+  <section class="cta-section py-14 md:py-20">
+    <div class="max-w-3xl mx-auto px-4 text-center text-white reveal">
+      <h2 class="text-2xl md:text-3xl font-extrabold mb-3">
+        Bereit für saubere Räume?
       </h2>
-      <p class="text-blue-200 mb-8 max-w-xl mx-auto">
-        Schildern Sie uns kurz Ihren Bedarf. Wir melden uns noch am selben Tag mit einem konkreten Angebot.
+      <p class="text-blue-200 mb-2 text-sm max-w-xl mx-auto">
+        Schreiben Sie uns kurz was Sie brauchen.<br>
+        Rückmeldung noch am selben Tag. Kein Formularantwort-Automat.
       </p>
-      <div class="flex flex-col sm:flex-row justify-center gap-4">
-        <a href="tel:01778740889" class="btn-primary bg-white !text-primary hover:bg-gray-100 py-3 px-8 text-base">
+      <p class="text-blue-300 text-xs mb-7">Unverbindlich · Keine Mindestlaufzeit beim Ersteinsatz</p>
+      <div class="flex flex-col sm:flex-row justify-center gap-3">
+        <a href="https://wa.me/491778740889?text=Hallo%20Herr%20Kurdi%2C%20ich%20interessiere%20mich%20f%C3%BCr%20eine%20Reinigung." class="btn-wa py-3.5 px-7 text-base">
+          💬 WhatsApp – schnellste Antwort
+        </a>
+        <a href="tel:01778740889" class="btn-primary bg-white !text-primary hover:bg-gray-100 py-3.5 px-7 text-base">
           📞 0177 8740889
         </a>
-        <a href="https://wa.me/491778740889?text=Hallo%2C%20ich%20interessiere%20mich%20f%C3%BCr%20Ihren%20Reinigungsservice." class="btn-wa py-3 px-8 text-base">
-          💬 WhatsApp schreiben
-        </a>
-        <a href="kontakt.html" class="btn-outline border-white !text-white hover:bg-white hover:!text-primary py-3 px-8 text-base">
-          Angebot per Formular
-        </a>
       </div>
-      <p class="text-blue-300 text-xs mt-4">Kostenlos & unverbindlich – Mo–Sa 7–20 Uhr</p>
+      <p class="text-blue-400 text-xs mt-4">Mo–Sa 7–20 Uhr · Bei WhatsApp oft Antwort in unter einer Stunde</p>
     </div>
   </section>
 
@@ -452,36 +524,31 @@
 <!-- ── Footer ─────────────────────────────────────────────── -->
 <footer class="bg-gray-900 text-gray-400 pt-12 pb-6">
   <div class="max-w-6xl mx-auto px-4">
-    <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-8 mb-10">
+    <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
       <div class="sm:col-span-2 lg:col-span-1">
         <a href="index.html" class="flex items-center gap-2 mb-3">
           <img src="apple-touch-icon.png" alt="K.K. Reinigung" class="w-8 h-8 rounded-lg">
           <span class="font-bold text-white text-sm">K.K. Reinigung</span>
         </a>
-        <p class="text-sm leading-relaxed">Ihre Reinigungsfirma für Büros, Gewerbe und Objekte im Bodenseekreis.</p>
-        <div class="mt-4 text-sm space-y-1">
-          <div><a href="tel:01778740889" class="text-blue-400">📞 0177 8740889</a></div>
-          <div><a href="mailto:kurdi.reinigungsservice@gmail.com" class="text-blue-400">✉ kurdi.reinigungsservice@gmail.com</a></div>
+        <p class="text-xs leading-relaxed mb-4">Persönlicher Reinigungsservice für Büros und Gewerbe im Bodenseekreis.</p>
+        <div class="space-y-2 text-sm">
+          <div><a href="tel:01778740889" class="text-blue-400 hover:text-blue-300 flex items-center gap-1.5">📞 0177 8740889</a></div>
+          <div><a href="https://wa.me/491778740889" class="text-green-400 hover:text-green-300 flex items-center gap-1.5">💬 WhatsApp schreiben</a></div>
+          <div><a href="mailto:kurdi.reinigungsservice@gmail.com" class="text-blue-400 hover:text-blue-300 text-xs break-all">kurdi.reinigungsservice@gmail.com</a></div>
         </div>
-      </div>
-
-      <div>
-        <h4 class="text-white font-semibold text-sm mb-3">Navigation</h4>
-        <ul class="space-y-2 text-sm">
-          <li><a href="index.html">Start</a></li>
-          <li><a href="leistungen.html">Leistungen</a></li>
-          <li><a href="ueber-uns.html">Über uns</a></li>
-          <li><a href="kontakt.html">Kontakt</a></li>
-        </ul>
+        <div class="mt-3 text-xs text-gray-600">
+          Heinrich-Heine-Str. 33<br>88045 Friedrichshafen
+        </div>
       </div>
 
       <div>
         <h4 class="text-white font-semibold text-sm mb-3">Leistungen</h4>
         <ul class="space-y-2 text-sm">
+          <li><a href="unterhaltsreinigung-friedrichshafen.html">Unterhaltsreinigung</a></li>
           <li><a href="bueroreinigung-friedrichshafen.html">Büroreinigung Friedrichshafen</a></li>
           <li><a href="bauendreinigung-friedrichshafen.html">Bauendreinigung Friedrichshafen</a></li>
-          <li><a href="leistungen.html#gebaeudereinigung">Gebäudereinigung</a></li>
-          <li><a href="leistungen.html#unterhaltsreinigung">Unterhaltsreinigung</a></li>
+          <li><a href="gebaeudereinigung-friedrichshafen.html">Gebäudereinigung</a></li>
+          <li><a href="leistungen.html">Alle Leistungen →</a></li>
         </ul>
       </div>
 
@@ -494,23 +561,36 @@
           <li><a href="leistungen.html">Gebäudereinigung Bodenseekreis</a></li>
         </ul>
       </div>
+
+      <div>
+        <h4 class="text-white font-semibold text-sm mb-3">Unternehmen</h4>
+        <ul class="space-y-2 text-sm">
+          <li><a href="ueber-uns.html">Über uns</a></li>
+          <li><a href="faq.html">Häufige Fragen</a></li>
+          <li><a href="kontakt.html">Kontakt & Angebot</a></li>
+          <li><a href="impressum.html">Impressum</a></li>
+          <li><a href="datenschutz.html">Datenschutz</a></li>
+        </ul>
+        <div class="mt-5 pt-4 border-t border-gray-800">
+          <p class="text-xs text-gray-600 mb-2">Direkt anfragen:</p>
+          <a href="kontakt.html" class="text-xs text-white font-semibold bg-primary rounded-lg px-3 py-2 inline-block hover:bg-primary-dark transition-colors">Kostenloses Angebot →</a>
+        </div>
+      </div>
     </div>
 
     <div class="border-t border-gray-800 pt-5 flex flex-col sm:flex-row justify-between items-center text-xs gap-2">
-      <p>© 2025 K.K. Reinigung – Friedrichshafen</p>
+      <p>© 2025 K.K. Reinigung · Khaled Kurdi · Friedrichshafen</p>
       <div class="flex gap-4">
-        <a href="impressum.html">Impressum</a>
-        <a href="datenschutz.html">Datenschutz</a>
+        <a href="impressum.html" class="hover:text-gray-300">Impressum</a>
+        <a href="datenschutz.html" class="hover:text-gray-300">Datenschutz</a>
       </div>
     </div>
   </div>
 </footer>
 
-<!-- ── WhatsApp sticky button ─────────────────────────────── -->
+<!-- WhatsApp sticky -->
 <a id="wa-btn" href="https://wa.me/491778740889?text=Hallo%2C%20ich%20interessiere%20mich%20f%C3%BCr%20Ihren%20Reinigungsservice." aria-label="WhatsApp schreiben" title="WhatsApp schreiben">
-  <svg width="28" height="28" viewBox="0 0 24 24" fill="white">
-    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
-  </svg>
+  <svg width="28" height="28" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
 </a>
 
 <script src="script.js"></script>
