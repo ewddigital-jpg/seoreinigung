@@ -510,7 +510,7 @@
 </div>
 <script>
 (function(){
-  var k='kk-consent',v=localStorage.getItem(k);
+  var k='kk-consent',sk='kk-banner-shown',v=localStorage.getItem(k);
   function loadFonts(){
     var l=document.createElement('link');
     l.rel='stylesheet';
@@ -519,6 +519,8 @@
   }
   if(v==='all'){loadFonts();return;}
   if(v==='necessary'){return;}
+  if(sessionStorage.getItem(sk)){return;}
+  sessionStorage.setItem(sk,'1');
   document.getElementById('kk-ckb').style.display='block';
   window.kkCkAccept=function(){localStorage.setItem(k,'all');loadFonts();document.getElementById('kk-ckb').style.display='none';};
   window.kkCkNecessary=function(){localStorage.setItem(k,'necessary');document.getElementById('kk-ckb').style.display='none';};
