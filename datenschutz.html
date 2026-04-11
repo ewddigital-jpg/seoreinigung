@@ -107,16 +107,18 @@
         </div>
 
         <div>
-          <h2 class="text-lg font-bold text-gray-900 mb-2">4. Cookies</h2>
-          <p>Diese Website verwendet ausschließlich technisch notwendige Cookies.</p>
-          <ul class="mt-3 space-y-1 list-disc list-inside text-gray-600">
-            <li>Keine Tracking-Cookies</li>
-            <li>Keine Analyse-Tools</li>
-          </ul>
+          <h2 class="text-lg font-bold text-gray-900 mb-2">4. Cookies &amp; lokaler Speicher</h2>
+          <p>Diese Website verwendet <strong>keine Tracking-Cookies</strong>. Ihre Cookie-Einwilligung wird im lokalen Speicher (localStorage) Ihres Browsers gespeichert (Schlüssel: <code>kk-consent</code>). Dieser Eintrag verlässt Ihren Browser nicht.</p>
+          <p class="mt-2">Bei Zustimmung zu „Alle akzeptieren" werden Google Fonts dynamisch nachgeladen (Verbindung zu Google-Servern, USA). Sie können Ihre Einwilligung jederzeit widerrufen, indem Sie den Browser-Cache leeren.</p>
         </div>
 
         <div>
-          <h2 class="text-lg font-bold text-gray-900 mb-2">5. Kontaktaufnahme</h2>
+          <h2 class="text-lg font-bold text-gray-900 mb-2">5. KI-Chatbot</h2>
+          <p>Auf dieser Website ist ein KI-Assistent eingebunden. Ihre Chatnachrichten werden zur Verarbeitung an die API von <strong>OpenAI, LLC</strong> (San Francisco, USA) übertragen. OpenAI verarbeitet diese Daten ausschließlich zur Beantwortung Ihrer Anfrage und verwendet sie gemäß seinen Nutzungsbedingungen nicht zum Training von Modellen (API-Nutzung).</p>
+          <p class="mt-2">Die Übertragung in die USA erfolgt auf Grundlage der EU-Standardvertragsklauseln gemäß Art. 46 DSGVO. Chatnachrichten werden nicht dauerhaft gespeichert. Wenn Sie im Chat Ihren Namen oder Ihre E-Mail-Adresse hinterlassen, erhalten wir eine Benachrichtigung zur Kontaktaufnahme. Rechtsgrundlage: Art. 6 Abs. 1 lit. b und f DSGVO.</p>
+        </div>
+        <div>
+          <h2 class="text-lg font-bold text-gray-900 mb-2">6. Kontaktaufnahme</h2>
           <p>Wenn Sie uns per Kontaktformular oder E-Mail kontaktieren, werden folgende Daten verarbeitet:</p>
           <ul class="mt-3 space-y-1 list-disc list-inside text-gray-600">
             <li>Name</li>
@@ -127,12 +129,12 @@
         </div>
 
         <div>
-          <h2 class="text-lg font-bold text-gray-900 mb-2">6. SSL-/TLS-Verschlüsselung</h2>
+          <h2 class="text-lg font-bold text-gray-900 mb-2">7. SSL-/TLS-Verschlüsselung</h2>
           <p>Diese Website nutzt eine SSL-Verschlüsselung zur sicheren Übertragung von Daten.</p>
         </div>
 
         <div>
-          <h2 class="text-lg font-bold text-gray-900 mb-2">7. Rechte der betroffenen Personen</h2>
+          <h2 class="text-lg font-bold text-gray-900 mb-2">8. Rechte der betroffenen Personen</h2>
           <ul class="space-y-1 list-disc list-inside text-gray-600">
             <li>Auskunft</li>
             <li>Berichtigung</li>
@@ -144,8 +146,8 @@
         </div>
 
         <div>
-          <h2 class="text-lg font-bold text-gray-900 mb-2">8. Aktualität dieser Datenschutzerklärung</h2>
-          <p>Stand: Januar 2025</p>
+          <h2 class="text-lg font-bold text-gray-900 mb-2">9. Aktualität dieser Datenschutzerklärung</h2>
+          <p>Stand: April 2026</p>
         </div>
 
       </div>
@@ -207,5 +209,37 @@
 </footer>
 
 <script src="script.js"></script>
+
+<!-- KK Cookie Banner -->
+<div id="kk-ckb" style="display:none;position:fixed;bottom:0;left:0;right:0;z-index:99998;background:#fff;border-top:2px solid #1a3a5c;padding:18px 24px;box-shadow:0 -4px 24px rgba(0,0,0,.10);font-family:Inter,sans-serif">
+  <div style="max-width:900px;margin:0 auto;display:flex;align-items:center;gap:16px;flex-wrap:wrap">
+    <p style="flex:1;min-width:220px;font-size:.82rem;color:#374151;margin:0;line-height:1.6">
+      Wir verwenden <strong>keine Tracking-Cookies</strong>. Ihre Cookie-Auswahl speichern wir im lokalen Browserspeicher.
+      Bei „Alle akzeptieren" laden wir Google Fonts nach. Unser <strong>KI-Assistent</strong> überträgt Chatnachrichten an OpenAI (USA) zur Verarbeitung – nur für die Dauer des Gesprächs.
+      <a href="datenschutz.html" style="color:#1a3a5c;font-weight:600">Mehr erfahren</a>
+    </p>
+    <div style="display:flex;gap:8px;flex-shrink:0">
+      <button onclick="kkCkNecessary()" type="button" style="padding:.5rem 1.1rem;border:1.5px solid #1a3a5c;border-radius:8px;background:#fff;color:#1a3a5c;font-size:.82rem;font-weight:600;cursor:pointer;font-family:Inter,sans-serif">Nur notwendige</button>
+      <button onclick="kkCkAccept()" type="button" style="padding:.5rem 1.1rem;border:none;border-radius:8px;background:#1a3a5c;color:#fff;font-size:.82rem;font-weight:600;cursor:pointer;font-family:Inter,sans-serif">Alle akzeptieren</button>
+    </div>
+  </div>
+</div>
+<script>
+(function(){
+  var k='kk-consent',v=localStorage.getItem(k);
+  function loadFonts(){
+    var l=document.createElement('link');
+    l.rel='stylesheet';
+    l.href='https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap';
+    document.head.appendChild(l);
+  }
+  if(v==='all'){loadFonts();return;}
+  if(v==='necessary'){return;}
+  document.getElementById('kk-ckb').style.display='block';
+  window.kkCkAccept=function(){localStorage.setItem(k,'all');loadFonts();document.getElementById('kk-ckb').style.display='none';};
+  window.kkCkNecessary=function(){localStorage.setItem(k,'necessary');document.getElementById('kk-ckb').style.display='none';};
+})();
+</script>
+<!-- /KK Cookie Banner -->
 </body>
 </html>
