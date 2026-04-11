@@ -368,7 +368,7 @@
   function addMsg(role,html){
     var d=document.createElement('div');
     d.className='km'+(role==='user'?' u':'');
-    var av='<div class="kmav">'+(role==='user'?'Sie':'<img src="apple-touch-icon.png" alt="" onerror="this.parentElement.textContent='KK'">') +'</div>';
+    var av='<div class="kmav">'+(role==='user'?'Sie':'<img src="apple-touch-icon.png" alt="" onerror="this.remove()">') +'</div>';
     d.innerHTML=av+'<div class="kmbub">'+html+'</div>';
     msgsEl.appendChild(d);
     msgsEl.scrollTop=msgsEl.scrollHeight;
