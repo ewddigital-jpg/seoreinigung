@@ -190,6 +190,27 @@ body {
   color: #fff;
 }
 
+/* Phone CTA in header – compact outlined pill */
+.btn-phone {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  border: 1.5px solid #1a3a5c;
+  color: #1a3a5c;
+  padding: 7px 14px;
+  border-radius: 7px;
+  font-weight: 600;
+  font-size: 0.875rem;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+}
+.btn-phone:hover {
+  background: #1a3a5c;
+  color: #fff;
+  box-shadow: 0 2px 10px rgba(26,58,92,0.20);
+}
+
 /* ── Hero ────────────────────────────────────────────────── */
 .hero-badge {
   display: inline-flex;
