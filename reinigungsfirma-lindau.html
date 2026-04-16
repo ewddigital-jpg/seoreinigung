@@ -26,12 +26,35 @@
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "LocalBusiness",
+    "@type": ["LocalBusiness", "ProfessionalService"],
     "name": "K.K. Reinigung – Reinigungsfirma Lindau",
-    "telephone": "+4917787408889",
+    "description": "Professionelle Gebäudereinigung, Büroreinigung und Unterhaltsreinigung in Lindau und Umgebung.",
+    "telephone": "+491778740889",
+    "email": "kurdi.reinigungsservice@gmail.com",
     "url": "https://kkreinigung.com/reinigungsfirma-lindau",
-    "address": { "@type": "PostalAddress", "addressLocality": "Lindau", "addressCountry": "DE" },
-    "areaServed": "Lindau"
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Heinrich-Heine-Straße 33",
+      "addressLocality": "Friedrichshafen",
+      "postalCode": "88045",
+      "addressRegion": "Baden-Württemberg",
+      "addressCountry": "DE"
+    },
+    "areaServed": [
+      { "@type": "City", "name": "Lindau" },
+      { "@type": "AdministrativeArea", "name": "Bodenseekreis" }
+    ],
+    "openingHours": "Mo-Sa 07:00-20:00",
+    "founder": { "@type": "Person", "name": "Khaled Kurdi" },
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Reinigungsleistungen Lindau",
+      "itemListElement": [
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Büroreinigung Lindau" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Unterhaltsreinigung Lindau" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Gebäudereinigung Lindau" } }
+      ]
+    }
   }
   </script>
 </head>

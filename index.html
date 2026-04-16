@@ -29,10 +29,10 @@
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "LocalBusiness",
+    "@type": ["LocalBusiness", "ProfessionalService"],
     "name": "K.K. Reinigung",
-    "description": "Professionelle Büroreinigung, Unterhaltsreinigung und Bauendreinigung in Friedrichshafen und Bodenseekreis.",
-    "telephone": "+4917787408889",
+    "description": "Professionelle Büroreinigung, Unterhaltsreinigung, Bauendreinigung und Gebäudereinigung in Friedrichshafen und dem Bodenseekreis.",
+    "telephone": "+491778740889",
     "email": "kurdi.reinigungsservice@gmail.com",
     "url": "https://kkreinigung.com",
     "founder": { "@type": "Person", "name": "Khaled Kurdi" },
@@ -49,15 +49,27 @@
       { "@type": "City", "name": "Friedrichshafen" },
       { "@type": "City", "name": "Lindau" },
       { "@type": "City", "name": "Ravensburg" },
+      { "@type": "City", "name": "Tettnang" },
+      { "@type": "City", "name": "Überlingen" },
       { "@type": "AdministrativeArea", "name": "Bodenseekreis" }
     ],
     "openingHours": "Mo-Sa 07:00-20:00",
     "priceRange": "€€",
     "contactPoint": {
       "@type": "ContactPoint",
-      "telephone": "+4917787408889",
+      "telephone": "+491778740889",
       "contactType": "customer service",
       "availableLanguage": ["German"]
+    },
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Reinigungsleistungen",
+      "itemListElement": [
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Büroreinigung", "url": "https://kkreinigung.com/bueroreinigung-friedrichshafen" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Unterhaltsreinigung", "url": "https://kkreinigung.com/unterhaltsreinigung-friedrichshafen" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Bauendreinigung", "url": "https://kkreinigung.com/bauendreinigung-friedrichshafen" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Gebäudereinigung", "url": "https://kkreinigung.com/gebaeudereinigung-friedrichshafen" } }
+      ]
     }
   }
   </script>

@@ -26,12 +26,35 @@
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "LocalBusiness",
+    "@type": ["LocalBusiness", "ProfessionalService"],
     "name": "K.K. Reinigung – Reinigungsfirma Ravensburg",
-    "telephone": "+4917787408889",
+    "description": "Professionelle Gebäudereinigung, Büroreinigung und Unterhaltsreinigung in Ravensburg und Umgebung.",
+    "telephone": "+491778740889",
+    "email": "kurdi.reinigungsservice@gmail.com",
     "url": "https://kkreinigung.com/reinigungsfirma-ravensburg",
-    "address": { "@type": "PostalAddress", "addressLocality": "Ravensburg", "addressCountry": "DE" },
-    "areaServed": "Ravensburg"
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Heinrich-Heine-Straße 33",
+      "addressLocality": "Friedrichshafen",
+      "postalCode": "88045",
+      "addressRegion": "Baden-Württemberg",
+      "addressCountry": "DE"
+    },
+    "areaServed": [
+      { "@type": "City", "name": "Ravensburg" },
+      { "@type": "AdministrativeArea", "name": "Bodenseekreis" }
+    ],
+    "openingHours": "Mo-Sa 07:00-20:00",
+    "founder": { "@type": "Person", "name": "Khaled Kurdi" },
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Reinigungsleistungen Ravensburg",
+      "itemListElement": [
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Büroreinigung Ravensburg" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Unterhaltsreinigung Ravensburg" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Gebäudereinigung Ravensburg" } }
+      ]
+    }
   }
   </script>
 </head>

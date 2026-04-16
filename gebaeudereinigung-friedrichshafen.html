@@ -28,14 +28,35 @@
     "@context": "https://schema.org",
     "@type": "Service",
     "name": "Gebäudereinigung Friedrichshafen",
+    "serviceType": "Gebäudereinigung",
+    "url": "https://kkreinigung.com/gebaeudereinigung-friedrichshafen",
+    "description": "Professionelle Gebäudereinigung für Treppenhäuser, Eingangsbereiche, Außenflächen und gewerbliche Objekte in Friedrichshafen und Bodenseekreis.",
+    "areaServed": [
+      { "@type": "City", "name": "Friedrichshafen" },
+      { "@type": "AdministrativeArea", "name": "Bodenseekreis" }
+    ],
     "provider": {
       "@type": "LocalBusiness",
       "name": "K.K. Reinigung",
-      "telephone": "+4917787408889",
-      "address": { "@type": "PostalAddress", "addressLocality": "Friedrichshafen", "addressCountry": "DE" }
+      "telephone": "+491778740889",
+      "email": "kurdi.reinigungsservice@gmail.com",
+      "url": "https://kkreinigung.com",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Heinrich-Heine-Straße 33",
+        "addressLocality": "Friedrichshafen",
+        "postalCode": "88045",
+        "addressRegion": "Baden-Württemberg",
+        "addressCountry": "DE"
+      },
+      "openingHours": "Mo-Sa 07:00-20:00"
     },
-    "areaServed": "Friedrichshafen",
-    "description": "Professionelle Gebäudereinigung für gewerbliche Objekte in Friedrichshafen und Bodenseekreis."
+    "offers": {
+      "@type": "Offer",
+      "availability": "https://schema.org/InStock",
+      "priceCurrency": "EUR",
+      "seller": { "@type": "LocalBusiness", "name": "K.K. Reinigung" }
+    }
   }
   </script>
 </head>
