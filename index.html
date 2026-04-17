@@ -469,7 +469,29 @@
   #kk-send{background:#1a3a5c;border:none;border-radius:10px;width:36px;height:36px;cursor:pointer;display:flex;align-items:center;justify-content:center;flex-shrink:0;transition:background .2s}
   #kk-send:hover{background:#254d78}
   #kk-send svg{width:15px;height:15px;fill:none;stroke:#fff;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
-  @media(max-width:480px){#kk-box{width:calc(100vw - 24px);left:0;bottom:72px}}
+  @media(max-width:480px){
+    #kk-chat{bottom:16px!important;left:16px!important}
+    #kk-box{
+      position:fixed!important;
+      left:10px!important;
+      right:10px!important;
+      bottom:82px!important;
+      width:auto!important;
+      max-height:calc(100dvh - 100px);
+      display:flex;
+      flex-direction:column;
+      border-radius:16px;
+      overflow:hidden
+    }
+    #kk-msgs{height:auto!important;flex:1;min-height:200px;max-height:none}
+    #kk-input{font-size:16px!important;padding:.7rem .95rem!important}
+    #kk-send{width:44px!important;height:44px!important;border-radius:12px!important}
+    #kk-send svg{width:17px!important;height:17px!important}
+    .kk-q{padding:.55rem 1.1rem!important;font-size:.82rem!important;min-height:38px;display:inline-flex;align-items:center}
+    #kk-close{width:40px!important;height:40px!important;font-size:1rem!important}
+    #kk-form{padding:10px 12px!important;gap:10px!important}
+    #kk-qr{padding:10px 14px!important;gap:8px!important}
+  }
 </style>
 <div id="kk-chat">
   <button type="button" id="kk-toggle" aria-label="KI-Assistent öffnen">
@@ -502,7 +524,7 @@
   function addMsg(role,html){var d=document.createElement('div');d.className='km'+(role==='user'?' u':'');var av='<div class="kmav">'+(role==='user'?'Sie':'<img src="apple-touch-icon.png" alt="" onerror="this.remove()">') +'</div>';d.innerHTML=av+'<div class="kmbub">'+html+'</div>';msgsEl.appendChild(d);msgsEl.scrollTop=msgsEl.scrollHeight;return d;}
   function hideWA(){var el=document.getElementById('wa-btn');if(el)el.style.display='none';}
   function showWA(){var el=document.getElementById('wa-btn');if(el)el.style.display='';}
-  window.kkOpen=function(){if(isOpen)return;isOpen=true;document.getElementById('kk-box').style.display='block';document.getElementById('kk-toggle').style.opacity='.7';badgeEl.style.display='none';hideWA();if(msgs.length===0){setTimeout(function(){addMsg('bot','Hallo! Ich bin der KI-Assistent von <strong>K.K. Reinigung</strong>. Wie kann ich Ihnen helfen?');},300);}inputEl.focus();};
+  window.kkOpen=function(){if(isOpen)return;isOpen=true;document.getElementById('kk-box').style.display='flex';document.getElementById('kk-toggle').style.opacity='.7';badgeEl.style.display='none';hideWA();if(msgs.length===0){setTimeout(function(){addMsg('bot','Hallo! Ich bin der KI-Assistent von <strong>K.K. Reinigung</strong>. Wie kann ich Ihnen helfen?');},300);}if(window.innerWidth>480){inputEl.focus();}};
   window.kkClose=function(){isOpen=false;document.getElementById('kk-box').style.display='none';document.getElementById('kk-toggle').style.opacity='1';showWA();};
   window.kkSend=function(text){var msg=(text||inputEl.value).trim();if(!msg||busy)return;inputEl.value='';qrEl.style.display='none';addMsg('user',msg);msgs.push({role:'user',content:msg});busy=true;var typing=addMsg('bot','<span><i></i><i></i><i></i></span>');typing.classList.add('km-typing');var cbName='kkCb'+Date.now();window[cbName]=function(data){delete window[cbName];document.querySelectorAll('script[data-kk-cb]').forEach(function(s){s.remove();});typing.remove();busy=false;if(data&&data.reply){msgs.push({role:'assistant',content:data.reply});addMsg('bot',data.reply);}else{addMsg('bot','Entschuldigung, kurzer Fehler. Bitte direkt anrufen: <a href="tel:01778740889">0177 8740889</a>');}};var s=document.createElement('script');s.setAttribute('data-kk-cb','1');s.src=API+'?callback='+cbName+'&clientId='+encodeURIComponent(CLIENT)+'&messages='+encodeURIComponent(JSON.stringify(msgs));document.body.appendChild(s);};
   document.getElementById('kk-toggle').addEventListener('click',function(){window.kkOpen();});
