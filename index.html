@@ -483,10 +483,12 @@
       bottom:0!important;
       top:0!important;
       width:100%!important;
-      max-height:100dvh!important;
+      height:100%!important;
+      max-height:none!important;
       flex-direction:column;
       border-radius:0!important;
-      overflow:hidden
+      overflow:hidden;
+      overscroll-behavior:none
     }
     #kk-msgs{height:auto!important;flex:1;min-height:0;max-height:none}
     #kk-input{font-size:16px!important;padding:.7rem .95rem!important}
@@ -532,17 +534,6 @@
   function hideTip(){tipEl.style.display='none';}
   var boxEl=document.getElementById('kk-box');
   function isMobile(){return window.innerWidth<=480;}
-  function lockScroll(){if(isMobile()){document.body.style.overflow='hidden';document.body.style.position='fixed';document.body.style.width='100%';}}
-  function unlockScroll(){document.body.style.overflow='';document.body.style.position='';document.body.style.width='';}
-  function applyVV(){
-    if(!isMobile()||!isOpen)return;
-    var vv=window.visualViewport;
-    if(!vv)return;
-    boxEl.style.height=vv.height+'px';
-    boxEl.style.top=vv.offsetTop+'px';
-    msgsEl.scrollTop=msgsEl.scrollHeight;
-  }
-  if(window.visualViewport){window.visualViewport.addEventListener('resize',applyVV);window.visualViewport.addEventListener('scroll',applyVV);}
   window.kkOpen=function(){
     if(isOpen)return;
     isOpen=true;
@@ -550,21 +541,14 @@
     badgeEl.classList.remove('kk-vis');
     toggleEl.classList.remove('kk-pulsing');
     boxEl.style.display='flex';
-    boxEl.style.height='';
-    boxEl.style.top='';
     toggleEl.setAttribute('aria-label','KI-Assistent schließen');
-    lockScroll();
     hideWA();
     if(msgs.length===0){setTimeout(function(){addMsg('bot','Hallo! Ich bin der KI-Assistent von <strong>K.K. Reinigung</strong>. Wie kann ich Ihnen helfen?');},300);}
-    if(!isMobile()){inputEl.focus();}
   };
   window.kkClose=function(){
     isOpen=false;
     boxEl.style.display='none';
-    boxEl.style.height='';
-    boxEl.style.top='';
     toggleEl.setAttribute('aria-label','KI-Assistent öffnen');
-    unlockScroll();
     showWA();
   };
   window.kkSend=function(text){var msg=(text||inputEl.value).trim();if(!msg||busy)return;inputEl.value='';qrEl.style.display='none';addMsg('user',msg);msgs.push({role:'user',content:msg});busy=true;var typing=addMsg('bot','<span><i></i><i></i><i></i></span>');typing.classList.add('km-typing');var cbName='kkCb'+Date.now();window[cbName]=function(data){delete window[cbName];document.querySelectorAll('script[data-kk-cb]').forEach(function(s){s.remove();});typing.remove();busy=false;if(data&&data.reply){msgs.push({role:'assistant',content:data.reply});addMsg('bot',data.reply);}else{addMsg('bot','Entschuldigung, kurzer Fehler. Bitte direkt anrufen: <a href="tel:01778740889">0177 8740889</a>');}};var s=document.createElement('script');s.setAttribute('data-kk-cb','1');s.src=API+'?callback='+cbName+'&clientId='+encodeURIComponent(CLIENT)+'&messages='+encodeURIComponent(JSON.stringify(msgs));document.body.appendChild(s);};
