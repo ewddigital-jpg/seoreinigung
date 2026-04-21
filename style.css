@@ -43,8 +43,8 @@ body {
 /* ── WhatsApp sticky button ──────────────────────────────── */
 #wa-btn {
   position: fixed;
-  bottom: 24px;
-  right: 20px;
+  bottom: 96px;
+  right: 24px;
   z-index: 999;
   width: 56px;
   height: 56px;
@@ -401,3 +401,7 @@ footer a:hover { color: #93c5fd; }
 /* ── Warm section backgrounds ────────────────────────────── */
 .bg-warm { background: #fafaf9; }
 .bg-warm-blue { background: #f0f7ff; }
+
+@media(max-width:480px){
+  #wa-btn { bottom: 88px; right: 16px; }
+}
