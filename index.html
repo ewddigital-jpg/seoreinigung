@@ -473,20 +473,22 @@
   #kk-send:hover{background:#264f7a}
   #kk-send svg{width:15px;height:15px;fill:none;stroke:#fff;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
   @media(max-width:480px){
-    #kk-chat{bottom:16px!important;right:16px!important}
-    #kk-tip{max-width:180px;font-size:.8rem}
+    #kk-chat{bottom:16px!important;left:16px!important;right:auto!important}
+    #kk-tip{max-width:180px;font-size:.8rem;right:auto;left:0}
+    #kk-tip::after{right:auto;left:19px}
     #kk-box{
       position:fixed!important;
-      left:10px!important;
-      right:10px!important;
-      bottom:82px!important;
-      width:auto!important;
-      max-height:calc(100dvh - 100px);
+      left:0!important;
+      right:0!important;
+      bottom:0!important;
+      top:0!important;
+      width:100%!important;
+      max-height:100dvh!important;
       flex-direction:column;
-      border-radius:16px;
+      border-radius:0!important;
       overflow:hidden
     }
-    #kk-msgs{height:auto!important;flex:1;min-height:180px;max-height:none}
+    #kk-msgs{height:auto!important;flex:1;min-height:0;max-height:none}
     #kk-input{font-size:16px!important;padding:.7rem .95rem!important}
     #kk-send{width:44px!important;height:44px!important;border-radius:12px!important}
     #kk-send svg{width:17px!important;height:17px!important}
