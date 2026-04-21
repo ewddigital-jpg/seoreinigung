@@ -538,8 +538,9 @@
     if(!isOpen||!isMobile())return;
     var vv=window.visualViewport;
     if(!vv)return;
-    boxEl.style.top=vv.offsetTop+'px';
-    boxEl.style.height=vv.height+'px';
+    boxEl.style.setProperty('top',vv.offsetTop+'px','important');
+    boxEl.style.setProperty('height',vv.height+'px','important');
+    msgsEl.scrollTop=msgsEl.scrollHeight;
   }
   if(window.visualViewport){
     window.visualViewport.addEventListener('resize',syncVV,{passive:true});
@@ -559,8 +560,8 @@
   window.kkClose=function(){
     isOpen=false;
     boxEl.style.display='none';
-    boxEl.style.top='';
-    boxEl.style.height='';
+    boxEl.style.removeProperty('top');
+    boxEl.style.removeProperty('height');
     toggleEl.setAttribute('aria-label','KI-Assistent öffnen');
     showWA();
   };
