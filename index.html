@@ -534,6 +534,16 @@
   function hideTip(){tipEl.style.display='none';}
   var boxEl=document.getElementById('kk-box');
   function isMobile(){return window.innerWidth<=480;}
+  function syncVV(){
+    if(!isOpen||!isMobile())return;
+    var vv=window.visualViewport;
+    if(!vv)return;
+    boxEl.style.top=vv.offsetTop+'px';
+    boxEl.style.height=vv.height+'px';
+  }
+  if(window.visualViewport){
+    window.visualViewport.addEventListener('resize',syncVV,{passive:true});
+  }
   window.kkOpen=function(){
     if(isOpen)return;
     isOpen=true;
@@ -541,6 +551,7 @@
     badgeEl.classList.remove('kk-vis');
     toggleEl.classList.remove('kk-pulsing');
     boxEl.style.display='flex';
+    syncVV();
     toggleEl.setAttribute('aria-label','KI-Assistent schließen');
     hideWA();
     if(msgs.length===0){setTimeout(function(){addMsg('bot','Hallo! Ich bin der KI-Assistent von <strong>K.K. Reinigung</strong>. Wie kann ich Ihnen helfen?');},300);}
@@ -548,6 +559,8 @@
   window.kkClose=function(){
     isOpen=false;
     boxEl.style.display='none';
+    boxEl.style.top='';
+    boxEl.style.height='';
     toggleEl.setAttribute('aria-label','KI-Assistent öffnen');
     showWA();
   };
