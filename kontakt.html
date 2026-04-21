@@ -284,5 +284,121 @@
 </a>
 
 <script src="script.js"></script>
+
+<!-- KK KI-Agent Widget -->
+<style>
+  @keyframes kk-pulse{0%{box-shadow:0 4px 20px rgba(26,58,92,.5)}50%{box-shadow:0 4px 28px rgba(26,58,92,.75),0 0 0 8px rgba(26,58,92,.12)}100%{box-shadow:0 4px 20px rgba(26,58,92,.5)}}
+  @keyframes kkSlideUp{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:translateY(0)}}
+  @keyframes kkFadeIn{from{opacity:0;transform:scale(.92)}to{opacity:1;transform:scale(1)}}
+  @keyframes kkDot{0%,60%,100%{transform:translateY(0);opacity:.4}30%{transform:translateY(-5px);opacity:1}}
+  #kk-chat{position:fixed!important;bottom:24px!important;right:24px!important;z-index:99999!important;font-family:Inter,sans-serif!important}
+  #kk-toggle{appearance:none!important;-webkit-appearance:none!important;width:56px!important;height:56px!important;min-width:56px!important;border-radius:50%!important;cursor:pointer!important;padding:0!important;background:#1a3a5c!important;border:none!important;box-shadow:0 4px 20px rgba(26,58,92,.5)!important;display:flex!important;align-items:center!important;justify-content:center!important;position:relative!important;transition:transform .2s ease,box-shadow .2s ease!important;pointer-events:auto!important;overflow:visible!important;flex-shrink:0!important}
+  #kk-toggle:hover{transform:scale(1.08)!important;box-shadow:0 6px 28px rgba(26,58,92,.65)!important}
+  #kk-toggle.kk-pulsing{animation:kk-pulse 2.6s ease-in-out infinite!important}
+  #kk-toggle img{width:30px!important;height:30px!important;object-fit:contain!important;border-radius:50%!important;pointer-events:none!important}
+  #kk-badge{position:absolute!important;top:-4px!important;right:-4px!important;width:18px!important;height:18px!important;border-radius:50%!important;background:#e63946!important;color:#fff!important;font-size:10px!important;font-weight:800!important;display:none!important;align-items:center!important;justify-content:center!important;border:2px solid #fff!important;pointer-events:none!important;animation:kkFadeIn .3s ease!important}
+  #kk-badge.kk-vis{display:flex!important}
+  #kk-tip{position:absolute;bottom:68px;right:0;background:#fff;color:#1a3a5c;border-radius:14px 14px 3px 14px;padding:11px 15px 11px 13px;font-size:.83rem;font-weight:500;line-height:1.45;box-shadow:0 4px 22px rgba(0,0,0,.13);display:none;animation:kkSlideUp .3s ease;border:1px solid rgba(26,58,92,.1);max-width:210px;cursor:pointer}
+  #kk-tip::after{content:'';position:absolute;bottom:-7px;right:19px;width:13px;height:13px;background:#fff;border-right:1px solid rgba(26,58,92,.1);border-bottom:1px solid rgba(26,58,92,.1);transform:rotate(45deg)}
+  #kk-box{display:none;flex-direction:column;position:absolute;bottom:72px;right:0;width:355px;background:#0f1c2e;border-radius:20px;overflow:hidden;border:1px solid rgba(255,255,255,.09);box-shadow:0 16px 48px rgba(0,0,0,.45),0 0 0 1px rgba(26,58,92,.12);animation:kkSlideUp .22s ease}
+  #kk-header{background:linear-gradient(135deg,#1a3a5c,#0f2340);border-bottom:1px solid rgba(255,255,255,.07);padding:13px 16px;display:flex;align-items:center;gap:11px;flex-shrink:0}
+  .kk-hlogo{width:38px;height:38px;border-radius:50%;background:rgba(255,255,255,.07);border:1.5px solid rgba(255,255,255,.18);display:flex;align-items:center;justify-content:center;flex-shrink:0;overflow:hidden}
+  .kk-hlogo img{width:26px;height:26px;object-fit:contain;border-radius:50%}
+  .kk-ht{flex:1}
+  .kk-ht strong{display:block;color:#f0f6fc;font-size:.875rem;font-weight:700}
+  .kk-on{display:inline-flex;align-items:center;gap:5px;font-size:.68rem;color:rgba(255,255,255,.5);margin-top:2px}
+  .kk-dt{width:6px;height:6px;border-radius:50%;background:#4ade80;box-shadow:0 0 5px #4ade80;flex-shrink:0}
+  #kk-close{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.1);color:rgba(255,255,255,.55);cursor:pointer;border-radius:8px;width:32px;height:32px;display:flex;align-items:center;justify-content:center;font-size:.88rem;transition:all .2s;flex-shrink:0}
+  #kk-close:hover{background:rgba(255,255,255,.14);color:#fff}
+  #kk-msgs{height:320px;overflow-y:auto;padding:14px 14px 8px;display:flex;flex-direction:column;gap:10px;scrollbar-width:thin;scrollbar-color:rgba(255,255,255,.07) transparent;background:#0f1c2e}
+  .km{display:flex;gap:8px;align-items:flex-end;max-width:92%}
+  .km.u{align-self:flex-end;flex-direction:row-reverse}
+  .kmav{width:26px;height:26px;border-radius:50%;background:#1a3a5c;border:1px solid rgba(255,255,255,.1);display:flex;align-items:center;justify-content:center;font-size:.6rem;font-weight:700;color:#fff;flex-shrink:0;overflow:hidden}
+  .kmav img{width:17px;height:17px;object-fit:contain;border-radius:50%}
+  .kmbub{border-radius:12px 12px 12px 3px;padding:.55rem .85rem;font-size:.84rem;line-height:1.55;background:#1a3a5c;color:#e8f0f8;max-width:100%;word-break:break-word}
+  .km.u .kmbub{border-radius:12px 12px 3px 12px;background:#2563eb;color:#fff}
+  .km.u .kmav{background:#2563eb;border-color:rgba(37,99,235,.35)}
+  .kmbub a{color:#7eb8f7;text-decoration:none}
+  .kmbub strong{color:#fff;font-weight:600}
+  .km-typing .kmbub{padding:.7rem .9rem}
+  .km-typing span{display:inline-flex;gap:3px}
+  .km-typing span i{width:6px;height:6px;border-radius:50%;background:rgba(255,255,255,.45);display:inline-block;animation:kkDot .9s ease-in-out infinite}
+  .km-typing span i:nth-child(2){animation-delay:.15s}
+  .km-typing span i:nth-child(3){animation-delay:.3s}
+  #kk-qr{display:flex;flex-wrap:wrap;gap:6px;padding:10px 14px;background:#0f1c2e;border-top:1px solid rgba(255,255,255,.05)}
+  .kk-q{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);color:rgba(255,255,255,.75);border-radius:20px;padding:.38rem .9rem;font-size:.77rem;cursor:pointer;transition:all .18s;white-space:nowrap;font-family:Inter,sans-serif}
+  .kk-q:hover{background:rgba(26,58,92,.6);border-color:rgba(255,255,255,.22);color:#fff}
+  #kk-form{display:flex;gap:8px;padding:10px 12px;border-top:1px solid rgba(255,255,255,.06);background:#0a1525;align-items:center}
+  #kk-input{flex:1;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.12);border-radius:12px;padding:.55rem .9rem;color:#f0f6fc;font-size:.84rem;outline:none;font-family:Inter,sans-serif;transition:border-color .2s,background .2s}
+  #kk-input:focus{border-color:rgba(100,160,230,.45);background:rgba(255,255,255,.1)}
+  #kk-input::placeholder{color:rgba(255,255,255,.28)}
+  #kk-send{background:#1a3a5c;border:none;border-radius:10px;width:36px;height:36px;cursor:pointer;display:flex;align-items:center;justify-content:center;flex-shrink:0;transition:background .2s}
+  #kk-send:hover{background:#264f7a}
+  #kk-send svg{width:15px;height:15px;fill:none;stroke:#fff;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+  @media(max-width:480px){
+    #kk-chat{bottom:16px!important;left:16px!important;right:auto!important}
+    #kk-tip{max-width:180px;font-size:.8rem;right:auto;left:0}
+    #kk-tip::after{right:auto;left:19px}
+    #kk-box{position:fixed!important;left:0!important;right:0!important;bottom:0!important;top:0!important;width:100%!important;height:100%!important;max-height:none!important;flex-direction:column;border-radius:0!important;overflow:hidden;overscroll-behavior:none;animation:none!important}
+    #kk-msgs{height:auto!important;flex:1;min-height:0;max-height:none}
+    #kk-input{font-size:16px!important;padding:.7rem .95rem!important}
+    #kk-send{width:44px!important;height:44px!important;border-radius:12px!important}
+    #kk-send svg{width:17px!important;height:17px!important}
+    .kk-q{padding:.5rem 1rem!important;font-size:.8rem!important;min-height:36px;display:inline-flex;align-items:center}
+    #kk-close{width:40px!important;height:40px!important;font-size:1rem!important}
+    #kk-form{padding:10px 12px!important;gap:10px!important}
+    #kk-qr{padding:10px 14px!important;gap:8px!important}
+  }
+</style>
+<div id="kk-chat">
+  <div id="kk-tip">Fragen zu Preisen oder Terminen? 👋</div>
+  <button type="button" id="kk-toggle" aria-label="KI-Assistent öffnen">
+    <img src="apple-touch-icon.png" alt="K.K. Reinigung" onerror="this.remove()">
+    <div id="kk-badge">1</div>
+  </button>
+  <div id="kk-box">
+    <div id="kk-header">
+      <div class="kk-hlogo"><img src="apple-touch-icon.png" alt="K.K." onerror="this.remove()"></div>
+      <div class="kk-ht"><strong>K.K. Reinigung</strong><div class="kk-on"><span class="kk-dt"></span>Online – antwortet sofort</div></div>
+      <button id="kk-close" aria-label="Schließen">✕</button>
+    </div>
+    <div id="kk-msgs"></div>
+    <div id="kk-qr">
+      <button class="kk-q" data-msg="Was kostet eine Reinigung?">Preise anfragen</button>
+      <button class="kk-q" data-msg="Angebot anfordern">Angebot anfordern</button>
+      <button class="kk-q" data-msg="Welche Leistungen bietet ihr an?">Leistungen</button>
+    </div>
+    <div id="kk-form">
+      <input id="kk-input" type="text" placeholder="Ihre Frage…" autocomplete="off">
+      <button id="kk-send" aria-label="Senden"><svg viewBox="0 0 24 24"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg></button>
+    </div>
+  </div>
+</div>
+<script>
+(function(){
+  var API='https://ewd-ki-agent.vercel.app/api/chat',CLIENT='kk-reinigung',msgs=[],isOpen=false,busy=false;
+  var msgsEl=document.getElementById('kk-msgs'),inputEl=document.getElementById('kk-input'),qrEl=document.getElementById('kk-qr'),badgeEl=document.getElementById('kk-badge'),tipEl=document.getElementById('kk-tip'),toggleEl=document.getElementById('kk-toggle');
+  function addMsg(role,html){var d=document.createElement('div');d.className='km'+(role==='user'?' u':'');var av='<div class="kmav">'+(role==='user'?'Sie':'<img src="apple-touch-icon.png" alt="" onerror="this.remove()">') +'</div>';d.innerHTML=av+'<div class="kmbub">'+html+'</div>';msgsEl.appendChild(d);msgsEl.scrollTop=msgsEl.scrollHeight;return d;}
+  function hideWA(){var el=document.getElementById('wa-btn');if(el)el.style.display='none';}
+  function showWA(){var el=document.getElementById('wa-btn');if(el)el.style.display='';}
+  function hideTip(){tipEl.style.display='none';}
+  var boxEl=document.getElementById('kk-box');
+  function isMobile(){return window.innerWidth<=480;}
+  function syncVV(){if(!isOpen||!isMobile())return;var vv=window.visualViewport;if(!vv)return;boxEl.style.setProperty('top',vv.offsetTop+'px','important');boxEl.style.setProperty('height',vv.height+'px','important');msgsEl.scrollTop=msgsEl.scrollHeight;}
+  if(window.visualViewport){window.visualViewport.addEventListener('resize',syncVV,{passive:true});}
+  window.kkOpen=function(){if(isOpen)return;isOpen=true;hideTip();badgeEl.classList.remove('kk-vis');toggleEl.classList.remove('kk-pulsing');boxEl.style.display='flex';syncVV();toggleEl.setAttribute('aria-label','KI-Assistent schließen');hideWA();if(msgs.length===0){setTimeout(function(){addMsg('bot','Hallo! Ich bin der KI-Assistent von <strong>K.K. Reinigung</strong>. Wie kann ich Ihnen helfen?');},300);}};
+  window.kkClose=function(){isOpen=false;boxEl.style.display='none';boxEl.style.removeProperty('top');boxEl.style.removeProperty('height');toggleEl.setAttribute('aria-label','KI-Assistent öffnen');showWA();};
+  window.kkSend=function(text){var msg=(text||inputEl.value).trim();if(!msg||busy)return;inputEl.value='';qrEl.style.display='none';addMsg('user',msg);msgs.push({role:'user',content:msg});busy=true;var typing=addMsg('bot','<span><i></i><i></i><i></i></span>');typing.classList.add('km-typing');var cbName='kkCb'+Date.now();window[cbName]=function(data){delete window[cbName];document.querySelectorAll('script[data-kk-cb]').forEach(function(s){s.remove();});typing.remove();busy=false;if(data&&data.reply){msgs.push({role:'assistant',content:data.reply});addMsg('bot',data.reply);}else{addMsg('bot','Entschuldigung, kurzer Fehler. Bitte direkt anrufen: <a href="tel:01778740889">0177 8740889</a>');}};var s=document.createElement('script');s.setAttribute('data-kk-cb','1');s.src=API+'?callback='+cbName+'&clientId='+encodeURIComponent(CLIENT)+'&messages='+encodeURIComponent(JSON.stringify(msgs));document.body.appendChild(s);};
+  toggleEl.addEventListener('click',function(){isOpen?window.kkClose():window.kkOpen();});
+  document.getElementById('kk-close').addEventListener('click',function(){window.kkClose();});
+  document.getElementById('kk-send').addEventListener('click',function(){window.kkSend();});
+  inputEl.addEventListener('keydown',function(e){if(e.key==='Enter')window.kkSend();});
+  document.querySelectorAll('.kk-q').forEach(function(b){b.addEventListener('click',function(){window.kkSend(b.getAttribute('data-msg'));});});
+  tipEl.addEventListener('click',function(){window.kkOpen();});
+  if(!sessionStorage.getItem('kk-tip')){setTimeout(function(){if(isOpen)return;tipEl.style.display='block';badgeEl.classList.add('kk-vis');toggleEl.classList.add('kk-pulsing');sessionStorage.setItem('kk-tip','1');setTimeout(function(){if(!isOpen)hideTip();},8000);},5000);}
+  window.addEventListener('scroll',function(){if(!isOpen)hideTip();},{passive:true,once:true});
+})();
+</script>
+<!-- /KK KI-Agent Widget -->
 </body>
 </html>
