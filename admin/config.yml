@@ -3,7 +3,7 @@ backend:
   repo: ewddigital-jpg/seoreinigung
   branch: main
   auth_type: pkce
-  app_id: DEIN_GITHUB_OAUTH_CLIENT_ID
+  app_id: Ov23likqSPjBdBGG6qME
 
 locale: de
 media_folder: "."
