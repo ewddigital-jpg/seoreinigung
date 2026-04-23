@@ -11,30 +11,30 @@ public_folder: "/"
 
 collections:
   - name: "seiten"
-    label: "Seiten bearbeiten"
+    label: "Seiten"
     files:
       - name: "index"
         label: "Startseite"
         file: "index.html"
         fields:
-          - {label: "Seiteninhalt (HTML)", name: "body", widget: "code", default_language: "html"}
+          - {label: "Inhalt", name: "body", widget: "text"}
       - name: "leistungen"
         label: "Leistungen"
         file: "leistungen.html"
         fields:
-          - {label: "Seiteninhalt (HTML)", name: "body", widget: "code", default_language: "html"}
+          - {label: "Inhalt", name: "body", widget: "text"}
       - name: "kontakt"
         label: "Kontakt"
         file: "kontakt.html"
         fields:
-          - {label: "Seiteninhalt (HTML)", name: "body", widget: "code", default_language: "html"}
+          - {label: "Inhalt", name: "body", widget: "text"}
       - name: "ueber-uns"
         label: "Ueber uns"
         file: "ueber-uns.html"
         fields:
-          - {label: "Seiteninhalt (HTML)", name: "body", widget: "code", default_language: "html"}
+          - {label: "Inhalt", name: "body", widget: "text"}
       - name: "faq"
         label: "FAQ"
         file: "faq.html"
         fields:
-          - {label: "Seiteninhalt (HTML)", name: "body", widget: "code", default_language: "html"}
+          - {label: "Inhalt", name: "body", widget: "text"}
