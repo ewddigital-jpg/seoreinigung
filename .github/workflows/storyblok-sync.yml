@@ -2,8 +2,8 @@ name: Storyblok Sync
 
 on:
   schedule:
-    - cron: '*/15 * * * *'   # every 15 minutes
-  workflow_dispatch:           # manual trigger from GitHub Actions UI
+    - cron: "*/15 * * * *"
+  workflow_dispatch:
   repository_dispatch:
     types: [storyblok_published]
 
@@ -15,7 +15,7 @@ jobs:
 
       - uses: actions/setup-python@v5
         with:
-          python-version: '3.11'
+          python-version: "3.12"
 
       - name: Install dependencies
         run: pip install requests
@@ -25,10 +25,11 @@ jobs:
           SB_TOKEN: ${{ secrets.SB_TOKEN }}
         run: python scripts/sync_storyblok.py
 
-      - name: Commit changes
+      - name: Commit and push if changed
         run: |
           git config user.email "storyblok-sync@github.com"
           git config user.name "Storyblok Sync"
           git add -A
-          git diff --staged --quiet || git commit -m "sync: content update from Storyblok [skip ci]"
+          git diff --staged --quiet && echo "No changes to commit" && exit 0
+          git commit -m "sync: content update from Storyblok [skip ci]"
           git push
