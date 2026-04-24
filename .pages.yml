@@ -1,0 +1,48 @@
+content:
+  - name: seiten
+    label: Seiten
+    type: file
+    files:
+      - name: index
+        label: Startseite
+        path: index.html
+        fields:
+          - name: body
+            label: Seiteninhalt
+            type: rich-text
+
+      - name: leistungen
+        label: Leistungen
+        path: leistungen.html
+        fields:
+          - name: body
+            label: Seiteninhalt
+            type: rich-text
+
+      - name: kontakt
+        label: Kontakt
+        path: kontakt.html
+        fields:
+          - name: body
+            label: Seiteninhalt
+            type: rich-text
+
+      - name: ueber-uns
+        label: Ueber uns
+        path: ueber-uns.html
+        fields:
+          - name: body
+            label: Seiteninhalt
+            type: rich-text
+
+      - name: faq
+        label: FAQ
+        path: faq.html
+        fields:
+          - name: body
+            label: Seiteninhalt
+            type: rich-text
+
+media:
+  input: .
+  output: /
