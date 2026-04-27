@@ -1,6 +1,5 @@
 <!DOCTYPE html>
-<html lang="de">
-<head>
+<html lang="de"><head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Leistungen – Büroreinigung, Bauendreinigung &amp; Gebäudereinigung Friedrichshafen | K.K. Reinigung</title>
@@ -77,14 +76,70 @@
   <meta name="twitter:title" content="Leistungen – K.K. Reinigung Friedrichshafen">
   <meta name="twitter:description" content="Alle Reinigungsleistungen von K.K. Reinigung: Büroreinigung, Gebäudereinigung, Bauendreinigung und Unterhaltsreinigung – professionell und zuverlässig.">
   <meta name="twitter:image" content="https://kkreinigung.com/android-chrome-512x512.png">
-</head>
-<body class="font-sans text-gray-900 bg-white">
+<style>
+    #ewd-overlay {
+      position:fixed;inset:0;background:rgba(0,0,0,.55);
+      display:flex;align-items:center;justify-content:center;z-index:99999;
+      font-family:system-ui,sans-serif;
+    }
+    #ewd-login {
+      background:#fff;border-radius:14px;padding:36px 32px;
+      width:340px;box-shadow:0 8px 40px rgba(0,0,0,.25);text-align:center;
+    }
+    #ewd-login h2 {margin:0 0 6px;font-size:1.2rem;color:#0d1117;}
+    #ewd-login p  {margin:0 0 20px;font-size:.85rem;color:#64748b;}
+    #ewd-login input {
+      width:100%;padding:11px 14px;border:1.5px solid #e2e8f0;
+      border-radius:8px;font-size:1rem;outline:none;box-sizing:border-box;margin-bottom:10px;
+    }
+    #ewd-login input:focus {border-color:#0066ff;}
+    #ewd-login button {
+      width:100%;padding:12px;background:#0066ff;color:#fff;
+      border:none;border-radius:8px;font-size:1rem;font-weight:700;cursor:pointer;
+    }
+    #ewd-login button:hover {background:#0050cc;}
+    #ewd-login .err {color:#e63946;font-size:.82rem;margin-top:8px;display:none;}
 
-<header id="site-header">
+    #ewd-bar {
+      position:fixed;bottom:0;left:0;right:0;
+      background:#0d1117;color:#fff;
+      display:flex;align-items:center;gap:12px;padding:10px 20px;
+      z-index:99998;font-family:system-ui,sans-serif;font-size:.85rem;
+      box-shadow:0 -2px 16px rgba(0,0,0,.3);
+    }
+    #ewd-bar .ewd-status {flex:1;color:#a8b4c0;}
+    #ewd-bar button {
+      padding:8px 18px;border:none;border-radius:7px;
+      font-size:.85rem;font-weight:700;cursor:pointer;
+    }
+    #ewd-save   {background:#0066ff;color:#fff;}
+    #ewd-save:hover {background:#0050cc;}
+    #ewd-cancel {background:#1c2128;color:#a8b4c0;}
+    #ewd-cancel:hover {background:#2d3748;color:#fff;}
+
+    [data-ewd-editable]:hover  {outline:2px dashed rgba(0,102,255,.4);outline-offset:2px;}
+    [data-ewd-editable]:focus  {outline:2px solid #0066ff;outline-offset:2px;border-radius:2px;}
+    [data-ewd-drag]            {cursor:grab;position:relative;}
+    [data-ewd-drag].ewd-dragging {opacity:.4;}
+    [data-ewd-drag]::before    {
+      content:'⠿';position:absolute;left:-22px;top:50%;transform:translateY(-50%);
+      font-size:1.1rem;color:#0066ff;opacity:0;transition:opacity .15s;pointer-events:none;
+    }
+    [data-ewd-drag]:hover::before {opacity:1;}
+    .ewd-drop-hint {
+      border-top:3px solid #0066ff !important;margin-top:0 !important;
+    }
+    [data-ewd-img]:hover {
+      outline:3px dashed rgba(0,102,255,.5);outline-offset:3px;cursor:pointer;
+    }
+  </style><script src="https://cdn.jsdelivr.net/npm/sortablejs@1.15.2/Sortable.min.js"></script></head>
+<body class="font-sans text-gray-900 bg-white" style="">
+
+<header id="site-header" class="">
   <div class="max-w-6xl mx-auto px-4">
     <div class="flex items-center justify-between h-16">
       <a href="index" class="flex items-center gap-2.5">
-        <img src="apple-touch-icon.png" alt="K.K. Reinigung Logo" class="w-8 h-8 rounded-lg">
+        <img src="apple-touch-icon.png" alt="K.K. Reinigung Logo" class="w-8 h-8 rounded-lg" title="📷 Klicken um Bild zu ändern">
         <div>
           <div class="font-bold text-primary text-sm leading-tight">K.K. Reinigung</div>
           <div class="text-xs text-gray-500 leading-tight hidden sm:block">Friedrichshafen · Bodenseekreis</div>
@@ -98,11 +153,11 @@
         <a href="kontakt" class="text-gray-600 hover:text-primary transition-colors">Kontakt</a>
       </nav>
       <div class="hidden md:flex items-center gap-3">
-        <a href="tel:01778740889" class="btn-phone"><svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 11a19.79 19.79 0 01-3.07-8.67A2 2 0 012 .18h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>0177 8740889</a>
+        <a href="tel:01778740889" class="btn-phone"><svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 11a19.79 19.79 0 01-3.07-8.67A2 2 0 012 .18h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"></path></svg>0177 8740889</a>
         <a href="kontakt" class="btn-primary text-sm py-2 px-4">Angebot anfragen</a>
       </div>
       <button id="menu-btn" class="md:hidden p-2 text-gray-600 rounded-lg hover:bg-gray-100" aria-label="Menü öffnen" aria-expanded="false">
-        <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+        <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h16"></path></svg>
       </button>
     </div>
     <nav id="mobile-nav">
@@ -135,7 +190,7 @@
       <h1 class="text-3xl md:text-4xl font-extrabold text-gray-900 mt-3 mb-4">
             <!-- SB:hero_title -->Unsere Reinigungsleistungen<!-- /SB:hero_title -->
           </h1>
-      <p class="text-gray-600 max-w-xl mx-auto leading-relaxed"><!-- SB:hero_subtitle -->Vom Büro bis zur Baustelle: Professionelle Reinigung für Unternehmen am Bodensee.<!-- /SB:hero_subtitle --></p>
+      <p class="text-gray-600 max-w-xl mx-auto leading-relaxed"><!-- SB:hero_subtitle -->Vom Büro bis zur Baustelle: Professionelle Reinigung für Unternehmen am Bodensee<!-- /SB:hero_subtitle --></p>
       <div class="mt-7">
         <a href="kontakt" class="btn-cta">Angebot anfordern</a>
       </div>
@@ -146,7 +201,7 @@
   <section id="bueroreinigung" class="py-16 md:py-20 bg-white">
     <div class="max-w-6xl mx-auto px-4">
       <div class="grid md:grid-cols-2 gap-10 md:gap-16 items-center">
-        <div class="reveal">
+        <div class="reveal visible">
 
           <h2 class="text-2xl md:text-3xl font-extrabold text-gray-900 mt-2 mb-4">
             Büroreinigung Friedrichshafen
@@ -161,13 +216,9 @@
           </ul>
           <a href="bueroreinigung-friedrichshafen" class="btn-cta text-sm py-3 px-6">Büroreinigung anfragen</a>
         </div>
-        <div class="reveal delay-200">
+        <div class="reveal delay-200 visible">
           <div class="service-img">
-            <img
-              src="https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&w=800&q=80"
-              alt="Professionelle Büroreinigung in Friedrichshafen"
-              loading="lazy" width="800" height="600"
-            >
+            <img src="https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&amp;fit=crop&amp;w=800&amp;q=80" alt="Professionelle Büroreinigung in Friedrichshafen" loading="lazy" width="800" height="600" title="📷 Klicken um Bild zu ändern">
           </div>
         </div>
       </div>
@@ -178,16 +229,12 @@
   <section id="unterhaltsreinigung" class="py-16 md:py-20 bg-warm">
     <div class="max-w-6xl mx-auto px-4">
       <div class="grid md:grid-cols-2 gap-10 md:gap-16 items-center">
-        <div class="reveal order-2 md:order-1">
+        <div class="reveal order-2 md:order-1 visible">
           <div class="service-img">
-            <img
-              src="https://images.unsplash.com/photo-1527515637462-cff94eecc1ac?auto=format&fit=crop&w=800&q=80"
-              alt="Unterhaltsreinigung im Bodenseekreis"
-              loading="lazy" width="800" height="600"
-            >
+            <img src="https://images.unsplash.com/photo-1527515637462-cff94eecc1ac?auto=format&amp;fit=crop&amp;w=800&amp;q=80" alt="Unterhaltsreinigung im Bodenseekreis" loading="lazy" width="800" height="600" title="📷 Klicken um Bild zu ändern">
           </div>
         </div>
-        <div class="reveal delay-200 order-1 md:order-2">
+        <div class="reveal delay-200 order-1 md:order-2 visible">
 
           <h2 class="text-2xl md:text-3xl font-extrabold text-gray-900 mt-2 mb-4">
             Unterhaltsreinigung Friedrichshafen
@@ -210,7 +257,7 @@
   <section id="bauendreinigung" class="py-16 md:py-20 bg-white">
     <div class="max-w-6xl mx-auto px-4">
       <div class="grid md:grid-cols-2 gap-10 md:gap-16 items-center">
-        <div class="reveal">
+        <div class="reveal visible">
 
           <h2 class="text-2xl md:text-3xl font-extrabold text-gray-900 mt-2 mb-4">
             Bauendreinigung Friedrichshafen
@@ -225,13 +272,9 @@
           </ul>
           <a href="bauendreinigung-friedrichshafen" class="btn-cta text-sm py-3 px-6">Bauendreinigung anfragen</a>
         </div>
-        <div class="reveal delay-200">
+        <div class="reveal delay-200 visible">
           <div class="service-img">
-            <img
-              src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=800&q=80"
-              alt="Bauendreinigung nach Neubau oder Renovierung"
-              loading="lazy" width="800" height="600"
-            >
+            <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&amp;fit=crop&amp;w=800&amp;q=80" alt="Bauendreinigung nach Neubau oder Renovierung" loading="lazy" width="800" height="600" title="📷 Klicken um Bild zu ändern">
           </div>
         </div>
       </div>
@@ -242,16 +285,12 @@
   <section id="gebaeudereinigung" class="py-16 md:py-20 bg-warm">
     <div class="max-w-6xl mx-auto px-4">
       <div class="grid md:grid-cols-2 gap-10 md:gap-16 items-center">
-        <div class="reveal order-2 md:order-1">
+        <div class="reveal order-2 md:order-1 visible">
           <div class="service-img">
-            <img
-              src="https://images.unsplash.com/photo-1486325212027-8081e485255e?auto=format&fit=crop&w=800&q=80"
-              alt="Gebäudereinigung für Wohn- und Gewerbeimmobilien"
-              loading="lazy" width="800" height="600"
-            >
+            <img src="https://images.unsplash.com/photo-1486325212027-8081e485255e?auto=format&amp;fit=crop&amp;w=800&amp;q=80" alt="Gebäudereinigung für Wohn- und Gewerbeimmobilien" loading="lazy" width="800" height="600" title="📷 Klicken um Bild zu ändern">
           </div>
         </div>
-        <div class="reveal delay-200 order-1 md:order-2">
+        <div class="reveal delay-200 order-1 md:order-2 visible">
 
           <h2 class="text-2xl md:text-3xl font-extrabold text-gray-900 mt-2 mb-4">
             Gebäudereinigung Friedrichshafen
@@ -316,7 +355,7 @@
 
   <!-- ── Einsatzgebiet ──────────────────────────────────────── -->
   <section class="py-12 bg-white border-t border-gray-100">
-    <div class="max-w-4xl mx-auto px-4 text-center reveal">
+    <div class="max-w-4xl mx-auto px-4 text-center reveal visible">
       <h2 class="text-lg font-bold text-gray-900 mb-4">Einsatzgebiet Bodenseekreis</h2>
       <div class="flex flex-wrap justify-center gap-2 mb-4">
         <a href="index" class="region-pill">Friedrichshafen</a>
@@ -333,7 +372,7 @@
 
   <!-- ── CTA ────────────────────────────────────────────────── -->
   <section class="cta-section py-16">
-    <div class="max-w-2xl mx-auto px-4 text-center text-white reveal">
+    <div class="max-w-2xl mx-auto px-4 text-center text-white reveal visible">
       <h2 class="text-2xl md:text-3xl font-extrabold mb-4">Jetzt Angebot anfordern</h2>
       <p class="text-blue-200 mb-8 leading-relaxed">Beschreiben Sie kurz Ihre Fläche und den gewünschten Umfang. Wir melden uns am selben Tag.</p>
       <a href="kontakt" class="inline-flex items-center justify-center bg-white text-primary font-bold py-4 px-10 rounded-xl hover:bg-gray-100 transition-colors text-base shadow-lg">
@@ -350,7 +389,7 @@
     <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
       <div>
         <a href="index" class="flex items-center gap-2 mb-3">
-          <img src="apple-touch-icon.png" alt="K.K. Reinigung" class="w-8 h-8 rounded-lg">
+          <img src="apple-touch-icon.png" alt="K.K. Reinigung" class="w-8 h-8 rounded-lg" title="📷 Klicken um Bild zu ändern">
           <span class="font-bold text-white text-sm">K.K. Reinigung</span>
         </a>
         <p class="text-xs leading-relaxed mb-3">Persönlicher Reinigungsservice im Bodenseekreis.</p>
@@ -401,7 +440,7 @@
 </footer>
 
 <a id="wa-btn" href="https://wa.me/491778740889?text=Hallo%2C%20ich%20interessiere%20mich%20f%C3%BCr%20Ihre%20Leistungen." aria-label="WhatsApp schreiben" title="WhatsApp schreiben">
-  <svg width="28" height="28" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+  <svg width="28" height="28" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"></path></svg>
 </a>
 <script src="script.js"></script>
 
@@ -471,14 +510,14 @@
   }
 </style>
 <div id="kk-chat">
-  <div id="kk-tip">Fragen zu Preisen oder Terminen? 👋</div>
+  <div id="kk-tip" style="display: none;">Fragen zu Preisen oder Terminen? 👋</div>
   <button type="button" id="kk-toggle" aria-label="KI-Assistent öffnen">
-    <img src="apple-touch-icon.png" alt="K.K. Reinigung" onerror="this.remove()">
+    <img src="apple-touch-icon.png" alt="K.K. Reinigung" onerror="this.remove()" title="📷 Klicken um Bild zu ändern">
     <div id="kk-badge">1</div>
   </button>
   <div id="kk-box">
     <div id="kk-header">
-      <div class="kk-hlogo"><img src="apple-touch-icon.png" alt="K.K." onerror="this.remove()"></div>
+      <div class="kk-hlogo"><img src="apple-touch-icon.png" alt="K.K." onerror="this.remove()" title="📷 Klicken um Bild zu ändern"></div>
       <div class="kk-ht"><strong>K.K. Reinigung</strong><div class="kk-on"><span class="kk-dt"></span>Online – antwortet sofort</div></div>
       <button id="kk-close" aria-label="Schließen">✕</button>
     </div>
@@ -490,7 +529,7 @@
     </div>
     <div id="kk-form">
       <input id="kk-input" type="text" placeholder="Ihre Frage…" autocomplete="off">
-      <button id="kk-send" aria-label="Senden"><svg viewBox="0 0 24 24"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg></button>
+      <button id="kk-send" aria-label="Senden"><svg viewBox="0 0 24 24"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg></button>
     </div>
   </div>
 </div>
@@ -520,9 +559,7 @@
 })();
 </script>
 <!-- /KK KI-Agent Widget -->
-  <script src="https://ewd-cms.vercel.app/cms.js"
-    data-repo="ewddigital-jpg/seoreinigung" data-file="leistungen.html"
-    data-api="https://ewd-cms.vercel.app"
-    data-pw-hash="92fca008b7019839a3f015cee8e2f7b78ff0a2140ba6246dfdd1a80c5a4da8aa"></script>
-</body>
-</html>
+  <script src="https://ewd-cms.vercel.app/cms.js" data-repo="ewddigital-jpg/seoreinigung" data-file="leistungen.html" data-api="https://ewd-cms.vercel.app" data-pw-hash="92fca008b7019839a3f015cee8e2f7b78ff0a2140ba6246dfdd1a80c5a4da8aa"></script>
+
+
+</body></html>
