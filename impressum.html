@@ -214,12 +214,7 @@
 <script>
 (function(){
   var k='kk-consent',sk='kk-banner-shown',v=localStorage.getItem(k);
-  function loadFonts(){
-    var l=document.createElement('link');
-    l.rel='stylesheet';
-    l.href='https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap';
-    document.head.appendChild(l);
-  }
+  function loadFonts(){}
   if(v==='all'){loadFonts();return;}
   if(v==='necessary'){return;}
   if(sessionStorage.getItem(sk)){return;}

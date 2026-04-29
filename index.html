@@ -67,7 +67,7 @@
   <meta name="twitter:title" content="Reinigungsfirma Friedrichshafen – K.K. Reinigung">
   <meta name="twitter:description" content="K.K. Reinigung in Friedrichshafen – Ihr Experte für Gebäudereinigung, Büroreinigung und Unterhaltsreinigung am Bodensee. Jetzt kostenlos anfragen.">
   <meta name="twitter:image" content="https://kkreinigung.com/android-chrome-512x512.png">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap"><style>
+<style>
     #ewd-overlay {
       position:fixed;inset:0;background:rgba(0,0,0,.55);
       display:flex;align-items:center;justify-content:center;z-index:99999;
@@ -123,8 +123,7 @@
     [data-ewd-img]:hover {
       outline:3px dashed rgba(0,102,255,.5);outline-offset:3px;cursor:pointer;
     }
-  </style><script src="https://cdn.jsdelivr.net/npm/sortablejs@1.15.2/Sortable.min.js"></script>
-</head>
+  </style></head>
 <body class="font-sans text-gray-900 bg-white" style="">
 
 <!-- ── Header ─────────────────────────────────────────────── -->
@@ -641,7 +640,7 @@
 <script>
 (function(){
   var k='kk-consent',sk='kk-banner-shown',v=localStorage.getItem(k);
-  function loadFonts(){var l=document.createElement('link');l.rel='stylesheet';l.href='https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap';document.head.appendChild(l);}
+  function loadFonts(){}
   if(v==='all'){loadFonts();return;}
   if(v==='necessary'){return;}
   if(sessionStorage.getItem(sk)){return;}
