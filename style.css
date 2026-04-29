@@ -6,7 +6,13 @@
 body {
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
   scroll-behavior: smooth;
+  font-size: 1rem;
+  line-height: 1.65;
 }
+
+/* UX text size — 1pt above minimum throughout */
+.text-xs   { font-size: 0.8125rem !important; } /* 13px (was 12px) */
+.text-sm   { font-size: 0.9375rem !important; } /* 15px (was 14px) */
 
 /* ── Animations ─────────────────────────────────────────── */
 @keyframes fadeInUp {
