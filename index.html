@@ -864,13 +864,14 @@
   /* Service cards: stagger on scroll */
   gsap.from('.service-card', {
     opacity: 0,
-    y: 32,
-    duration: 0.65,
+    y: 24,
+    duration: 0.55,
     ease: 'power2.out',
-    stagger: 0.1,
+    stagger: 0.08,
+    immediateRender: false,
     scrollTrigger: {
       trigger: '.service-grid',
-      start: 'top 82%',
+      start: 'top 85%',
       toggleActions: 'play none none none'
     }
   });
@@ -878,74 +879,81 @@
   /* Stats band */
   gsap.from('.stat-item', {
     opacity: 0,
-    y: 20,
-    duration: 0.5,
+    y: 16,
+    duration: 0.45,
     ease: 'power2.out',
-    stagger: 0.08,
+    stagger: 0.07,
+    immediateRender: false,
     scrollTrigger: {
       trigger: '.stats-band',
-      start: 'top 85%'
+      start: 'top 90%'
     }
   });
 
   /* Review cards */
   gsap.from('.review-card', {
     opacity: 0,
-    y: 24,
-    duration: 0.6,
+    y: 20,
+    duration: 0.5,
     ease: 'power2.out',
-    stagger: 0.1,
+    stagger: 0.08,
+    immediateRender: false,
     scrollTrigger: {
       trigger: '.testimonials-grid',
-      start: 'top 80%'
+      start: 'top 85%'
     }
   });
 
   /* Why-us image + content */
   gsap.from('.why-img', {
     opacity: 0,
-    x: -32,
-    duration: 0.8,
+    x: -24,
+    duration: 0.7,
     ease: 'power2.out',
-    scrollTrigger: { trigger: '.why-us', start: 'top 78%' }
+    immediateRender: false,
+    scrollTrigger: { trigger: '.why-us', start: 'top 82%' }
   });
   gsap.from('.why-item', {
     opacity: 0,
-    x: 20,
-    duration: 0.55,
+    x: 16,
+    duration: 0.5,
     ease: 'power2.out',
-    stagger: 0.1,
-    scrollTrigger: { trigger: '.why-list', start: 'top 82%' }
+    stagger: 0.08,
+    immediateRender: false,
+    scrollTrigger: { trigger: '.why-list', start: 'top 85%' }
   });
 
   /* Process steps */
   gsap.from('.process-step, .process-card', {
     opacity: 0,
-    y: 20,
-    duration: 0.5,
+    y: 16,
+    duration: 0.45,
     ease: 'power2.out',
-    stagger: 0.08,
-    scrollTrigger: { trigger: '.process', start: 'top 80%' }
+    stagger: 0.07,
+    immediateRender: false,
+    scrollTrigger: { trigger: '.process', start: 'top 85%' }
   });
 
   /* Area cards */
   gsap.from('.area-card', {
     opacity: 0,
-    y: 20,
-    duration: 0.5,
+    y: 16,
+    duration: 0.45,
     ease: 'power2.out',
-    stagger: 0.1,
-    scrollTrigger: { trigger: '.areas-grid', start: 'top 82%' }
+    stagger: 0.08,
+    immediateRender: false,
+    scrollTrigger: { trigger: '.areas-grid', start: 'top 85%' }
   });
 
   /* Section headers */
   gsap.utils.toArray('.section-header').forEach(function(el) {
     gsap.from(el, {
       opacity: 0,
-      y: 20,
-      duration: 0.7,
+      y: 16,
+      duration: 0.55,
       ease: 'power2.out',
-      scrollTrigger: { trigger: el, start: 'top 85%' }
+      immediateRender: false,
+      scrollTrigger: { trigger: el, start: 'top 88%' }
     });
   });
 })();
