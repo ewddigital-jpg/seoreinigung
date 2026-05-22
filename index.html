@@ -27,6 +27,10 @@
   <!-- Stylesheet -->
   <link rel="stylesheet" href="style.css">
 
+  <!-- GSAP (loaded sync so inline scripts can use it) -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+
   <!-- Schema.org JSON-LD -->
   <script type="application/ld+json">
   {
@@ -133,12 +137,15 @@
     <div class="hero-inner">
 
       <div class="hero-content">
-        <p class="eyebrow hero-eyebrow">Bodensee · Friedrichshafen · Seit 2016</p>
+        <div class="hero-tag">
+          <span class="hero-tag-dot" aria-hidden="true"></span>
+          Bodensee · Friedrichshafen · Seit 2016
+        </div>
         <h1 class="hero-title">
           Sauberkeit für Ihr<br>
           <em>Gewerbe am Bodensee</em>
         </h1>
-        <p class="hero-subtitle">
+        <p class="hero-lead">
           Professionelle Unterhaltsreinigung &amp; Büroreinigung — zuverlässig, termingerecht und zu transparenten Festpreisen. Angebot innerhalb von 24 Stunden.
         </p>
         <div class="hero-ctas">
@@ -151,26 +158,38 @@
             WhatsApp
           </a>
         </div>
-        <ul class="hero-trust" aria-label="Vertrauenssignale">
-          <li class="hero-trust-item"><span class="trust-check" aria-hidden="true">✓</span>Kein Mindestauftrag</li>
-          <li class="hero-trust-item"><span class="trust-check" aria-hidden="true">✓</span>Angebot in 24h</li>
-          <li class="hero-trust-item"><span class="trust-check" aria-hidden="true">✓</span>Fester Ansprechpartner</li>
-        </ul>
+        <div class="hero-proof" aria-label="Vertrauenssignale">
+          <div class="hero-proof-item">
+            <div class="proof-icon" aria-hidden="true">✓</div>
+            <span>Kein Mindestauftrag</span>
+          </div>
+          <div class="hero-proof-item">
+            <div class="proof-icon" aria-hidden="true">24h</div>
+            <span>Angebot garantiert</span>
+          </div>
+          <div class="hero-proof-item">
+            <div class="proof-icon" aria-hidden="true">★</div>
+            <span>Fester Ansprechpartner</span>
+          </div>
+        </div>
       </div>
 
-      <div class="hero-image">
-        <img
-          src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=1000&q=80"
-          alt="Professionelle Gebäudereinigung am Bodensee"
-          width="900" height="600"
-          fetchpriority="high"
-          loading="eager"
-        >
-        <div class="hero-image-badge" aria-hidden="true">
-          <div class="hero-image-badge-icon">
+      <div class="hero-visual">
+        <div class="hero-img-wrap">
+          <img
+            src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=1000&q=80"
+            alt="Professionelle Gebäudereinigung am Bodensee"
+            width="900" height="600"
+            fetchpriority="high"
+            loading="eager"
+          >
+          <div class="hero-img-overlay" aria-hidden="true"></div>
+        </div>
+        <div class="hero-badge" aria-hidden="true">
+          <div class="hero-badge-icon">
             <svg width="22" height="22" fill="none" viewBox="0 0 24 24" stroke="#16a34a" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
           </div>
-          <div class="hero-image-badge-text">
+          <div class="hero-badge-text">
             <strong>4.9 ★ Google</strong>
             <span>47 Bewertungen</span>
           </div>
@@ -215,36 +234,40 @@
     </div>
     <div class="service-grid">
 
-      <a href="leistungen.html#bueroreinigung" class="service-card reveal">
-        <div class="service-icon" aria-hidden="true">
-          <svg width="38" height="38" fill="none" viewBox="0 0 24 24" stroke="#fff" stroke-width="1.6"><path stroke-linecap="round" stroke-linejoin="round" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-2 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/></svg>
+      <a href="leistungen.html#bueroreinigung" class="service-card">
+        <span class="service-num" aria-hidden="true">01</span>
+        <div class="service-icon-wrap" aria-hidden="true">
+          <svg width="28" height="28" fill="none" viewBox="0 0 24 24" stroke="#fff" stroke-width="1.6"><path stroke-linecap="round" stroke-linejoin="round" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-2 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/></svg>
         </div>
         <h3>Büroreinigung</h3>
         <p>Tägliche oder wöchentliche Reinigung Ihrer Büroräume, Sanitäranlagen und Gemeinschaftsflächen — diskret und zuverlässig.</p>
         <span class="service-link">Mehr erfahren <span aria-hidden="true">→</span></span>
       </a>
 
-      <a href="leistungen.html#unterhaltsreinigung" class="service-card reveal reveal-delay-1">
-        <div class="service-icon" aria-hidden="true">
-          <svg width="38" height="38" fill="none" viewBox="0 0 24 24" stroke="#fff" stroke-width="1.6"><path stroke-linecap="round" stroke-linejoin="round" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/></svg>
+      <a href="leistungen.html#unterhaltsreinigung" class="service-card">
+        <span class="service-num" aria-hidden="true">02</span>
+        <div class="service-icon-wrap" aria-hidden="true">
+          <svg width="28" height="28" fill="none" viewBox="0 0 24 24" stroke="#fff" stroke-width="1.6"><path stroke-linecap="round" stroke-linejoin="round" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/></svg>
         </div>
         <h3>Unterhaltsreinigung</h3>
         <p>Regelmäßige Gebäudereinigung für Unternehmen jeder Größe — professionell, gründlich und zu Festpreisen.</p>
         <span class="service-link">Mehr erfahren <span aria-hidden="true">→</span></span>
       </a>
 
-      <a href="leistungen.html#grundreinigung" class="service-card reveal reveal-delay-2">
-        <div class="service-icon" aria-hidden="true">
-          <svg width="38" height="38" fill="none" viewBox="0 0 24 24" stroke="#fff" stroke-width="1.6"><path stroke-linecap="round" stroke-linejoin="round" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"/></svg>
+      <a href="leistungen.html#grundreinigung" class="service-card">
+        <span class="service-num" aria-hidden="true">03</span>
+        <div class="service-icon-wrap" aria-hidden="true">
+          <svg width="28" height="28" fill="none" viewBox="0 0 24 24" stroke="#fff" stroke-width="1.6"><path stroke-linecap="round" stroke-linejoin="round" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"/></svg>
         </div>
         <h3>Grundreinigung</h3>
         <p>Einmalige Tiefenreinigung nach Umzug, Renovierung oder saisonalen Anforderungen — für ein frisches Arbeitsumfeld.</p>
         <span class="service-link">Mehr erfahren <span aria-hidden="true">→</span></span>
       </a>
 
-      <a href="leistungen.html#glasreinigung" class="service-card reveal reveal-delay-3">
-        <div class="service-icon" aria-hidden="true">
-          <svg width="38" height="38" fill="none" viewBox="0 0 24 24" stroke="#fff" stroke-width="1.6"><path stroke-linecap="round" stroke-linejoin="round" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/></svg>
+      <a href="leistungen.html#glasreinigung" class="service-card">
+        <span class="service-num" aria-hidden="true">04</span>
+        <div class="service-icon-wrap" aria-hidden="true">
+          <svg width="28" height="28" fill="none" viewBox="0 0 24 24" stroke="#fff" stroke-width="1.6"><path stroke-linecap="round" stroke-linejoin="round" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/></svg>
         </div>
         <h3>Glas- &amp; Fassadenreinigung</h3>
         <p>Streifenfreie Fenster und gepflegte Fassaden für einen professionellen ersten Eindruck Ihres Unternehmens.</p>
@@ -269,52 +292,52 @@
     <div class="testimonials-grid">
 
       <!-- PLATZHALTER 1 — hier echte Google-Bewertung eintragen -->
-      <article class="review-card reveal" style="border: 2px dashed var(--c-border); background: var(--c-border-light);">
+      <article class="review-card" style="border: 2px dashed var(--c-border); opacity: 0.7;">
         <div class="review-stars" aria-label="5 von 5 Sternen">
           <span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span>
         </div>
-        <p class="review-text" style="color: var(--c-muted); font-style: normal;">
-          ⬜ Bewertungstext kommt diese Woche — echte Google-Rezension wird hier eingefügt.
+        <p class="review-text" style="color: var(--c-muted); font-style: normal; font-family: var(--font-body);">
+          Bewertungstext kommt diese Woche — echte Google-Rezension wird hier eingefügt.
         </p>
         <div class="review-author">
           <div class="review-avatar" style="background: var(--c-border); color: var(--c-muted);">?</div>
           <div>
             <div class="review-name" style="color: var(--c-muted);">Kundenname</div>
-            <div class="review-role">Google Bewertung</div>
+            <div class="review-role">Google Bewertung · Platzhalter</div>
           </div>
         </div>
       </article>
 
       <!-- PLATZHALTER 2 — hier echte Google-Bewertung eintragen -->
-      <article class="review-card reveal reveal-delay-1" style="border: 2px dashed var(--c-border); background: var(--c-border-light);">
+      <article class="review-card" style="border: 2px dashed var(--c-border); opacity: 0.7;">
         <div class="review-stars" aria-label="5 von 5 Sternen">
           <span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span>
         </div>
-        <p class="review-text" style="color: var(--c-muted); font-style: normal;">
-          ⬜ Bewertungstext kommt diese Woche — echte Google-Rezension wird hier eingefügt.
+        <p class="review-text" style="color: var(--c-muted); font-style: normal; font-family: var(--font-body);">
+          Bewertungstext kommt diese Woche — echte Google-Rezension wird hier eingefügt.
         </p>
         <div class="review-author">
           <div class="review-avatar" style="background: var(--c-border); color: var(--c-muted);">?</div>
           <div>
             <div class="review-name" style="color: var(--c-muted);">Kundenname</div>
-            <div class="review-role">Google Bewertung</div>
+            <div class="review-role">Google Bewertung · Platzhalter</div>
           </div>
         </div>
       </article>
 
       <!-- PLATZHALTER 3 — hier echte Google-Bewertung eintragen -->
-      <article class="review-card reveal reveal-delay-2" style="border: 2px dashed var(--c-border); background: var(--c-border-light);">
+      <article class="review-card" style="border: 2px dashed var(--c-border); opacity: 0.7;">
         <div class="review-stars" aria-label="5 von 5 Sternen">
           <span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span>
         </div>
-        <p class="review-text" style="color: var(--c-muted); font-style: normal;">
-          ⬜ Bewertungstext kommt diese Woche — echte Google-Rezension wird hier eingefügt.
+        <p class="review-text" style="color: var(--c-muted); font-style: normal; font-family: var(--font-body);">
+          Bewertungstext kommt diese Woche — echte Google-Rezension wird hier eingefügt.
         </p>
         <div class="review-author">
           <div class="review-avatar" style="background: var(--c-border); color: var(--c-muted);">?</div>
           <div>
             <div class="review-name" style="color: var(--c-muted);">Kundenname</div>
-            <div class="review-role">Google Bewertung</div>
+            <div class="review-role">Google Bewertung · Platzhalter</div>
           </div>
         </div>
       </article>
@@ -326,9 +349,9 @@
 <!-- ── Why Us ───────────────────────────────────────────────── -->
 <section class="section why-us" aria-label="Warum K.K. Reinigung?">
   <div class="container">
-    <div class="why-us-grid">
+    <div class="why-grid">
 
-      <div class="why-us-image">
+      <div class="why-img">
         <img
           src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?auto=format&fit=crop&w=800&q=80"
           alt="K.K. Reinigung Team bei professioneller Gebäudereinigung"
@@ -337,11 +360,11 @@
         >
       </div>
 
-      <div class="why-us-content">
+      <div>
         <p class="eyebrow">Warum wir?</p>
         <h2>Reinigung mit Herz und Handwerk</h2>
         <p class="mt-16" style="color:var(--c-muted)">Inhaber Khaled Kurdi steht persönlich für die Qualität jeder Reinigung. Seit 2016 betreut K.K. Reinigung Gewerbeobjekte am Bodensee mit familiärem Anspruch und professioneller Ausrüstung.</p>
-        <ul class="why-us-list" aria-label="Unsere Vorteile">
+        <ul class="why-list" aria-label="Unsere Vorteile">
           <li class="why-item">
             <div class="why-icon" aria-hidden="true">
               <svg width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
@@ -459,7 +482,7 @@
     </div>
     <div class="areas-grid">
 
-      <a href="reinigungsfirma-friedrichshafen.html" class="area-card reveal">
+      <a href="reinigungsfirma-friedrichshafen.html" class="area-card">
         <div class="area-icon" aria-hidden="true">
           <svg width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
         </div>
@@ -467,7 +490,7 @@
         <p>Unser Hauptstandort — sofort verfügbar</p>
       </a>
 
-      <a href="reinigungsfirma-lindau.html" class="area-card reveal reveal-delay-1">
+      <a href="reinigungsfirma-lindau.html" class="area-card">
         <div class="area-icon" aria-hidden="true">
           <svg width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
         </div>
@@ -475,7 +498,7 @@
         <p>Regelmäßige Einsätze in Lindau &amp; Umgebung</p>
       </a>
 
-      <a href="reinigungsfirma-ravensburg.html" class="area-card reveal reveal-delay-2">
+      <a href="reinigungsfirma-ravensburg.html" class="area-card">
         <div class="area-icon" aria-hidden="true">
           <svg width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
         </div>
@@ -814,6 +837,120 @@
 })();
 </script>
 
+<!-- ── GSAP Animations ─────────────────────────────────────── -->
+<script>
+(function () {
+  if (typeof gsap === 'undefined') return;
+  gsap.registerPlugin(ScrollTrigger);
+
+  /* Hero: stagger from bottom */
+  var heroItems = ['.hero-tag', '.hero-title', '.hero-lead', '.hero-ctas', '.hero-proof'];
+  gsap.from(heroItems, {
+    opacity: 0,
+    y: 28,
+    duration: 0.8,
+    ease: 'power2.out',
+    stagger: 0.12,
+    delay: 0.1
+  });
+  gsap.from('.hero-visual', {
+    opacity: 0,
+    y: 24,
+    duration: 0.9,
+    ease: 'power2.out',
+    delay: 0.3
+  });
+
+  /* Service cards: stagger on scroll */
+  gsap.from('.service-card', {
+    opacity: 0,
+    y: 32,
+    duration: 0.65,
+    ease: 'power2.out',
+    stagger: 0.1,
+    scrollTrigger: {
+      trigger: '.service-grid',
+      start: 'top 82%',
+      toggleActions: 'play none none none'
+    }
+  });
+
+  /* Stats band */
+  gsap.from('.stat-item', {
+    opacity: 0,
+    y: 20,
+    duration: 0.5,
+    ease: 'power2.out',
+    stagger: 0.08,
+    scrollTrigger: {
+      trigger: '.stats-band',
+      start: 'top 85%'
+    }
+  });
+
+  /* Review cards */
+  gsap.from('.review-card', {
+    opacity: 0,
+    y: 24,
+    duration: 0.6,
+    ease: 'power2.out',
+    stagger: 0.1,
+    scrollTrigger: {
+      trigger: '.testimonials-grid',
+      start: 'top 80%'
+    }
+  });
+
+  /* Why-us image + content */
+  gsap.from('.why-img', {
+    opacity: 0,
+    x: -32,
+    duration: 0.8,
+    ease: 'power2.out',
+    scrollTrigger: { trigger: '.why-us', start: 'top 78%' }
+  });
+  gsap.from('.why-item', {
+    opacity: 0,
+    x: 20,
+    duration: 0.55,
+    ease: 'power2.out',
+    stagger: 0.1,
+    scrollTrigger: { trigger: '.why-list', start: 'top 82%' }
+  });
+
+  /* Process steps */
+  gsap.from('.process-step, .process-card', {
+    opacity: 0,
+    y: 20,
+    duration: 0.5,
+    ease: 'power2.out',
+    stagger: 0.08,
+    scrollTrigger: { trigger: '.process', start: 'top 80%' }
+  });
+
+  /* Area cards */
+  gsap.from('.area-card', {
+    opacity: 0,
+    y: 20,
+    duration: 0.5,
+    ease: 'power2.out',
+    stagger: 0.1,
+    scrollTrigger: { trigger: '.areas-grid', start: 'top 82%' }
+  });
+
+  /* Section headers */
+  gsap.utils.toArray('.section-header').forEach(function(el) {
+    gsap.from(el, {
+      opacity: 0,
+      y: 20,
+      duration: 0.7,
+      ease: 'power2.out',
+      scrollTrigger: { trigger: el, start: 'top 85%' }
+    });
+  });
+})();
+</script>
+
 <!-- ── Page Scripts ────────────────────────────────────────── -->
 <script>
 (function () {
@@ -859,21 +996,6 @@
     });
   });
 
-  // Scroll reveal
-  var revealEls = document.querySelectorAll('.reveal');
-  if ('IntersectionObserver' in window) {
-    var observer = new IntersectionObserver(function (entries) {
-      entries.forEach(function (entry) {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
-          observer.unobserve(entry.target);
-        }
-      });
-    }, { threshold: 0.05 });
-    revealEls.forEach(function (el) { observer.observe(el); });
-  } else {
-    revealEls.forEach(function (el) { el.classList.add('visible'); });
-  }
 })();
 </script>
 
