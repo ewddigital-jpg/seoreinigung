@@ -132,7 +132,7 @@
   <div class="container">
     <div class="hero-inner">
 
-      <div class="hero-content reveal">
+      <div class="hero-content">
         <p class="eyebrow hero-eyebrow">Bodensee · Friedrichshafen · Seit 2016</p>
         <h1 class="hero-title">
           Sauberkeit für Ihr<br>
@@ -158,7 +158,7 @@
         </ul>
       </div>
 
-      <div class="hero-image reveal reveal-delay-2">
+      <div class="hero-image">
         <img
           src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=900&q=80"
           alt="Professionell gereinigtes Büro am Bodensee"
@@ -208,7 +208,7 @@
 <!-- ── Services ────────────────────────────────────────────── -->
 <section class="section services" id="leistungen">
   <div class="container">
-    <div class="section-header reveal">
+    <div class="section-header">
       <p class="eyebrow">Unsere Leistungen</p>
       <h2>Was wir für Sie reinigen</h2>
       <p>Von der täglichen Büroreinigung bis zur professionellen Unterhaltsreinigung — wir übernehmen alles für Sie.</p>
@@ -261,7 +261,7 @@
 ──────────────────────────────────────────────────────────── -->
 <section class="section testimonials" aria-label="Kundenbewertungen">
   <div class="container">
-    <div class="section-header reveal">
+    <div class="section-header">
       <p class="eyebrow">Kundenstimmen</p>
       <h2>Was unsere Kunden sagen</h2>
       <p>Verifizierte Bewertungen von echten Kunden am Bodensee</p>
@@ -328,7 +328,7 @@
   <div class="container">
     <div class="why-us-grid">
 
-      <div class="why-us-image reveal">
+      <div class="why-us-image">
         <img
           src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?auto=format&fit=crop&w=800&q=80"
           alt="K.K. Reinigung Team bei professioneller Gebäudereinigung"
@@ -337,7 +337,7 @@
         >
       </div>
 
-      <div class="why-us-content reveal reveal-delay-1">
+      <div class="why-us-content">
         <p class="eyebrow">Warum wir?</p>
         <h2>Reinigung mit Herz und Handwerk</h2>
         <p class="mt-16" style="color:var(--c-muted)">Inhaber Khaled Kurdi steht persönlich für die Qualität jeder Reinigung. Seit 2016 betreut K.K. Reinigung Gewerbeobjekte am Bodensee mit familiärem Anspruch und professioneller Ausrüstung.</p>
@@ -388,7 +388,7 @@
 <!-- ── Process ─────────────────────────────────────────────── -->
 <section class="section process" aria-label="So funktioniert es">
   <div class="container">
-    <div class="section-header reveal">
+    <div class="section-header">
       <p class="eyebrow">So einfach geht's</p>
       <h2>In 5 Schritten zur sauberen Lösung</h2>
     </div>
@@ -452,7 +452,7 @@
 <!-- ── Areas ───────────────────────────────────────────────── -->
 <section class="section areas" id="gebiete" aria-label="Einzugsgebiet">
   <div class="container">
-    <div class="section-header reveal">
+    <div class="section-header">
       <p class="eyebrow">Unser Einzugsgebiet</p>
       <h2>Reinigung rund um den Bodensee</h2>
       <p>Wir sind im gesamten Bodenseekreis für Sie im Einsatz — schnell, zuverlässig und ohne Anfahrtszuschlag im Kerngebiet.</p>
@@ -490,7 +490,7 @@
 <!-- ── FAQ ─────────────────────────────────────────────────── -->
 <section class="section faq-section" id="faq" aria-label="Häufige Fragen">
   <div class="container">
-    <div class="section-header reveal">
+    <div class="section-header">
       <p class="eyebrow">FAQ</p>
       <h2>Häufig gestellte Fragen</h2>
     </div>
@@ -869,7 +869,7 @@
           observer.unobserve(entry.target);
         }
       });
-    }, { threshold: 0.12 });
+    }, { threshold: 0.05 });
     revealEls.forEach(function (el) { observer.observe(el); });
   } else {
     revealEls.forEach(function (el) { el.classList.add('visible'); });
