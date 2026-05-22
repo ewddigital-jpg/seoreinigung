@@ -351,8 +351,9 @@ p  { color: var(--c-text); line-height: 1.75; }
 }
 .hero-image img {
   width: 100%;
-  height: clamp(340px, 45vw, 520px);
+  height: clamp(380px, 50vw, 560px);
   object-fit: cover;
+  object-position: center center;
   border-radius: var(--radius-xl) var(--radius-xl) 0 0;
   display: block;
 }
