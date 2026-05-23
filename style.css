@@ -382,7 +382,7 @@ p { color: var(--color-text-secondary); line-height: 1.7; }
   gap: clamp(40px, 5vw, 72px);
   align-items: flex-start;
 }
-.hero-content { padding-top: clamp(36px, 5vw, 64px); padding-bottom: clamp(56px, 8vw, 100px); }
+.hero-content { padding-top: 12px; padding-bottom: clamp(56px, 8vw, 100px); }
 
 .hero-tag {
   display: inline-flex;
