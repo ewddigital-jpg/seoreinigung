@@ -8,8 +8,18 @@
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://kkreinigung.com/faq">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
-  <link rel="stylesheet" href="kk-tw.min.css">
   <link rel="stylesheet" href="style.css">
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&display=swap" rel="stylesheet">
+
+  <!-- Favicon -->
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+
+  <!-- GSAP -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -86,48 +96,80 @@
   <meta name="twitter:description" content="Häufig gestellte Fragen zur Gebäudereinigung, Büroreinigung und Unterhaltsreinigung von K.K. Reinigung Friedrichshafen.">
   <meta name="twitter:image" content="https://kkreinigung.com/android-chrome-512x512.png">
 </head>
-<body class="font-sans text-gray-900 bg-white">
+<body>
 
-<header id="site-header">
-  <div class="max-w-6xl mx-auto px-4">
-    <div class="flex items-center justify-between h-16">
-      <a href="index" class="flex items-center gap-2.5">
-        <img src="apple-touch-icon.png" alt="K.K. Reinigung Logo" class="w-8 h-8 rounded-lg">
-        <div>
-          <div class="font-bold text-primary text-sm leading-tight">K.K. Reinigung</div>
-          <div class="text-xs text-gray-500 leading-tight hidden sm:block">Friedrichshafen · Bodenseekreis</div>
-        </div>
-      </a>
-      <nav class="hidden md:flex items-center gap-6 text-sm font-medium">
-        <a href="index" class="text-gray-600 hover:text-primary transition-colors">Start</a>
-        <a href="leistungen" class="text-gray-600 hover:text-primary transition-colors">Leistungen</a>
-        <a href="ueber-uns" class="text-gray-600 hover:text-primary transition-colors">Über uns</a>
-        <a href="faq" class="text-primary font-semibold">FAQ</a>
-        <a href="kontakt" class="text-gray-600 hover:text-primary transition-colors">Kontakt</a>
-      </nav>
-      <div class="hidden md:flex items-center gap-3">
-        <a href="tel:01778740889" class="btn-phone"><svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 11a19.79 19.79 0 01-3.07-8.67A2 2 0 012 .18h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>0177 8740889</a>
-        <a href="kontakt" class="btn-primary text-sm py-2 px-4">Angebot anfragen</a>
+<!-- ── Header ──────────────────────────────────────────────── -->
+<header class="site-header" id="site-header">
+
+  <!-- Topbar -->
+  <div class="header-topbar">
+    <div class="container">
+      <div class="topbar-left">
+        <svg width="13" height="13" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+        Friedrichshafen &amp; Bodenseekreis
       </div>
-      <button id="menu-btn" class="md:hidden p-2 text-gray-600 rounded-lg hover:bg-gray-100" aria-label="Menü öffnen" aria-expanded="false">
-        <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
-      </button>
+      <div class="topbar-right">
+        <a href="tel:01778740889" aria-label="Jetzt anrufen">
+          <svg width="13" height="13" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 7V5z"/></svg>
+          0177 8740889
+        </a>
+        <span class="topbar-divider" aria-hidden="true"></span>
+        <span class="topbar-hours">Mo–Sa 07:00–20:00 Uhr</span>
+      </div>
     </div>
-    <nav id="mobile-nav">
-      <a href="index">Start</a>
-      <a href="leistungen">Leistungen</a>
-      <a href="ueber-uns">Über uns</a>
-      <a href="faq">FAQ</a>
-      <a href="kontakt">Kontakt</a>
-      <div class="mobile-cta">
-        <a href="tel:01778740889" class="btn-outline text-center">0177 8740889</a>
-        <a href="kontakt" class="btn-primary text-center">Angebot anfragen</a>
-      </div>
-    </nav>
   </div>
+
+  <!-- Main Nav -->
+  <div class="header-main">
+    <div class="container">
+      <div class="header-inner">
+
+        <a href="/" class="logo" aria-label="K.K. Reinigung – Startseite">
+          <img src="android-chrome-192x192.png" alt="K.K. Reinigung Logo" class="logo-img" width="52" height="52">
+          <div class="logo-text">
+            <span class="logo-name">K.K. Reinigung</span>
+            <span class="logo-sub">Bodensee · Seit 2016</span>
+          </div>
+        </a>
+
+        <nav class="nav-links" aria-label="Hauptnavigation">
+          <a href="#leistungen">Leistungen</a>
+          <a href="#ablauf">Ablauf</a>
+          <a href="#ueber-uns">Über uns</a>
+          <a href="#kontakt">Kontakt</a>
+        </nav>
+
+        <div class="header-actions">
+          <a href="#kontakt" class="btn btn-cta header-cta">Kostenloses Angebot</a>
+        </div>
+
+        <button class="menu-btn" id="menu-btn" aria-label="Menü öffnen" aria-expanded="false" aria-controls="mobile-nav">
+          <svg width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/></svg>
+        </button>
+
+      </div>
+    </div>
+  </div>
+
 </header>
 
-<main class="pt-16">
+<!-- Mobile Nav -->
+<nav class="mobile-nav" id="mobile-nav" aria-label="Mobile Navigation">
+  <a href="#leistungen">Leistungen</a>
+  <a href="#vorteile">Vorteile</a>
+  <a href="#ablauf">Ablauf</a>
+  <a href="#ueber-uns">Über uns</a>
+  <a href="#kontakt">Kontakt</a>
+  <div class="mobile-ctas">
+    <a href="tel:01778740889" class="btn btn-primary btn-lg">
+      <svg width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 7V5z"/></svg>
+      Jetzt anrufen
+    </a>
+    <a href="#kontakt" class="btn btn-cta btn-lg">Kostenloses Angebot</a>
+  </div>
+</nav>
+
+<main>
 
   <div class="max-w-6xl mx-auto px-4 py-3">
     <div class="breadcrumb">
@@ -235,62 +277,91 @@
 
 </main>
 
-<footer class="bg-gray-900 text-gray-400 pt-12 pb-6">
-  <div class="max-w-6xl mx-auto px-4">
-    <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
-      <div>
-        <a href="index" class="flex items-center gap-2 mb-3">
-          <img src="apple-touch-icon.png" alt="K.K. Reinigung" class="w-8 h-8 rounded-lg">
-          <span class="font-bold text-white text-sm">K.K. Reinigung</span>
+<footer class="site-footer" aria-label="Footer">
+  <div class="container">
+    <div class="footer-grid">
+
+      <div class="footer-brand">
+        <a href="/" class="footer-logo" aria-label="K.K. Reinigung – Startseite">
+          <span class="footer-logo-icon" aria-hidden="true">
+            <svg width="20" height="20" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M11 2L12.5 7.5H18L13.5 10.8L15 16.3L11 13L7 16.3L8.5 10.8L4 7.5H9.5L11 2Z" fill="white"/>
+            </svg>
+          </span>
+          <span class="footer-logo-name">K.K. Reinigung</span>
         </a>
-        <p class="text-xs leading-relaxed mb-3">Persönlicher Reinigungsservice im Bodenseekreis.</p>
-        <div class="space-y-1.5 text-sm">
-          <div><a href="tel:01778740889" class="text-blue-400 hover:text-blue-300">0177 8740889</a></div>
-          <div><a href="https://wa.me/491778740889" class="text-green-400 hover:text-green-300">WhatsApp schreiben</a></div>
+        <p class="footer-desc">Professionelle Gebäude- und Unterhaltsreinigung im Bodenseekreis. Zuverlässig, termingerecht und zu fairen Festpreisen seit 2016.</p>
+        <div class="footer-contact">
+          <a href="tel:01778740889">
+            <svg width="13" height="13" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 7V5z"/></svg>
+            0177 8740889
+          </a>
+          <a href="mailto:kurdi.reinigungsservice@gmail.com">
+            <svg width="13" height="13" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+            kurdi.reinigungsservice@gmail.com
+          </a>
+          <a href="https://wa.me/491778740889" target="_blank" rel="noopener noreferrer">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="rgba(255,255,255,.6)" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            WhatsApp schreiben
+          </a>
         </div>
       </div>
-      <div>
-        <h4 class="text-white font-semibold text-sm mb-3">Leistungen</h4>
-        <ul class="space-y-2 text-sm">
-          <li><a href="unterhaltsreinigung-friedrichshafen">Unterhaltsreinigung</a></li>
-          <li><a href="bueroreinigung-friedrichshafen">Büroreinigung</a></li>
-          <li><a href="bauendreinigung-friedrichshafen">Bauendreinigung</a></li>
-          <li><a href="gebaeudereinigung-friedrichshafen">Gebäudereinigung</a></li>
+
+      <div class="footer-col">
+        <h4>Leistungen</h4>
+        <ul>
+          <li><a href="#leistungen">Büroreinigung</a></li>
+          <li><a href="#leistungen">Unterhaltsreinigung</a></li>
+          <li><a href="#leistungen">Treppenhausreinigung</a></li>
+          <li><a href="#leistungen">Gebäudereinigung</a></li>
+          <li><a href="#leistungen">Bauendreinigung</a></li>
+          <li><a href="#leistungen">Sonderreinigung</a></li>
         </ul>
       </div>
-      <div>
-        <h4 class="text-white font-semibold text-sm mb-3">Regionen</h4>
-        <ul class="space-y-2 text-sm">
-          <li><a href="index">Friedrichshafen</a></li>
-          <li><a href="reinigungsfirma-lindau">Lindau</a></li>
-          <li><a href="reinigungsfirma-ravensburg">Ravensburg</a></li>
+
+      <div class="footer-col">
+        <h4>Servicegebiet</h4>
+        <ul>
+          <li><a href="reinigungsfirma-friedrichshafen.html">Friedrichshafen</a></li>
+          <li><a href="#gebiete">Tettnang</a></li>
+          <li><a href="#gebiete">Meckenbeuren</a></li>
+          <li><a href="#gebiete">Markdorf</a></li>
+          <li><a href="reinigungsfirma-lindau.html">Lindau</a></li>
+          <li><a href="reinigungsfirma-ravensburg.html">Ravensburg</a></li>
         </ul>
       </div>
-      <div>
-        <h4 class="text-white font-semibold text-sm mb-3">Unternehmen</h4>
-        <ul class="space-y-2 text-sm">
-          <li><a href="ueber-uns">Über uns</a></li>
-          <li><a href="faq">FAQ</a></li>
-          <li><a href="kontakt">Kontakt</a></li>
-          <li><a href="impressum">Impressum</a></li>
-          <li><a href="datenschutz">Datenschutz</a></li>
+
+      <div class="footer-col">
+        <h4>Unternehmen</h4>
+        <ul>
+          <li><a href="#ueber-uns">Über uns</a></li>
+          <li><a href="#ablauf">Ablauf</a></li>
+          <li><a href="#faq">FAQ</a></li>
+          <li><a href="#kontakt">Kontakt</a></li>
+          <li><a href="impressum.html">Impressum</a></li>
+          <li><a href="datenschutz.html">Datenschutz</a></li>
         </ul>
       </div>
+
     </div>
-    <div class="border-t border-gray-800 pt-5 flex flex-col sm:flex-row justify-between items-center text-xs gap-2">
-      <p>© 2025 K.K. Reinigung · Khaled Kurdi · Friedrichshafen</p>
-      <div class="flex gap-4"><a href="impressum" class="hover:text-gray-300">Impressum</a><a href="datenschutz" class="hover:text-gray-300">Datenschutz</a></div>
+
+    <div class="footer-bottom">
+      <p>© 2026 K.K. Reinigung · Friedrichshafen · Inhaber: Khaled Kurdi</p>
+      <div class="footer-bottom-links">
+        <a href="impressum.html">Impressum</a>
+        <a href="datenschutz.html">Datenschutz</a>
+        <a href="sitemap.xml">Sitemap</a>
+      </div>
     </div>
   </div>
 </footer>
 
-<a id="wa-btn" href="https://wa.me/491778740889?text=Hallo%2C%20ich%20interessiere%20mich%20f%C3%BCr%20Ihren%20Reinigungsservice." aria-label="WhatsApp schreiben" title="WhatsApp schreiben">
-  <svg width="28" height="28" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+<!-- ── WhatsApp Button ─────────────────────────────────────── -->
+<a id="wa-btn" href="https://wa.me/491778740889" target="_blank" rel="noopener noreferrer" aria-label="Auf WhatsApp schreiben">
+  <svg width="28" height="28" viewBox="0 0 24 24" fill="#fff" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
 </a>
 
-<script src="script.js"></script>
-
-<!-- KK KI-Agent Widget -->
+<!-- ── KK KI-Agent Widget ───────────────────────────────────── -->
 <style>
   @keyframes kk-pulse{0%{box-shadow:0 4px 20px rgba(26,58,92,.5)}50%{box-shadow:0 4px 28px rgba(26,58,92,.75),0 0 0 8px rgba(26,58,92,.12)}100%{box-shadow:0 4px 20px rgba(26,58,92,.5)}}
   @keyframes kkSlideUp{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:translateY(0)}}
@@ -356,7 +427,7 @@
   }
 </style>
 <div id="kk-chat">
-  <div id="kk-tip">Fragen zu Preisen oder Terminen? 👋</div>
+  <div id="kk-tip" style="display: none;">Fragen zu Preisen oder Terminen? 👋</div>
   <button type="button" id="kk-toggle" aria-label="KI-Assistent öffnen">
     <img src="apple-touch-icon.png" alt="K.K. Reinigung" onerror="this.remove()">
     <div id="kk-badge">1</div>
@@ -375,7 +446,7 @@
     </div>
     <div id="kk-form">
       <input id="kk-input" type="text" placeholder="Ihre Frage…" autocomplete="off">
-      <button id="kk-send" aria-label="Senden"><svg viewBox="0 0 24 24"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg></button>
+      <button id="kk-send" aria-label="Senden"><svg viewBox="0 0 24 24"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg></button>
     </div>
   </div>
 </div>
@@ -389,10 +460,29 @@
   function hideTip(){tipEl.style.display='none';}
   var boxEl=document.getElementById('kk-box');
   function isMobile(){return window.innerWidth<=480;}
-  function syncVV(){if(!isOpen||!isMobile())return;var vv=window.visualViewport;if(!vv)return;boxEl.style.setProperty('top',vv.offsetTop+'px','important');boxEl.style.setProperty('height',vv.height+'px','important');msgsEl.scrollTop=msgsEl.scrollHeight;}
+  function syncVV(){
+    if(!isOpen||!isMobile())return;
+    var vv=window.visualViewport;
+    if(!vv)return;
+    boxEl.style.setProperty('top',vv.offsetTop+'px','important');
+    boxEl.style.setProperty('height',vv.height+'px','important');
+    msgsEl.scrollTop=msgsEl.scrollHeight;
+  }
   if(window.visualViewport){window.visualViewport.addEventListener('resize',syncVV,{passive:true});}
-  window.kkOpen=function(){if(isOpen)return;isOpen=true;hideTip();badgeEl.classList.remove('kk-vis');toggleEl.classList.remove('kk-pulsing');boxEl.style.display='flex';syncVV();toggleEl.setAttribute('aria-label','KI-Assistent schließen');hideWA();if(msgs.length===0){setTimeout(function(){addMsg('bot','Hallo! Ich bin der KI-Assistent von <strong>K.K. Reinigung</strong>. Wie kann ich Ihnen helfen?');},300);}};
-  window.kkClose=function(){isOpen=false;boxEl.style.display='none';boxEl.style.removeProperty('top');boxEl.style.removeProperty('height');toggleEl.setAttribute('aria-label','KI-Assistent öffnen');showWA();};
+  window.kkOpen=function(){
+    if(isOpen)return;
+    isOpen=true;hideTip();
+    badgeEl.classList.remove('kk-vis');toggleEl.classList.remove('kk-pulsing');
+    boxEl.style.display='flex';syncVV();
+    toggleEl.setAttribute('aria-label','KI-Assistent schließen');
+    hideWA();
+    if(msgs.length===0){setTimeout(function(){addMsg('bot','Hallo! Ich bin der KI-Assistent von <strong>K.K. Reinigung</strong>. Wie kann ich Ihnen helfen?');},300);}
+  };
+  window.kkClose=function(){
+    isOpen=false;boxEl.style.display='none';
+    boxEl.style.removeProperty('top');boxEl.style.removeProperty('height');
+    toggleEl.setAttribute('aria-label','KI-Assistent öffnen');showWA();
+  };
   window.kkSend=function(text){var msg=(text||inputEl.value).trim();if(!msg||busy)return;inputEl.value='';qrEl.style.display='none';addMsg('user',msg);msgs.push({role:'user',content:msg});busy=true;var typing=addMsg('bot','<span><i></i><i></i><i></i></span>');typing.classList.add('km-typing');var cbName='kkCb'+Date.now();window[cbName]=function(data){delete window[cbName];document.querySelectorAll('script[data-kk-cb]').forEach(function(s){s.remove();});typing.remove();busy=false;if(data&&data.reply){msgs.push({role:'assistant',content:data.reply});addMsg('bot',data.reply);}else{addMsg('bot','Entschuldigung, kurzer Fehler. Bitte direkt anrufen: <a href="tel:01778740889">0177 8740889</a>');}};var s=document.createElement('script');s.setAttribute('data-kk-cb','1');s.src=API+'?callback='+cbName+'&clientId='+encodeURIComponent(CLIENT)+'&messages='+encodeURIComponent(JSON.stringify(msgs));document.body.appendChild(s);};
   toggleEl.addEventListener('click',function(){isOpen?window.kkClose():window.kkOpen();});
   document.getElementById('kk-close').addEventListener('click',function(){window.kkClose();});
@@ -400,14 +490,65 @@
   inputEl.addEventListener('keydown',function(e){if(e.key==='Enter')window.kkSend();});
   document.querySelectorAll('.kk-q').forEach(function(b){b.addEventListener('click',function(){window.kkSend(b.getAttribute('data-msg'));});});
   tipEl.addEventListener('click',function(){window.kkOpen();});
-  if(!sessionStorage.getItem('kk-tip')){setTimeout(function(){if(isOpen)return;tipEl.style.display='block';badgeEl.classList.add('kk-vis');toggleEl.classList.add('kk-pulsing');sessionStorage.setItem('kk-tip','1');setTimeout(function(){if(!isOpen)hideTip();},8000);},5000);}
+  if(!sessionStorage.getItem('kk-tip')){
+    setTimeout(function(){
+      if(isOpen)return;
+      tipEl.style.display='block';badgeEl.classList.add('kk-vis');toggleEl.classList.add('kk-pulsing');
+      sessionStorage.setItem('kk-tip','1');
+      setTimeout(function(){if(!isOpen)hideTip();},8000);
+    },5000);
+  }
   window.addEventListener('scroll',function(){if(!isOpen)hideTip();},{passive:true,once:true});
 })();
 </script>
 <!-- /KK KI-Agent Widget -->
-  <script src="https://ewd-cms.vercel.app/cms.js"
-    data-repo="ewddigital-jpg/seoreinigung" data-file="faq.html"
-    data-api="https://ewd-cms.vercel.app"
-    data-pw-hash="92fca008b7019839a3f015cee8e2f7b78ff0a2140ba6246dfdd1a80c5a4da8aa"></script>
+
+<!-- ── Cookie Banner ───────────────────────────────────────── -->
+<div id="kk-ckb" style="display:none;position:fixed;bottom:0;left:0;right:0;z-index:99998;background:#fff;border-top:2px solid #003257;padding:18px 24px;box-shadow:0 -4px 24px rgba(0,0,0,.10);font-family:sans-serif">
+  <div style="max-width:900px;margin:0 auto;display:flex;align-items:center;gap:16px;flex-wrap:wrap">
+    <p style="flex:1;min-width:220px;font-size:.82rem;color:#374151;margin:0;line-height:1.6">Wir verwenden <strong>keine Tracking-Cookies</strong>. Bei „Alle akzeptieren" laden wir Google Fonts nach. Bilder auf dieser Seite werden von <strong>Unsplash</strong> (USA) geladen. Unser <strong>KI-Assistent</strong> überträgt Chatnachrichten an OpenAI (USA) — nur für die Dauer des Gesprächs. <a href="datenschutz.html" style="color:#003257;font-weight:600">Mehr erfahren</a></p>
+    <div style="display:flex;gap:8px;flex-shrink:0">
+      <button onclick="kkCkNecessary()" type="button" style="padding:.5rem 1.1rem;border:1.5px solid #003257;border-radius:8px;background:#fff;color:#003257;font-size:.82rem;font-weight:600;cursor:pointer">Nur notwendige</button>
+      <button onclick="kkCkAccept()" type="button" style="padding:.5rem 1.1rem;border:none;border-radius:8px;background:#003257;color:#fff;font-size:.82rem;font-weight:600;cursor:pointer">Alle akzeptieren</button>
+    </div>
+  </div>
+</div>
+<script>
+(function(){
+  var k='kk-consent',sk='kk-banner-shown',v=localStorage.getItem(k);
+  function loadFonts(){}
+  if(v==='all'){loadFonts();return;}
+  if(v==='necessary'){return;}
+  if(sessionStorage.getItem(sk)){return;}
+  sessionStorage.setItem(sk,'1');
+  document.getElementById('kk-ckb').style.display='block';
+  window.kkCkAccept=function(){localStorage.setItem(k,'all');loadFonts();document.getElementById('kk-ckb').style.display='none';};
+  window.kkCkNecessary=function(){localStorage.setItem(k,'necessary');document.getElementById('kk-ckb').style.display='none';};
+})();
+</script>
+
+<!-- ── GSAP Animations ─────────────────────────────────────── -->
+<script>
+(function () {
+  if (typeof gsap === 'undefined') return;
+  gsap.registerPlugin(ScrollTrigger);
+  function once(trigger, startPos) {
+    return { trigger: trigger, start: startPos || 'top 88%', once: true };
+  }
+  gsap.utils.toArray('.section-header').forEach(function(el) {
+    gsap.fromTo(el,
+      { opacity: 0, y: 14 },
+      { opacity: 1, y: 0, duration: 0.55, ease: 'power2.out',
+        scrollTrigger: once(el, 'top 90%') }
+    );
+  });
+  gsap.utils.toArray('.hero-title, .hero-lead, .hero-ctas').forEach(function(el, i) {
+    gsap.fromTo(el,
+      { opacity: 0, y: 20 },
+      { opacity: 1, y: 0, duration: 0.6, ease: 'power2.out', delay: i * 0.1 }
+    );
+  });
+})();
+</script>
 </body>
 </html>
