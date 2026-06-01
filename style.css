@@ -41,8 +41,8 @@
   --max-w:            1200px;
   --px:               clamp(20px, 5vw, 64px);
   --header-topbar-h:  38px;
-  --header-main-h:    112px;
-  --header-h:         112px;
+  --header-main-h:    80px;
+  --header-h:         80px;
   --section-gap:      clamp(43px, 6.3vw, 72px);
 }
 
@@ -233,8 +233,8 @@ p { color: var(--color-text-secondary); line-height: 1.7; }
 }
 .logo:hover { opacity: 0.85; }
 .logo-img {
-  height: 56px; width: auto;
-  object-fit: contain; border-radius: 12px;
+  height: 44px; width: auto;
+  object-fit: contain; border-radius: 10px;
 }
 .logo-text { display: flex; flex-direction: column; justify-content: center; gap: 3px; }
 .logo-name {
@@ -320,8 +320,8 @@ p { color: var(--color-text-secondary); line-height: 1.7; }
 }
 .header-cta {
   position: relative !important; overflow: hidden !important;
-  padding: 0 28px !important; height: 52px !important;
-  min-height: unset !important; font-size: 1rem !important;
+  padding: 0 24px !important; height: 44px !important;
+  min-height: unset !important; font-size: 0.9375rem !important;
   font-weight: 700 !important; border-radius: 12px !important;
   box-shadow: 0 4px 18px rgba(229,114,42,.30) !important;
   white-space: nowrap; letter-spacing: -0.01em;
@@ -1058,12 +1058,12 @@ p { color: var(--color-text-secondary); line-height: 1.7; }
 @media (max-width: 768px) {
   :root {
     --px: 20px;
-    --header-h:      72px;
-    --header-main-h: 72px;
+    --header-h:      64px;
+    --header-main-h: 64px;
   }
 
-  .site-header { height: 72px; }
-  .logo-img { height: 42px; }
+  .site-header { height: 64px; }
+  .logo-img { height: 38px; }
   .logo-name { font-size: 1.125rem; }
   .nav-links, .header-actions { display: none; }
   .menu-btn { display: flex; align-items: center; justify-content: center; }
