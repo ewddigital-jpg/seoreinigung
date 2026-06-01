@@ -7,7 +7,6 @@
   <meta name="description" content="Datenschutzerklärung der K.K. Reinigung.">
   <meta name="robots" content="noindex, follow">
   <link rel="icon" href="favicon.ico">
-  <link rel="stylesheet" href="kk-tw.min.css">
   <link rel="stylesheet" href="style.css">
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -49,175 +48,94 @@
 <body>
 
 <!-- ── Header ──────────────────────────────────────────────── -->
+<!-- ── Header ──────────────────────────────────────────────── -->
+<!-- ── Header ──────────────────────────────────────────────── -->
+<!-- ── Header ──────────────────────────────────────────────── -->
 <header class="site-header" id="site-header">
+  <div class="container">
+    <div class="header-inner">
 
-  <!-- Topbar -->
-  <div class="header-topbar">
-    <div class="container">
-      <div class="topbar-left">
-        <svg width="13" height="13" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
-        Friedrichshafen &amp; Bodenseekreis
-      </div>
-      <div class="topbar-right">
-        <a href="tel:01778740889" aria-label="Jetzt anrufen">
-          <svg width="13" height="13" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 7V5z"/></svg>
-          0177 8740889
-        </a>
-        <span class="topbar-divider" aria-hidden="true"></span>
-        <span class="topbar-hours">Mo–Sa 07:00–20:00 Uhr</span>
-      </div>
-    </div>
-  </div>
+      <!-- Branding -->
+      <a href="/" class="logo" aria-label="K.K. Reinigung – Startseite">
+        <img src="android-chrome-192x192.png" alt="K.K. Reinigung Logo" class="logo-img" width="56" height="56">
+        <div class="logo-text">
+          <span class="logo-name">K.K. Reinigung</span>
+          <span class="logo-sub">Bodenseekreis · seit 2016</span>
+        </div>
+      </a>
 
-  <!-- Main Nav -->
-  <div class="header-main">
-    <div class="container">
-      <div class="header-inner">
+      <!-- Navigation -->
+      <nav class="nav-links" aria-label="Hauptnavigation">
+        <a href="/">Startseite</a>
+        <a href="leistungen">Dienstleistungen</a>
+        <a href="ueber-uns">Über uns</a>
+        <a href="kontakt">Kontakt</a>
+      </nav>
 
-        <a href="/" class="logo" aria-label="K.K. Reinigung – Startseite">
-          <img src="android-chrome-192x192.png" alt="K.K. Reinigung Logo" class="logo-img" width="52" height="52">
-          <div class="logo-text">
-            <span class="logo-name">K.K. Reinigung</span>
-            <span class="logo-sub">Bodensee · Seit 2016</span>
+      <!-- Contact + CTA -->
+      <div class="header-actions">
+        <a href="tel:01778740889" class="header-phone" aria-label="Anrufen: 0177 8740889">
+          <div class="header-phone-icon" aria-hidden="true">
+            <svg width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 7V5z"/></svg>
+          </div>
+          <div class="header-phone-text">
+            <span class="header-phone-label">Jetzt anrufen</span>
+            <span class="header-phone-num">0177 8740889</span>
           </div>
         </a>
-
-        <nav class="nav-links" aria-label="Hauptnavigation">
-          <a href="#leistungen">Leistungen</a>
-          <a href="#ablauf">Ablauf</a>
-          <a href="#ueber-uns">Über uns</a>
-          <a href="#kontakt">Kontakt</a>
-        </nav>
-
-        <div class="header-actions">
-          <a href="#kontakt" class="btn btn-cta header-cta">Kostenloses Angebot</a>
-        </div>
-
-        <button class="menu-btn" id="menu-btn" aria-label="Menü öffnen" aria-expanded="false" aria-controls="mobile-nav">
-          <svg width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/></svg>
-        </button>
-
+        <div class="header-divider" aria-hidden="true"></div>
+        <a href="kontakt" class="btn btn-cta header-cta">Kostenloses Angebot</a>
       </div>
+
+      <!-- Mobile burger -->
+      <button class="menu-btn" id="menu-btn" aria-label="Menü öffnen" aria-expanded="false" aria-controls="mobile-nav">
+        <svg width="22" height="22" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/></svg>
+      </button>
+
     </div>
   </div>
-
 </header>
 
 <!-- Mobile Nav -->
 <nav class="mobile-nav" id="mobile-nav" aria-label="Mobile Navigation">
-  <a href="#leistungen">Leistungen</a>
-  <a href="#vorteile">Vorteile</a>
-  <a href="#ablauf">Ablauf</a>
-  <a href="#ueber-uns">Über uns</a>
-  <a href="#kontakt">Kontakt</a>
+  <a href="/">Startseite</a>
+  <a href="leistungen">Leistungen</a>
+  <a href="ueber-uns">Über uns</a>
+  <a href="kontakt">Kontakt</a>
   <div class="mobile-ctas">
     <a href="tel:01778740889" class="btn btn-primary btn-lg">
       <svg width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 7V5z"/></svg>
       Jetzt anrufen
     </a>
-    <a href="#kontakt" class="btn btn-cta btn-lg">Kostenloses Angebot</a>
+    <a href="kontakt" class="btn btn-cta btn-lg">Kostenloses Angebot</a>
   </div>
 </nav>
 
 <main>
-  <div class="max-w-6xl mx-auto px-4 py-3">
-    <div class="breadcrumb">
-      <a href="index">Start</a><span>›</span>
-      <span class="text-gray-900">Datenschutz</span>
-    </div>
+<div class="breadcrumb-wrap">
+  <div class="container">
+    <nav class="breadcrumb" aria-label="Breadcrumb"><a href="/">Startseite</a><span aria-hidden="true">›</span><span>Datenschutz</span></nav>
   </div>
-
-  <section class="py-12 md:py-16">
-    <div class="max-w-2xl mx-auto px-4">
-      <h1 class="text-3xl font-extrabold text-gray-900 mb-8">Datenschutzerklärung</h1>
-
-      <div class="space-y-8 text-gray-700 leading-relaxed">
-
-        <div>
-          <h2 class="text-lg font-bold text-gray-900 mb-2">1. Verantwortlicher</h2>
-          <p>
-            <strong>K.K. Gebäudereinigung</strong><br>
-            Inhaber: Khaled Kurdi<br>
-            Heinrich-Heine-Straße 33<br>
-            88045 Friedrichshafen<br>
-            Telefon: 0177 8740889<br>
-            E-Mail: <a href="mailto:kurdi.reinigungsservice@gmail.com" class="text-primary hover:underline">kurdi.reinigungsservice@gmail.com</a>
-          </p>
-        </div>
-
-        <div>
-          <h2 class="text-lg font-bold text-gray-900 mb-2">2. Erhebung und Speicherung personenbezogener Daten</h2>
-          <p>Beim Aufrufen dieser Website werden automatisch Daten durch den Hosting-Anbieter erfasst:</p>
-          <ul class="mt-3 space-y-1 list-disc list-inside text-gray-600">
-            <li>IP-Adresse</li>
-            <li>Datum und Uhrzeit des Zugriffs</li>
-            <li>Browsertyp und Browserversion</li>
-            <li>Betriebssystem</li>
-            <li>Referrer-URL</li>
-            <li>Name des Providers</li>
-          </ul>
-          <p class="mt-3">Diese Daten sind technisch notwendig, um die Website korrekt anzuzeigen und die Stabilität zu gewährleisten.</p>
-        </div>
-
-        <div>
-          <h2 class="text-lg font-bold text-gray-900 mb-2">3. Hosting</h2>
-          <p>Diese Website wird bei GitHub Pages gehostet.</p>
-        </div>
-
-        <div>
-          <h2 class="text-lg font-bold text-gray-900 mb-2">4. Cookies &amp; lokaler Speicher</h2>
-          <p>Diese Website verwendet <strong>keine Tracking-Cookies</strong>. Ihre Cookie-Einwilligung wird im lokalen Speicher (localStorage) Ihres Browsers gespeichert (Schlüssel: <code>kk-consent</code>). Dieser Eintrag verlässt Ihren Browser nicht.</p>
-          <p class="mt-2">Bei Zustimmung zu „Alle akzeptieren" werden Google Fonts dynamisch nachgeladen (Verbindung zu Google-Servern, USA). Sie können Ihre Einwilligung jederzeit widerrufen, indem Sie den Browser-Cache leeren.</p>
-        </div>
-
-        <div>
-          <h2 class="text-lg font-bold text-gray-900 mb-2">5. Externe Bilder (Unsplash)</h2>
-          <p>Auf dieser Website werden Bilder eingebunden, die über das Content Delivery Network (CDN) von <strong>Unsplash, Inc.</strong> (222 Broadway, New York, USA) bereitgestellt werden. Beim Laden dieser Bilder stellt Ihr Browser eine direkte Verbindung zu Servern von Unsplash her. Dabei wird Ihre IP-Adresse an Unsplash übermittelt.</p>
-          <p class="mt-2">Die Bilder werden unter der <a href="https://unsplash.com/license" class="text-primary hover:underline" target="_blank" rel="noopener">Unsplash-Lizenz</a> verwendet, die eine kostenfreie kommerzielle Nutzung erlaubt. Wir haben keinen Einfluss auf die weitere Datenverarbeitung durch Unsplash. Weitere Informationen finden Sie in der <a href="https://unsplash.com/privacy" class="text-primary hover:underline" target="_blank" rel="noopener">Datenschutzerklärung von Unsplash</a>.</p>
-          <p class="mt-2">Die Datenübertragung in die USA erfolgt auf Grundlage der EU-Standardvertragsklauseln gemäß Art. 46 DSGVO. Rechtsgrundlage für die Einbindung ist Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse an der professionellen Darstellung unserer Dienstleistungen).</p>
-        </div>
-
-        <div>
-          <h2 class="text-lg font-bold text-gray-900 mb-2">6. KI-Chatbot</h2>
-          <p>Auf dieser Website ist ein KI-Assistent eingebunden. Ihre Chatnachrichten werden zur Verarbeitung an die API von <strong>OpenAI, LLC</strong> (San Francisco, USA) übertragen. OpenAI verarbeitet diese Daten ausschließlich zur Beantwortung Ihrer Anfrage und verwendet sie gemäß seinen Nutzungsbedingungen nicht zum Training von Modellen (API-Nutzung).</p>
-          <p class="mt-2">Die Übertragung in die USA erfolgt auf Grundlage der EU-Standardvertragsklauseln gemäß Art. 46 DSGVO. Chatnachrichten werden nicht dauerhaft gespeichert. Wenn Sie im Chat Ihren Namen oder Ihre E-Mail-Adresse hinterlassen, erhalten wir eine Benachrichtigung zur Kontaktaufnahme. Rechtsgrundlage: Art. 6 Abs. 1 lit. b und f DSGVO.</p>
-        </div>
-        <div>
-          <h2 class="text-lg font-bold text-gray-900 mb-2">7. Kontaktaufnahme</h2>
-          <p>Wenn Sie uns per Kontaktformular oder E-Mail kontaktieren, werden folgende Daten verarbeitet:</p>
-          <ul class="mt-3 space-y-1 list-disc list-inside text-gray-600">
-            <li>Name</li>
-            <li>E-Mail-Adresse</li>
-            <li>Telefonnummer (optional)</li>
-            <li>Inhalt der Nachricht</li>
-          </ul>
-        </div>
-
-        <div>
-          <h2 class="text-lg font-bold text-gray-900 mb-2">8. SSL-/TLS-Verschlüsselung</h2>
-          <p>Diese Website nutzt eine SSL-Verschlüsselung zur sicheren Übertragung von Daten.</p>
-        </div>
-
-        <div>
-          <h2 class="text-lg font-bold text-gray-900 mb-2">9. Rechte der betroffenen Personen</h2>
-          <ul class="space-y-1 list-disc list-inside text-gray-600">
-            <li>Auskunft</li>
-            <li>Berichtigung</li>
-            <li>Löschung</li>
-            <li>Einschränkung der Verarbeitung</li>
-            <li>Widerspruch</li>
-            <li>Datenübertragbarkeit</li>
-          </ul>
-        </div>
-
-        <div>
-          <h2 class="text-lg font-bold text-gray-900 mb-2">10. Aktualität dieser Datenschutzerklärung</h2>
-          <p>Stand: April 2026</p>
-        </div>
-
+</div>
+<section class="section">
+  <div class="container">
+    <div class="prose">
+      <h1 style="font-family:var(--font-body);font-size:clamp(1.5rem,3vw,2rem);font-weight:800;color:var(--color-primary-dark);margin-bottom:32px">Datenschutzerklärung</h1>
+      <div style="display:flex;flex-direction:column;gap:28px;color:var(--color-text-secondary);line-height:1.75">
+        <div><h2 class="prose h2">1. Verantwortlicher</h2><p><strong>K.K. Gebäudereinigung</strong><br>Inhaber: Khaled Kurdi<br>Heinrich-Heine-Straße 33<br>88045 Friedrichshafen<br>Telefon: 0177 8740889<br>E-Mail: <a href="mailto:kurdi.reinigungsservice@gmail.com" style="color:var(--color-primary)">kurdi.reinigungsservice@gmail.com</a></p></div>
+        <div><h2 class="prose h2">2. Erhebung und Speicherung personenbezogener Daten</h2><p>Beim Aufrufen dieser Website werden automatisch Daten durch den Hosting-Anbieter erfasst:</p><ul style="margin-top:10px;padding-left:20px;display:flex;flex-direction:column;gap:4px"><li>IP-Adresse</li><li>Datum und Uhrzeit des Zugriffs</li><li>Browsertyp und Browserversion</li><li>Betriebssystem</li><li>Referrer-URL</li><li>Name des Providers</li></ul><p style="margin-top:12px">Diese Daten sind technisch notwendig, um die Website korrekt anzuzeigen und die Stabilität zu gewährleisten.</p></div>
+        <div><h2 class="prose h2">3. Hosting</h2><p>Diese Website wird bei GitHub Pages gehostet.</p></div>
+        <div><h2 class="prose h2">4. Cookies &amp; lokaler Speicher</h2><p>Diese Website verwendet <strong>keine Tracking-Cookies</strong>. Ihre Cookie-Einwilligung wird im lokalen Speicher (localStorage) Ihres Browsers gespeichert (Schlüssel: <code>kk-consent</code>). Dieser Eintrag verlässt Ihren Browser nicht.</p><p style="margin-top:10px">Bei Zustimmung zu „Alle akzeptieren" werden Google Fonts dynamisch nachgeladen (Verbindung zu Google-Servern, USA). Sie können Ihre Einwilligung jederzeit widerrufen, indem Sie den Browser-Cache leeren.</p></div>
+        <div><h2 class="prose h2">5. Externe Bilder (Unsplash)</h2><p>Auf dieser Website werden Bilder eingebunden, die über das Content Delivery Network (CDN) von <strong>Unsplash, Inc.</strong> (222 Broadway, New York, USA) bereitgestellt werden. Beim Laden dieser Bilder stellt Ihr Browser eine direkte Verbindung zu Servern von Unsplash her. Dabei wird Ihre IP-Adresse an Unsplash übermittelt.</p><p style="margin-top:10px">Die Bilder werden unter der <a href="https://unsplash.com/license" target="_blank" rel="noopener" style="color:var(--color-primary)">Unsplash-Lizenz</a> verwendet, die eine kostenfreie kommerzielle Nutzung erlaubt. Wir haben keinen Einfluss auf die weitere Datenverarbeitung durch Unsplash. Weitere Informationen finden Sie in der <a href="https://unsplash.com/privacy" target="_blank" rel="noopener" style="color:var(--color-primary)">Datenschutzerklärung von Unsplash</a>.</p><p style="margin-top:10px">Die Datenübertragung in die USA erfolgt auf Grundlage der EU-Standardvertragsklauseln gemäß Art. 46 DSGVO.</p></div>
+        <div><h2 class="prose h2">6. KI-Chatbot</h2><p>Auf dieser Website ist ein KI-Assistent eingebunden. Ihre Chatnachrichten werden zur Verarbeitung an die API von <strong>OpenAI, LLC</strong> (San Francisco, USA) übertragen. OpenAI verarbeitet diese Daten ausschließlich zur Beantwortung Ihrer Anfrage und verwendet sie gemäß seinen Nutzungsbedingungen nicht zum Training von Modellen (API-Nutzung).</p><p style="margin-top:10px">Die Übertragung in die USA erfolgt auf Grundlage der EU-Standardvertragsklauseln gemäß Art. 46 DSGVO. Chatnachrichten werden nicht dauerhaft gespeichert. Rechtsgrundlage: Art. 6 Abs. 1 lit. b und f DSGVO.</p></div>
+        <div><h2 class="prose h2">7. Kontaktaufnahme</h2><p>Wenn Sie uns per Kontaktformular oder E-Mail kontaktieren, werden folgende Daten verarbeitet:</p><ul style="margin-top:10px;padding-left:20px;display:flex;flex-direction:column;gap:4px"><li>Name</li><li>E-Mail-Adresse</li><li>Telefonnummer (optional)</li><li>Inhalt der Nachricht</li></ul></div>
+        <div><h2 class="prose h2">8. SSL-/TLS-Verschlüsselung</h2><p>Diese Website nutzt eine SSL-Verschlüsselung zur sicheren Übertragung von Daten.</p></div>
+        <div><h2 class="prose h2">9. Rechte der betroffenen Personen</h2><ul style="padding-left:20px;display:flex;flex-direction:column;gap:4px"><li>Auskunft</li><li>Berichtigung</li><li>Löschung</li><li>Einschränkung der Verarbeitung</li><li>Widerspruch</li><li>Datenübertragbarkeit</li></ul></div>
+        <div><h2 class="prose h2">10. Aktualität dieser Datenschutzerklärung</h2><p>Stand: April 2026</p></div>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 </main>
 
 <footer class="site-footer" aria-label="Footer">
@@ -253,36 +171,35 @@
       <div class="footer-col">
         <h4>Leistungen</h4>
         <ul>
-          <li><a href="#leistungen">Büroreinigung</a></li>
-          <li><a href="#leistungen">Unterhaltsreinigung</a></li>
-          <li><a href="#leistungen">Treppenhausreinigung</a></li>
-          <li><a href="#leistungen">Gebäudereinigung</a></li>
-          <li><a href="#leistungen">Bauendreinigung</a></li>
-          <li><a href="#leistungen">Sonderreinigung</a></li>
+          <li><a href="bueroreinigung-friedrichshafen">Büroreinigung</a></li>
+          <li><a href="unterhaltsreinigung-friedrichshafen">Unterhaltsreinigung</a></li>
+          <li><a href="gebaeudereinigung-friedrichshafen">Gebäudereinigung</a></li>
+          <li><a href="bauendreinigung-friedrichshafen">Bauendreinigung</a></li>
+          <li><a href="grundreinigung-friedrichshafen">Grundreinigung</a></li>
+          <li><a href="leistungen">Alle Leistungen</a></li>
         </ul>
       </div>
 
       <div class="footer-col">
         <h4>Servicegebiet</h4>
         <ul>
-          <li><a href="reinigungsfirma-friedrichshafen.html">Friedrichshafen</a></li>
-          <li><a href="#gebiete">Tettnang</a></li>
-          <li><a href="#gebiete">Meckenbeuren</a></li>
-          <li><a href="#gebiete">Markdorf</a></li>
-          <li><a href="reinigungsfirma-lindau.html">Lindau</a></li>
-          <li><a href="reinigungsfirma-ravensburg.html">Ravensburg</a></li>
+          <li><a href="/">Friedrichshafen</a></li>
+          <li><a href="leistungen">Tettnang</a></li>
+          <li><a href="leistungen">Meckenbeuren</a></li>
+          <li><a href="leistungen">Überlingen</a></li>
+          <li><a href="reinigungsfirma-lindau">Lindau</a></li>
+          <li><a href="reinigungsfirma-ravensburg">Ravensburg</a></li>
         </ul>
       </div>
 
       <div class="footer-col">
         <h4>Unternehmen</h4>
         <ul>
-          <li><a href="#ueber-uns">Über uns</a></li>
-          <li><a href="#ablauf">Ablauf</a></li>
-          <li><a href="#faq">FAQ</a></li>
-          <li><a href="#kontakt">Kontakt</a></li>
-          <li><a href="impressum.html">Impressum</a></li>
-          <li><a href="datenschutz.html">Datenschutz</a></li>
+          <li><a href="ueber-uns">Über uns</a></li>
+          <li><a href="faq">FAQ</a></li>
+          <li><a href="kontakt">Kontakt</a></li>
+          <li><a href="impressum">Impressum</a></li>
+          <li><a href="datenschutz">Datenschutz</a></li>
         </ul>
       </div>
 
@@ -291,8 +208,8 @@
     <div class="footer-bottom">
       <p>© 2026 K.K. Reinigung · Friedrichshafen · Inhaber: Khaled Kurdi</p>
       <div class="footer-bottom-links">
-        <a href="impressum.html">Impressum</a>
-        <a href="datenschutz.html">Datenschutz</a>
+        <a href="impressum">Impressum</a>
+        <a href="datenschutz">Datenschutz</a>
         <a href="sitemap.xml">Sitemap</a>
       </div>
     </div>

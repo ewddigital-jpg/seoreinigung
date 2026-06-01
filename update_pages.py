@@ -109,17 +109,26 @@ for page in PAGES:
     # 4. Fix body tag
     c = re.sub(r'<body[^>]*>', '<body>', c)
 
-    # 5. Replace old header (may include embedded mobile-nav) + optional comment
+    # 5a. Replace old header
     c = re.sub(
         r'(?s)(<!--\s*Header\s*-->\s*)?<header[^>]*>.*?</header>',
-        new_header + '\n\n' + new_mobnav,
+        new_header,
         c, count=1
     )
 
-    # 6. Fix <main> tag (remove class attributes)
+    # 5b. Strip ALL mobile-nav blocks (old and any previously injected)
+    c = re.sub(r'(?s)\s*<!-- Mobile Nav -->\s*<nav class="mobile-nav"[^>]*>.*?</nav>', '', c)
+
+    # 5c. Reinsert the correct mobile-nav once, right after </header>
+    c = c.replace('</header>', '</header>\n\n' + new_mobnav, 1)
+
+    # 6. Remove aria-current="page" from subpage headers (homepage-specific)
+    c = c.replace(' aria-current="page"', '')
+
+    # 7. Fix <main> tag (remove class attributes)
     c = re.sub(r'<main\b[^>]*>', '<main>', c)
 
-    # 7. Replace footer + everything after with new footer + widgets
+    # 8. Replace footer + everything after with new footer + widgets
     c = re.sub(r'(?s)<footer\b.*\Z', new_footer + TAIL, c)
 
     with open(path, 'w', encoding='utf-8', newline='') as f:

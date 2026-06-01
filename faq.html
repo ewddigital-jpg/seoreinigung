@@ -8,7 +8,6 @@
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://kkreinigung.com/faq">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
-  <link rel="stylesheet" href="kk-tw.min.css">
   <link rel="stylesheet" href="style.css">
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -100,182 +99,144 @@
 <body>
 
 <!-- ── Header ──────────────────────────────────────────────── -->
+<!-- ── Header ──────────────────────────────────────────────── -->
+<!-- ── Header ──────────────────────────────────────────────── -->
+<!-- ── Header ──────────────────────────────────────────────── -->
 <header class="site-header" id="site-header">
+  <div class="container">
+    <div class="header-inner">
 
-  <!-- Topbar -->
-  <div class="header-topbar">
-    <div class="container">
-      <div class="topbar-left">
-        <svg width="13" height="13" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
-        Friedrichshafen &amp; Bodenseekreis
-      </div>
-      <div class="topbar-right">
-        <a href="tel:01778740889" aria-label="Jetzt anrufen">
-          <svg width="13" height="13" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 7V5z"/></svg>
-          0177 8740889
-        </a>
-        <span class="topbar-divider" aria-hidden="true"></span>
-        <span class="topbar-hours">Mo–Sa 07:00–20:00 Uhr</span>
-      </div>
-    </div>
-  </div>
+      <!-- Branding -->
+      <a href="/" class="logo" aria-label="K.K. Reinigung – Startseite">
+        <img src="android-chrome-192x192.png" alt="K.K. Reinigung Logo" class="logo-img" width="56" height="56">
+        <div class="logo-text">
+          <span class="logo-name">K.K. Reinigung</span>
+          <span class="logo-sub">Bodenseekreis · seit 2016</span>
+        </div>
+      </a>
 
-  <!-- Main Nav -->
-  <div class="header-main">
-    <div class="container">
-      <div class="header-inner">
+      <!-- Navigation -->
+      <nav class="nav-links" aria-label="Hauptnavigation">
+        <a href="/">Startseite</a>
+        <a href="leistungen">Dienstleistungen</a>
+        <a href="ueber-uns">Über uns</a>
+        <a href="kontakt">Kontakt</a>
+      </nav>
 
-        <a href="/" class="logo" aria-label="K.K. Reinigung – Startseite">
-          <img src="android-chrome-192x192.png" alt="K.K. Reinigung Logo" class="logo-img" width="52" height="52">
-          <div class="logo-text">
-            <span class="logo-name">K.K. Reinigung</span>
-            <span class="logo-sub">Bodensee · Seit 2016</span>
+      <!-- Contact + CTA -->
+      <div class="header-actions">
+        <a href="tel:01778740889" class="header-phone" aria-label="Anrufen: 0177 8740889">
+          <div class="header-phone-icon" aria-hidden="true">
+            <svg width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 7V5z"/></svg>
+          </div>
+          <div class="header-phone-text">
+            <span class="header-phone-label">Jetzt anrufen</span>
+            <span class="header-phone-num">0177 8740889</span>
           </div>
         </a>
-
-        <nav class="nav-links" aria-label="Hauptnavigation">
-          <a href="#leistungen">Leistungen</a>
-          <a href="#ablauf">Ablauf</a>
-          <a href="#ueber-uns">Über uns</a>
-          <a href="#kontakt">Kontakt</a>
-        </nav>
-
-        <div class="header-actions">
-          <a href="#kontakt" class="btn btn-cta header-cta">Kostenloses Angebot</a>
-        </div>
-
-        <button class="menu-btn" id="menu-btn" aria-label="Menü öffnen" aria-expanded="false" aria-controls="mobile-nav">
-          <svg width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/></svg>
-        </button>
-
+        <div class="header-divider" aria-hidden="true"></div>
+        <a href="kontakt" class="btn btn-cta header-cta">Kostenloses Angebot</a>
       </div>
+
+      <!-- Mobile burger -->
+      <button class="menu-btn" id="menu-btn" aria-label="Menü öffnen" aria-expanded="false" aria-controls="mobile-nav">
+        <svg width="22" height="22" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/></svg>
+      </button>
+
     </div>
   </div>
-
 </header>
 
 <!-- Mobile Nav -->
 <nav class="mobile-nav" id="mobile-nav" aria-label="Mobile Navigation">
-  <a href="#leistungen">Leistungen</a>
-  <a href="#vorteile">Vorteile</a>
-  <a href="#ablauf">Ablauf</a>
-  <a href="#ueber-uns">Über uns</a>
-  <a href="#kontakt">Kontakt</a>
+  <a href="/">Startseite</a>
+  <a href="leistungen">Leistungen</a>
+  <a href="ueber-uns">Über uns</a>
+  <a href="kontakt">Kontakt</a>
   <div class="mobile-ctas">
     <a href="tel:01778740889" class="btn btn-primary btn-lg">
       <svg width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 7V5z"/></svg>
       Jetzt anrufen
     </a>
-    <a href="#kontakt" class="btn btn-cta btn-lg">Kostenloses Angebot</a>
+    <a href="kontakt" class="btn btn-cta btn-lg">Kostenloses Angebot</a>
   </div>
 </nav>
 
 <main>
-
-  <div class="max-w-6xl mx-auto px-4 py-3">
-    <div class="breadcrumb">
-      <a href="index">Start</a><span>›</span>
-      <span class="text-gray-900">FAQ</span>
+<div class="breadcrumb-wrap">
+  <div class="container">
+    <nav class="breadcrumb" aria-label="Breadcrumb"><a href="/">Startseite</a><span aria-hidden="true">›</span><span>FAQ</span></nav>
+  </div>
+</div>
+<section class="subpage-hero">
+  <div class="container">
+    <div class="subpage-hero-simple">
+      <p class="eyebrow">Häufige Fragen</p>
+      <h1>Fragen &amp; Antworten –<br><em>klar und direkt.</em></h1>
+      <p class="subpage-hero-lead">Hier finden Sie Antworten auf die häufigsten Fragen zu unseren Leistungen, Preisen und Abläufen. Steht Ihre Frage nicht dabei? Kontaktieren Sie uns direkt.</p>
     </div>
   </div>
-
-  <!-- Header -->
-  <section class="bg-gradient-to-br from-slate-50 to-blue-50 py-12 md:py-16">
-    <div class="max-w-3xl mx-auto px-4 text-center animate-fadeInUp">
-
-      <h1 class="text-3xl md:text-4xl font-extrabold text-gray-900 mt-3 mb-3">
-            <!-- SB:hero_title -->Häufige Fragen<!-- /SB:hero_title -->
-          </h1>
-      <p class="text-gray-600"><!-- SB:hero_subtitle -->Antworten auf die häufigsten Fragen rund um unsere Reinigungsleistungen.<!-- /SB:hero_subtitle --></p>
+</section>
+<section class="section">
+  <div class="container">
+    <div class="sp-faq-list">
+    <div class="sp-faq-item">
+      <h3 style="font-size:1rem;font-weight:700;color:var(--color-primary-dark);margin-bottom:8px">Was kostet eine Reinigung bei K.K. Reinigung?</h3>
+      <p style="font-size:.9375rem;color:var(--color-text-secondary);line-height:1.7;margin:0">Der Preis richtet sich nach Art der Reinigung, Fläche und Häufigkeit. Für ein Büro mit 100 m² und wöchentlicher Reinigung beginnen die Preise ab ca. 120–200 € pro Monat. Wir erstellen ein individuelles Angebot.</p>
     </div>
-  </section>
-
-  <!-- FAQ Akkordeon -->
-  <section class="py-14 md:py-20 bg-white">
-    <div class="max-w-2xl mx-auto px-4">
-
-      <div class="space-y-3 reveal">
-
-        <details class="bg-slate-50 rounded-xl border border-gray-100 group">
-          <summary class="flex items-center justify-between cursor-pointer px-5 py-4 font-semibold text-sm text-gray-900 list-none select-none">
-            Wie läuft eine Anfrage ab?
-            <span class="text-gray-400 group-open:rotate-180 transition-transform text-lg leading-none flex-shrink-0 ml-3">↓</span>
-          </summary>
-          <div class="px-5 pb-5 text-sm text-gray-600 leading-relaxed">
-            Sie senden uns Ihre Anfrage per Formular, WhatsApp oder Telefon. Wir melden uns zeitnah zurück, klären Fläche, Umfang und Termin, und senden Ihnen ein schriftliches Angebot. Nach Ihrer Freigabe wird der Einsatz verbindlich eingeplant.
-          </div>
-        </details>
-
-        <details class="bg-slate-50 rounded-xl border border-gray-100 group">
-          <summary class="flex items-center justify-between cursor-pointer px-5 py-4 font-semibold text-sm text-gray-900 list-none select-none">
-            Wie schnell erhalten wir ein Angebot?
-            <span class="text-gray-400 group-open:rotate-180 transition-transform text-lg leading-none flex-shrink-0 ml-3">↓</span>
-          </summary>
-          <div class="px-5 pb-5 text-sm text-gray-600 leading-relaxed">
-            In der Regel innerhalb von 24 Stunden. Für einen genauen Preis benötigen wir kurz Informationen zur Fläche und zum gewünschten Umfang. Das klären wir in einem kurzen Gespräch.
-          </div>
-        </details>
-
-        <details class="bg-slate-50 rounded-xl border border-gray-100 group">
-          <summary class="flex items-center justify-between cursor-pointer px-5 py-4 font-semibold text-sm text-gray-900 list-none select-none">
-            In welchen Orten sind Sie tätig?
-            <span class="text-gray-400 group-open:rotate-180 transition-transform text-lg leading-none flex-shrink-0 ml-3">↓</span>
-          </summary>
-          <div class="px-5 pb-5 text-sm text-gray-600 leading-relaxed">
-            Unser Haupteinsatzgebiet ist der Bodenseekreis mit Friedrichshafen, Lindau und Ravensburg. Wir sind auch in Tettnang, Überlingen, Meersburg und umliegenden Gemeinden tätig. Nicht sicher? Fragen Sie einfach nach.
-          </div>
-        </details>
-
-        <details class="bg-slate-50 rounded-xl border border-gray-100 group">
-          <summary class="flex items-center justify-between cursor-pointer px-5 py-4 font-semibold text-sm text-gray-900 list-none select-none">
-            Welche Leistungen bieten Sie an?
-            <span class="text-gray-400 group-open:rotate-180 transition-transform text-lg leading-none flex-shrink-0 ml-3">↓</span>
-          </summary>
-          <div class="px-5 pb-5 text-sm text-gray-600 leading-relaxed">
-            Büroreinigung, Unterhaltsreinigung, Bauendreinigung und Gebäudereinigung für gewerbliche Objekte. Die Details zu den einzelnen Leistungen finden Sie auf unserer <a href="leistungen" class="text-primary font-semibold hover:underline">Leistungsseite</a>.
-          </div>
-        </details>
-
-        <details class="bg-slate-50 rounded-xl border border-gray-100 group">
-          <summary class="flex items-center justify-between cursor-pointer px-5 py-4 font-semibold text-sm text-gray-900 list-none select-none">
-            Was passiert, wenn wir nicht zufrieden sind?
-            <span class="text-gray-400 group-open:rotate-180 transition-transform text-lg leading-none flex-shrink-0 ml-3">↓</span>
-          </summary>
-          <div class="px-5 pb-5 text-sm text-gray-600 leading-relaxed">
-            Wir kommen nochmal und bessern nach. Kostenlos. Wenn etwas nicht dem vereinbarten Standard entspricht, wird das ohne weiteren Aufwand für Sie behoben.
-          </div>
-        </details>
-
-        <details class="bg-slate-50 rounded-xl border border-gray-100 group">
-          <summary class="flex items-center justify-between cursor-pointer px-5 py-4 font-semibold text-sm text-gray-900 list-none select-none">
-            Müssen wir einen Vertrag unterschreiben?
-            <span class="text-gray-400 group-open:rotate-180 transition-transform text-lg leading-none flex-shrink-0 ml-3">↓</span>
-          </summary>
-          <div class="px-5 pb-5 text-sm text-gray-600 leading-relaxed">
-            Beim Ersteinsatz nicht. Sie können uns erst kennenlernen, bevor Sie sich für eine regelmäßige Zusammenarbeit entscheiden. Für langfristige Reinigungsintervalle werden die Konditionen klar schriftlich festgehalten.
-          </div>
-        </details>
-
-        <details class="bg-slate-50 rounded-xl border border-gray-100 group">
-          <summary class="flex items-center justify-between cursor-pointer px-5 py-4 font-semibold text-sm text-gray-900 list-none select-none">
-            Können Termine regelmäßig vereinbart werden?
-            <span class="text-gray-400 group-open:rotate-180 transition-transform text-lg leading-none flex-shrink-0 ml-3">↓</span>
-          </summary>
-          <div class="px-5 pb-5 text-sm text-gray-600 leading-relaxed">
-            Ja. Wöchentlich, zweiwöchentlich oder monatlich. Die Intervalle werden gemeinsam festgelegt und verbindlich eingeplant. Anpassungen sind möglich.
-          </div>
-        </details>
-
-      </div>
-
-      <div class="mt-10 text-center reveal">
-        <p class="text-sm text-gray-600 mb-4">Noch eine Frage? Wir antworten direkt.</p>
-        <a href="kontakt" class="btn-primary py-3 px-7">Jetzt unverbindlich anfragen</a>
-      </div>
-
+    <div class="sp-faq-item">
+      <h3 style="font-size:1rem;font-weight:700;color:var(--color-primary-dark);margin-bottom:8px">Wie läuft eine Anfrage ab?</h3>
+      <p style="font-size:.9375rem;color:var(--color-text-secondary);line-height:1.7;margin:0">Sie senden uns Ihre Anfrage per Formular, WhatsApp oder Telefon. Wir melden uns zeitnah zurück, klären Fläche, Umfang und Termin und senden Ihnen ein schriftliches Angebot. Nach Ihrer Freigabe wird der Einsatz verbindlich eingeplant.</p>
     </div>
-  </section>
-
+    <div class="sp-faq-item">
+      <h3 style="font-size:1rem;font-weight:700;color:var(--color-primary-dark);margin-bottom:8px">Wie schnell erhalten wir ein Angebot?</h3>
+      <p style="font-size:.9375rem;color:var(--color-text-secondary);line-height:1.7;margin:0">In der Regel innerhalb von 24 Stunden. Für einen genauen Preis benötigen wir kurz Informationen zur Fläche und zum gewünschten Umfang.</p>
+    </div>
+    <div class="sp-faq-item">
+      <h3 style="font-size:1rem;font-weight:700;color:var(--color-primary-dark);margin-bottom:8px">In welchen Orten sind Sie tätig?</h3>
+      <p style="font-size:.9375rem;color:var(--color-text-secondary);line-height:1.7;margin:0">Unser Haupteinsatzgebiet ist der Bodenseekreis mit Friedrichshafen, Lindau und Ravensburg. Wir sind auch in Tettnang, Überlingen, Meersburg und umliegenden Gemeinden tätig.</p>
+    </div>
+    <div class="sp-faq-item">
+      <h3 style="font-size:1rem;font-weight:700;color:var(--color-primary-dark);margin-bottom:8px">Welche Leistungen bieten Sie an?</h3>
+      <p style="font-size:.9375rem;color:var(--color-text-secondary);line-height:1.7;margin:0">Büroreinigung, Unterhaltsreinigung, Gebäudereinigung, Bauendreinigung, Grundreinigung, Praxisreinigung, Hotelreinigung, Schulreinigung und Polsterreinigung.</p>
+    </div>
+    <div class="sp-faq-item">
+      <h3 style="font-size:1rem;font-weight:700;color:var(--color-primary-dark);margin-bottom:8px">Was passiert, wenn wir nicht zufrieden sind?</h3>
+      <p style="font-size:.9375rem;color:var(--color-text-secondary);line-height:1.7;margin:0">Wir kommen nochmal und bessern nach – kostenlos. Wenn etwas nicht dem vereinbarten Standard entspricht, wird das ohne weiteren Aufwand für Sie behoben.</p>
+    </div>
+    <div class="sp-faq-item">
+      <h3 style="font-size:1rem;font-weight:700;color:var(--color-primary-dark);margin-bottom:8px">Müssen wir einen Vertrag unterschreiben?</h3>
+      <p style="font-size:.9375rem;color:var(--color-text-secondary);line-height:1.7;margin:0">Beim Ersteinsatz nicht. Sie können uns erst kennenlernen, bevor Sie sich für regelmäßige Zusammenarbeit entscheiden. Für langfristige Intervalle werden die Konditionen klar schriftlich festgehalten.</p>
+    </div>
+    <div class="sp-faq-item">
+      <h3 style="font-size:1rem;font-weight:700;color:var(--color-primary-dark);margin-bottom:8px">Können Termine regelmäßig vereinbart werden?</h3>
+      <p style="font-size:.9375rem;color:var(--color-text-secondary);line-height:1.7;margin:0">Ja. Wöchentlich, zweiwöchentlich oder monatlich. Die Intervalle werden gemeinsam festgelegt und verbindlich eingeplant. Anpassungen sind möglich.</p>
+    </div>
+    <div class="sp-faq-item">
+      <h3 style="font-size:1rem;font-weight:700;color:var(--color-primary-dark);margin-bottom:8px">Bringen Sie eigene Reinigungsmittel mit?</h3>
+      <p style="font-size:.9375rem;color:var(--color-text-secondary);line-height:1.7;margin:0">Ja, wir kommen mit allem Material und Geräten. Auf Wunsch verwenden wir auch umweltfreundliche Reinigungsmittel.</p>
+    </div>
+    <div class="sp-faq-item">
+      <h3 style="font-size:1rem;font-weight:700;color:var(--color-primary-dark);margin-bottom:8px">Gibt es einen festen Ansprechpartner?</h3>
+      <p style="font-size:.9375rem;color:var(--color-text-secondary);line-height:1.7;margin:0">Ja. Khaled Kurdi ist persönlich erreichbar – per Telefon und WhatsApp. Keine Vermittlung an Disponenten oder Callcenter.</p>
+    </div>
+    </div>
+    <div style="text-align:center;margin-top:36px">
+      <p style="font-size:.9375rem;color:var(--color-text-secondary);margin-bottom:16px">Noch eine Frage? Wir antworten direkt.</p>
+      <a href="kontakt" class="btn btn-cta btn-lg">Jetzt unverbindlich anfragen</a>
+    </div>
+  </div>
+</section>
+<section class="cta-section">
+  <div class="container"><div class="cta-inner">
+    <h2>Kontakt aufnehmen</h2><p>Schildern Sie uns kurz Ihren Bedarf – wir melden uns am selben Tag.</p>
+    <div class="cta-btns">
+      <a href="kontakt" class="btn btn-cta btn-lg">Kostenloses Angebot anfordern</a>
+      <a href="tel:01778740889" class="btn btn-white btn-lg"><svg width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true" style="flex-shrink:0"><path stroke-linecap="round" stroke-linejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 7V5z"/></svg> 0177 8740889</a>
+    </div>
+    <p class="cta-note">Montag bis Samstag, 7–20 Uhr</p>
+  </div></div>
+</section>
 </main>
 
 <footer class="site-footer" aria-label="Footer">
@@ -311,36 +272,35 @@
       <div class="footer-col">
         <h4>Leistungen</h4>
         <ul>
-          <li><a href="#leistungen">Büroreinigung</a></li>
-          <li><a href="#leistungen">Unterhaltsreinigung</a></li>
-          <li><a href="#leistungen">Treppenhausreinigung</a></li>
-          <li><a href="#leistungen">Gebäudereinigung</a></li>
-          <li><a href="#leistungen">Bauendreinigung</a></li>
-          <li><a href="#leistungen">Sonderreinigung</a></li>
+          <li><a href="bueroreinigung-friedrichshafen">Büroreinigung</a></li>
+          <li><a href="unterhaltsreinigung-friedrichshafen">Unterhaltsreinigung</a></li>
+          <li><a href="gebaeudereinigung-friedrichshafen">Gebäudereinigung</a></li>
+          <li><a href="bauendreinigung-friedrichshafen">Bauendreinigung</a></li>
+          <li><a href="grundreinigung-friedrichshafen">Grundreinigung</a></li>
+          <li><a href="leistungen">Alle Leistungen</a></li>
         </ul>
       </div>
 
       <div class="footer-col">
         <h4>Servicegebiet</h4>
         <ul>
-          <li><a href="reinigungsfirma-friedrichshafen.html">Friedrichshafen</a></li>
-          <li><a href="#gebiete">Tettnang</a></li>
-          <li><a href="#gebiete">Meckenbeuren</a></li>
-          <li><a href="#gebiete">Markdorf</a></li>
-          <li><a href="reinigungsfirma-lindau.html">Lindau</a></li>
-          <li><a href="reinigungsfirma-ravensburg.html">Ravensburg</a></li>
+          <li><a href="/">Friedrichshafen</a></li>
+          <li><a href="leistungen">Tettnang</a></li>
+          <li><a href="leistungen">Meckenbeuren</a></li>
+          <li><a href="leistungen">Überlingen</a></li>
+          <li><a href="reinigungsfirma-lindau">Lindau</a></li>
+          <li><a href="reinigungsfirma-ravensburg">Ravensburg</a></li>
         </ul>
       </div>
 
       <div class="footer-col">
         <h4>Unternehmen</h4>
         <ul>
-          <li><a href="#ueber-uns">Über uns</a></li>
-          <li><a href="#ablauf">Ablauf</a></li>
-          <li><a href="#faq">FAQ</a></li>
-          <li><a href="#kontakt">Kontakt</a></li>
-          <li><a href="impressum.html">Impressum</a></li>
-          <li><a href="datenschutz.html">Datenschutz</a></li>
+          <li><a href="ueber-uns">Über uns</a></li>
+          <li><a href="faq">FAQ</a></li>
+          <li><a href="kontakt">Kontakt</a></li>
+          <li><a href="impressum">Impressum</a></li>
+          <li><a href="datenschutz">Datenschutz</a></li>
         </ul>
       </div>
 
@@ -349,8 +309,8 @@
     <div class="footer-bottom">
       <p>© 2026 K.K. Reinigung · Friedrichshafen · Inhaber: Khaled Kurdi</p>
       <div class="footer-bottom-links">
-        <a href="impressum.html">Impressum</a>
-        <a href="datenschutz.html">Datenschutz</a>
+        <a href="impressum">Impressum</a>
+        <a href="datenschutz">Datenschutz</a>
         <a href="sitemap.xml">Sitemap</a>
       </div>
     </div>
