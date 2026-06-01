@@ -381,8 +381,8 @@ p { color: var(--color-text-secondary); line-height: 1.7; }
 
 /* ── Hero ────────────────────────────────────────────────── */
 .hero {
-  margin-top: var(--header-h);
-  padding: 0;
+  padding-top: var(--header-h);
+  padding-bottom: 0;
   background: linear-gradient(145deg, var(--color-primary-light) 0%, #f0f7fd 40%, var(--color-bg) 100%);
   overflow: hidden;
 }
@@ -1078,7 +1078,7 @@ p { color: var(--color-text-secondary); line-height: 1.7; }
   .nav-links, .header-actions { display: none; }
   .menu-btn { display: flex; align-items: center; justify-content: center; }
 
-  .hero { padding: 0; }
+  .hero { padding-top: var(--header-h); padding-bottom: 0; }
   .hero-inner { grid-template-columns: 1fr; gap: 0; }
   .hero-visual { order: -1; margin: 0 calc(-1 * var(--px)); }
   .hero-card { border-radius: 0; box-shadow: none; }
@@ -1362,14 +1362,46 @@ p { color: var(--color-text-secondary); line-height: 1.7; }
 .prose strong { color: var(--color-text); font-weight: 700; }
 
 @media (max-width: 768px) {
-  .subpage-hero-grid { grid-template-columns: 1fr; gap: 28px; }
+  /* Subpage hero */
+  .subpage-hero { padding: clamp(24px, 4vw, 36px) 0; }
+  .subpage-hero-grid { grid-template-columns: 1fr; gap: 24px; }
   .subpage-hero h1 { font-size: clamp(1.75rem, 7vw, 2.5rem); }
+  .subpage-hero-lead { font-size: 1rem; }
+  .subpage-hero-ctas { gap: 10px; }
+
+  /* Hero form card */
+  .hero-form-card { padding: 22px 18px; }
+  .hero-form-card h2 { font-size: 1rem; margin-bottom: 14px; }
+
+  /* Grids */
   .use-case-grid { grid-template-columns: 1fr 1fr; }
   .when-grid { grid-template-columns: 1fr; }
+
+  /* FAQ */
+  .sp-faq-item { padding: 16px 18px; }
+
+  /* Breadcrumb */
+  .breadcrumb { font-size: 0.8125rem; gap: 4px; }
 }
+
 @media (max-width: 480px) {
+  /* Full-width buttons on small phones */
+  .subpage-hero-ctas { flex-direction: column; }
+  .subpage-hero-ctas .btn { width: 100%; justify-content: center; }
+
+  /* Grids → 1 Spalte */
   .use-case-grid { grid-template-columns: 1fr; }
   .service-grid { grid-template-columns: 1fr; }
+
+  /* Reduced padding */
+  .hero-form-card { padding: 18px 16px; }
+  .sp-faq-item { padding: 14px 16px; }
+  .sp-faq-item h3 { font-size: 0.9375rem; }
+  .use-case-card { padding: 18px 14px; }
+  .when-card { padding: 14px; }
+
+  /* Prose legal pages */
+  .prose h2 { font-size: 1rem; }
 }
 
 /* ── Reduced Motion ──────────────────────────────────────── */
