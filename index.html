@@ -25,7 +25,7 @@
   <link rel="apple-touch-icon" href="apple-touch-icon.png">
 
   <!-- Stylesheet -->
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css?v=3">
 
   <!-- GSAP -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
@@ -1226,11 +1226,6 @@
     { opacity: 0, y: 28 },
     { opacity: 1, y: 0, duration: 0.7, ease: 'power2.out', stagger: 0.11, delay: 0.15 }
   );
-  gsap.fromTo('.hero-visual',
-    { opacity: 0, y: 20 },
-    { opacity: 1, y: 0, duration: 0.85, ease: 'power2.out', delay: 0.3 }
-  );
-
   /* Trust bar */
   gsap.fromTo('.trust-bar-item',
     { opacity: 0, y: 10 },
