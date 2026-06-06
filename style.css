@@ -383,13 +383,13 @@ p { color: var(--color-text-secondary); line-height: 1.7; }
 .hero {
   padding-top: var(--header-h);
   padding-bottom: 0;
-  background: linear-gradient(145deg, var(--color-primary-light) 0%, #f0f7fd 40%, var(--color-bg) 100%);
+  background: linear-gradient(145deg, #d4e8f5 0%, var(--color-primary-light) 35%, #f0f7fd 65%, var(--color-bg) 100%);
   overflow: hidden;
 }
 .hero-inner {
   max-width: 760px;
 }
-.hero-content { padding-top: 16px; padding-bottom: clamp(56px, 8vw, 100px); }
+.hero-content { padding-top: 0; padding-bottom: clamp(56px, 8vw, 100px); }
 
 .hero-tag {
   display: inline-flex;
