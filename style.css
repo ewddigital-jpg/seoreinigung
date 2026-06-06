@@ -1107,6 +1107,11 @@ p { color: var(--color-text-secondary); line-height: 1.7; }
   .process-steps::before { display: none; }
   .problem-inner { gap: 40px; }
   .contact-grid { gap: 36px; }
+  /* Header: tight fit between 769–1024px */
+  .header-phone-label { display: none; }
+  .nav-links { gap: 22px; }
+  .header-cta { padding: 11px 18px; font-size: 0.875rem; }
+  .site-header .container { padding: 0 20px; }
 }
 
 @media (max-width: 768px) {
@@ -1166,7 +1171,6 @@ p { color: var(--color-text-secondary); line-height: 1.7; }
   .cta-btns { flex-direction: column; align-items: center; }
   .footer-grid { grid-template-columns: 1fr; gap: 32px; }
   .footer-bottom { flex-direction: column; text-align: center; }
-  #wa-btn { right: 16px; bottom: 84px; width: 52px; height: 52px; }
 }
 
 @media (max-width: 480px) {
