@@ -389,7 +389,7 @@ p { color: var(--color-text-secondary); line-height: 1.7; }
 .hero-inner {
   max-width: 760px;
 }
-.hero-content { padding-top: 0; padding-bottom: clamp(56px, 8vw, 100px); }
+.hero-content { padding-top: 0; padding-bottom: clamp(32px, 3.5vw, 52px); }
 
 .hero-tag {
   display: inline-flex;
