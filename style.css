@@ -383,7 +383,7 @@ p { color: var(--color-text-secondary); line-height: 1.7; }
 .hero {
   padding-top: var(--header-h);
   padding-bottom: 0;
-  background: linear-gradient(145deg, #d4e8f5 0%, var(--color-primary-light) 35%, #f0f7fd 65%, var(--color-bg) 100%);
+  background: linear-gradient(to bottom, #b8d6ee 0%, #cce0f4 8%, var(--color-primary-light) 30%, #f0f7fd 65%, var(--color-bg) 100%);
   overflow: hidden;
 }
 .hero-inner {
