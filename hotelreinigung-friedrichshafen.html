@@ -8,7 +8,7 @@
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://kkreinigung.com/hotelreinigung-friedrichshafen">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css?v=11">
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -379,7 +379,7 @@
   #kk-badge.kk-vis{display:flex!important}
   #kk-tip{position:absolute;bottom:68px;left:0;background:#fff;color:#1a3a5c;border-radius:14px 14px 14px 3px;padding:11px 15px 11px 13px;font-size:.83rem;font-weight:500;line-height:1.45;box-shadow:0 4px 22px rgba(0,0,0,.13);display:none;animation:kkSlideUp .3s ease;border:1px solid rgba(26,58,92,.1);max-width:210px;cursor:pointer}
   #kk-tip::after{content:'';position:absolute;bottom:-7px;left:19px;width:13px;height:13px;background:#fff;border-right:1px solid rgba(26,58,92,.1);border-bottom:1px solid rgba(26,58,92,.1);transform:rotate(45deg)}
-  #kk-box{display:none;flex-direction:column;position:absolute;bottom:72px;left:0;width:355px;background:#0f1c2e;border-radius:20px;overflow:hidden;border:1px solid rgba(255,255,255,.09);box-shadow:0 16px 48px rgba(0,0,0,.45),0 0 0 1px rgba(26,58,92,.12);animation:kkSlideUp .22s ease}
+  #kk-tip{padding-right:30px!important}#kk-tip-x{position:absolute;top:5px;right:6px;width:18px;height:18px;line-height:1;border:none;background:transparent;color:rgba(26,58,92,.45);font-size:17px;cursor:pointer;padding:0;display:flex;align-items:center;justify-content:center;border-radius:50%;font-family:Inter,sans-serif}#kk-tip-x:hover{background:rgba(26,58,92,.12);color:#1a3a5c}#kk-box{display:none;flex-direction:column;position:absolute;bottom:72px;left:0;width:355px;background:#0f1c2e;border-radius:20px;overflow:hidden;border:1px solid rgba(255,255,255,.09);box-shadow:0 16px 48px rgba(0,0,0,.45),0 0 0 1px rgba(26,58,92,.12);animation:kkSlideUp .22s ease}
   #kk-header{background:linear-gradient(135deg,#1a3a5c,#0f2340);border-bottom:1px solid rgba(255,255,255,.07);padding:13px 16px;display:flex;align-items:center;gap:11px;flex-shrink:0}
   .kk-hlogo{width:38px;height:38px;border-radius:50%;background:rgba(255,255,255,.07);border:1.5px solid rgba(255,255,255,.18);display:flex;align-items:center;justify-content:center;flex-shrink:0;overflow:hidden}
   .kk-hlogo img{width:26px;height:26px;object-fit:contain;border-radius:50%}
@@ -430,7 +430,7 @@
   }
 </style>
 <div id="kk-chat">
-  <div id="kk-tip" style="display: none;">Fragen zu Preisen oder Terminen? 👋</div>
+  <div id="kk-tip" style="display: none;"><button type="button" id="kk-tip-x" aria-label="Hinweis schließen">&times;</button>Fragen zu Preisen oder Terminen? 👋</div>
   <button type="button" id="kk-toggle" aria-label="KI-Assistent öffnen">
     <img src="apple-touch-icon.png" alt="K.K. Reinigung" onerror="this.remove()">
     <div id="kk-badge">1</div>
@@ -492,7 +492,7 @@
   document.getElementById('kk-send').addEventListener('click',function(){window.kkSend();});
   inputEl.addEventListener('keydown',function(e){if(e.key==='Enter')window.kkSend();});
   document.querySelectorAll('.kk-q').forEach(function(b){b.addEventListener('click',function(){window.kkSend(b.getAttribute('data-msg'));});});
-  tipEl.addEventListener('click',function(){window.kkOpen();});
+  tipEl.addEventListener('click',function(){window.kkOpen();});var tipX=document.getElementById('kk-tip-x');if(tipX){tipX.addEventListener('click',function(e){e.stopPropagation();hideTip();try{sessionStorage.setItem('kk-tip','1');}catch(_){}}); }
   if(!sessionStorage.getItem('kk-tip')){
     setTimeout(function(){
       if(isOpen)return;

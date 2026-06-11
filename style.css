@@ -447,7 +447,7 @@ p { color: var(--color-text-secondary); line-height: 1.7; }
   max-width: 780px;
   margin: 0 auto;
   text-align: center;
-  padding: clamp(40px, 6vw, 78px) 0 clamp(52px, 7vw, 92px);
+  padding: clamp(28px, 3.5vw, 56px) 0 clamp(32px, 4vw, 60px);
 }
 .hero-content { display: flex; flex-direction: column; align-items: center; }
 .hero-content .hero-lead { margin-left: auto; margin-right: auto; }
@@ -489,10 +489,10 @@ p { color: var(--color-text-secondary); line-height: 1.7; }
 .hero-lead {
   font-size: clamp(1.0625rem, 1.5vw, 1.25rem);
   color: var(--color-text-secondary); font-weight: 400;
-  line-height: 1.7; max-width: 520px; margin-bottom: 40px;
+  line-height: 1.7; max-width: 520px; margin-bottom: 30px;
 }
 
-.hero-ctas { display: flex; flex-wrap: wrap; gap: 14px; margin-bottom: 36px; }
+.hero-ctas { display: flex; flex-wrap: wrap; gap: 14px; margin-bottom: 26px; }
 
 .hero-trust-row { display: flex; flex-wrap: wrap; gap: 10px; }
 .trust-badge {
