@@ -11,7 +11,7 @@
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@700;800&family=DM+Serif+Display:ital@0;1&family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,400;0,600;0,700;0,800;1,400&family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&display=swap" rel="stylesheet">
 
   <!-- Favicon -->
   <link rel="apple-touch-icon" href="apple-touch-icon.png">
@@ -547,21 +547,29 @@
 (function () {
   if (typeof gsap === 'undefined') return;
   gsap.registerPlugin(ScrollTrigger);
-  function once(trigger, startPos) {
-    return { trigger: trigger, start: startPos || 'top 88%', once: true };
+  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  /* Hero / above the fold: animate on load (uniform across all pages) */
+  var hero = gsap.utils.toArray('.subpage-hero .eyebrow, .subpage-hero h1, .subpage-hero-lead, .subpage-hero .check-list, .subpage-hero-ctas, .hero-form-card, .hero-title, .hero-lead, .hero-ctas, .hero-trust-row, .hero-tag');
+  if (hero.length && !reduce) {
+    gsap.fromTo(hero, { opacity: 0, y: 22 },
+      { opacity: 1, y: 0, duration: 0.6, ease: 'power2.out', stagger: 0.08, delay: 0.1 });
   }
-  gsap.utils.toArray('.section-header').forEach(function(el) {
-    gsap.fromTo(el,
-      { opacity: 0, y: 14 },
-      { opacity: 1, y: 0, duration: 0.55, ease: 'power2.out',
-        scrollTrigger: once(el, 'top 90%') }
-    );
-  });
-  gsap.utils.toArray('.hero-title, .hero-lead, .hero-ctas').forEach(function(el, i) {
-    gsap.fromTo(el,
-      { opacity: 0, y: 20 },
-      { opacity: 1, y: 0, duration: 0.6, ease: 'power2.out', delay: i * 0.1 }
-    );
+
+  if (reduce) return;
+
+  /* Scroll reveal: uniform fade-up + stagger (same feel as index) */
+  var groups = ['.section-header', '.service-card', '.area-card', '.proof-object-card',
+    '.card', '.feature-card', '.info-card', '.why-feature-item', '.process-step',
+    '.process-card', '.problem-item', '.solution-card', '.faq-item', '.ba-pair',
+    '.contact-info', '.contact-form-card', '.cta-inner', '.about-photo-wrap',
+    '.about-content', '.content-block', '.highlight-box', '.step-card'];
+  groups.forEach(function (sel) {
+    gsap.utils.toArray(sel).forEach(function (el) {
+      gsap.fromTo(el, { opacity: 0, y: 26 },
+        { opacity: 1, y: 0, duration: 0.55, ease: 'power2.out',
+          scrollTrigger: { trigger: el, start: 'top 88%', once: true } });
+    });
   });
 })();
 </script>

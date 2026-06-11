@@ -24,8 +24,8 @@
   --color-warning:          #E0A427;
   --color-error:            #C53A2E;
 
-  --font-display: 'DM Serif Display', Georgia, serif;
   --font-h1: 'Archivo', 'DM Sans', -apple-system, sans-serif;
+  --font-display: var(--font-h1); /* legacy alias → Archivo (DM Serif entfernt) */
   --font-body:    'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif;
 
   --radius-sm:   8px;
@@ -67,10 +67,10 @@ input, textarea, select { font-family: inherit; }
 
 /* ── Typography ─────────────────────────────────────────── */
 h2, h3 {
-  font-family: var(--font-display);
+  font-family: var(--font-h1);
   color: var(--color-text);
-  font-weight: 400;
-  line-height: 1.08;
+  font-weight: 700;
+  line-height: 1.12;
 }
 h1 {
   font-family: var(--font-h1);
@@ -85,12 +85,12 @@ h4, h5, h6 {
   line-height: 1.3;
 }
 h1 { font-size: clamp(2.25rem, 6vw, 5rem);     letter-spacing: -0.03em; }
-h2 { font-size: clamp(2rem, 4vw, 3.75rem);     letter-spacing: -0.025em; }
+h2 { font-size: clamp(2rem, 4vw, 3.5rem);     letter-spacing: -0.025em; font-weight: 800; }
 h3 { font-size: clamp(1.35rem, 2.5vw, 1.75rem); letter-spacing: -0.015em; }
 h4 { font-size: 1.0625rem; }
 
 h1 em { font-style: normal; color: var(--color-primary); }
-h2 em { font-style: italic; color: var(--color-primary); }
+h2 em { font-style: normal; color: var(--color-primary); }
 p { color: var(--color-text-secondary); line-height: 1.7; }
 
 .eyebrow {
@@ -545,7 +545,7 @@ p { color: var(--color-text-secondary); line-height: 1.7; }
 .trust-bar-item:last-child { border-right: none; }
 .trust-bar-num {
   font-family: var(--font-display);
-  font-size: clamp(1.75rem, 3vw, 2.5rem); font-weight: 400;
+  font-size: clamp(1.75rem, 3vw, 2.5rem); font-weight: 800;
   color: #fff; line-height: 1;
 }
 .trust-bar-label { font-size: 1rem; font-weight: 500; color: rgba(255,255,255,.78); }
@@ -562,7 +562,7 @@ p { color: var(--color-text-secondary); line-height: 1.7; }
   font-family: var(--font-display);
   font-size: clamp(1.75rem, 3.5vw, 3rem);
   color: var(--color-text); line-height: 1.1;
-  letter-spacing: -0.02em; margin-bottom: 32px; font-weight: 400;
+  letter-spacing: -0.02em; margin-bottom: 32px; font-weight: 800;
 }
 .problem-list { display: flex; flex-direction: column; gap: 12px; }
 .problem-item {
@@ -591,7 +591,7 @@ p { color: var(--color-text-secondary); line-height: 1.7; }
   font-family: var(--font-display);
   font-size: clamp(1.4rem, 2.5vw, 1.9rem);
   color: var(--color-text); line-height: 1.2;
-  margin-bottom: 24px; font-weight: 400;
+  margin-bottom: 24px; font-weight: 700;
 }
 .solution-list { display: flex; flex-direction: column; gap: 14px; margin-bottom: 28px; }
 .solution-item { display: flex; align-items: flex-start; gap: 12px; }
@@ -694,7 +694,7 @@ p { color: var(--color-text-secondary); line-height: 1.7; }
   box-shadow: var(--shadow-lg);
   display: flex; flex-direction: column; align-items: flex-start;
 }
-.why-img-badge-num { font-family: var(--font-display); font-size: 2rem; line-height: 1; }
+.why-img-badge-num { font-family: var(--font-h1); font-weight: 800; font-size: 2rem; line-height: 1; }
 .why-img-badge-text { font-size: 0.875rem; opacity: 0.8; margin-top: 4px; }
 
 .why-features { display: flex; flex-direction: column; }
@@ -810,8 +810,8 @@ p { color: var(--color-text-secondary); line-height: 1.7; }
   box-shadow: var(--shadow-md); text-align: center;
 }
 .about-photo-badge-num {
-  font-family: var(--font-display); font-size: 2rem;
-  color: var(--color-primary); line-height: 1; font-weight: 400;
+  font-family: var(--font-h1); font-size: 2rem;
+  color: var(--color-primary); line-height: 1; font-weight: 800;
 }
 .about-photo-badge-text {
   font-size: 0.8125rem; color: var(--color-text-muted); margin-top: 2px; font-weight: 500;
@@ -1061,7 +1061,7 @@ p { color: var(--color-text-secondary); line-height: 1.7; }
 .contact-form-title {
   font-family: var(--font-display);
   font-size: clamp(1.35rem, 2.5vw, 1.85rem);
-  color: var(--color-text); font-weight: 400;
+  color: var(--color-text); font-weight: 700;
   margin-bottom: 6px; line-height: 1.2;
 }
 .contact-form-subtitle {
