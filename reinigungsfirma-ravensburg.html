@@ -8,7 +8,7 @@
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://kkreinigung.com/reinigungsfirma-ravensburg">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
-  <link rel="stylesheet" href="style.css?v=11">
+  <link rel="stylesheet" href="style.css?v=12">
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -462,13 +462,6 @@
   if (typeof gsap === 'undefined') return;
   gsap.registerPlugin(ScrollTrigger);
   var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-
-  /* Hero / above the fold: animate on load (uniform across all pages) */
-  var hero = gsap.utils.toArray('.subpage-hero .eyebrow, .subpage-hero h1, .subpage-hero-lead, .subpage-hero .check-list, .subpage-hero-ctas, .hero-form-card, .hero-title, .hero-lead, .hero-ctas, .hero-trust-row, .hero-tag');
-  if (hero.length && !reduce) {
-    gsap.fromTo(hero, { opacity: 0, y: 22 },
-      { opacity: 1, y: 0, duration: 0.6, ease: 'power2.out', stagger: 0.08, delay: 0.1 });
-  }
 
   if (reduce) return;
 

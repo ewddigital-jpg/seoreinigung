@@ -29,7 +29,7 @@
   <link rel="apple-touch-icon" href="apple-touch-icon.png">
 
   <!-- Stylesheet -->
-  <link rel="stylesheet" href="style.css?v=11">
+  <link rel="stylesheet" href="style.css?v=12">
 
   <!-- GSAP -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
@@ -1284,12 +1284,8 @@
     return { trigger: trigger, start: startPos || 'top 88%', once: true };
   }
 
-  /* Hero: runs immediately on page load, no ScrollTrigger needed */
-  gsap.fromTo(
-    ['.hero-tag', '.hero-title', '.hero-lead', '.hero-ctas', '.hero-trust-row'],
-    { opacity: 0, y: 28 },
-    { opacity: 1, y: 0, duration: 0.7, ease: 'power2.out', stagger: 0.1, delay: 0.15 }
-  );
+  /* Hero entrance handled purely via CSS (keyframes heroFadeUp) so above-the-fold
+     content is never hidden while waiting for the GSAP CDN to load. */
   /* Trust bar */
   gsap.fromTo('.trust-bar-item',
     { opacity: 0, y: 10 },
