@@ -42,8 +42,8 @@
   --max-w:            1200px;
   --px:               clamp(20px, 5vw, 64px);
   --header-topbar-h:  38px;
-  --header-main-h:    88px;
-  --header-h:         88px;
+  --header-main-h:    68px;
+  --header-h:         68px;
   --section-gap:      clamp(43px, 6.3vw, 72px);
 }
 
@@ -1239,11 +1239,11 @@ p { color: var(--color-text-secondary); line-height: 1.7; }
 @media (max-width: 768px) {
   :root {
     --px: 20px;
-    --header-h:      72px;
-    --header-main-h: 72px;
+    --header-h:      58px;
+    --header-main-h: 58px;
   }
 
-  .site-header { height: 72px; }
+  .site-header { height: 58px; }
   .logo-img { height: 40px; }
   .logo-name { font-size: 1.125rem; }
   .nav-links, .header-actions { display: none; }
