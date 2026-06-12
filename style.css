@@ -212,7 +212,7 @@ p { color: var(--color-text-secondary); line-height: 1.7; }
   position: fixed;
   top: 0; left: 0; right: 0;
   z-index: 1000;
-  background: #FFFFFF;
+  background: transparent;
   border-bottom: 1px solid transparent;
   height: var(--header-main-h);
   transition: box-shadow 300ms, background 300ms, border-color 300ms;

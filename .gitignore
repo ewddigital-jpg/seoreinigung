@@ -3,3 +3,5 @@
 # lokale Arbeits-Screenshots
 sc-*.png
 screenshot-*.png
+shot-*.png
+.playwright-mcp/
